@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>learn git（1）</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Linglim">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+    </style>
+    <link href="/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/theme/css/font-awesome.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png">
+
+    <link href="/" type="application/atom+xml" rel="alternate" title="Linglim 's Blog ATOM Feed" />
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/index.html">Linglim 's Blog </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                  <li><a href="pages/about.html">About</a></li>
+                          <li class="divider-vertical"></li>
+                  <li >
+                    <a href="/category/ce-shi.html">
+						<i class="icon-folder-open icon-large"></i>测试
+					</a>
+                  </li>
+                  <li class="active">
+                    <a href="/category/ji-zhu-bi-ji.html">
+						<i class="icon-folder-open icon-large"></i>技术笔记
+					</a>
+                  </li>
+                  <li >
+                    <a href="/category/misc.html">
+						<i class="icon-folder-open icon-large"></i>misc
+					</a>
+                  </li>
+
+                          <ul class="nav pull-right">
+  <!--functions-->          <li><a href="/functions/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
+            </ul>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+            <!--添加百度搜索-->
+           <a href="https://github.com/linglim"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="span9 offset1" id="content">
+<section id="content">
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to learn git（1）">
+                                        learn git（1）
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2016-07-27T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-07-27(星期三) 00:00
+</abbr>
+<span class="label">By</span>
+<a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
+<span class="label">Category</span>
+<a href="/category/ji-zhu-bi-ji.html"><i class="icon-folder-open"></i>技术笔记</a>.
+
+
+<span class="label">Tags</span>
+	<a href="/tag/git.html"><i class="icon-tag"></i>git</a>
+</footer><!-- /.post-info -->                </div>
+                <h1 id="learn-git">learn git</h1>
+<h2 id="_1">安装与配置</h2>
+<p><code>git config --global user.name "name"</code></p>
+<p><code>git config --global user.email "emailadd"</code></p>
+<h2 id="_2">创建版本库(不要存在中文)</h2>
+<h3 id="_3">先创建空目录（工作区）</h3>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>mkdir learngit
+cd learngit
+pwd
+</pre></div>
+
+
+<h3 id="_4">将目录变为仓库</h3>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>git init
+</pre></div>
+
+
+<p>当前目录下多了一个.git的目录出现 .git的目录（暂存区），ls -ah查看隐藏文件</p>
+<h2 id="_5"><strong>*</strong>工作原理</h2>
+<p><img alt="工作原理图" src="http://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0" /></p>
+<blockquote>
+<p>把文件往Git版本库里添加的时候，是分两步执行的：</p>
+<ul>
+<li>
+<p>第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；</p>
+</li>
+<li>
+<p>第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。</p>
+</li>
+</ul>
+<p>因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改。</p>
+<p>每次修改，如果不add到暂存区，那就不会加入到commit中。</p>
+</blockquote>
+<h2 id="_6">把文件添加到版本库</h2>
+<p>创建文件（不要用txt和word）后存在工作区目录 learngit</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>git add readme.txt//把文件添加到仓库，加入到缓存区
+
+git commit -m&quot;注释&quot;//把文件提交到仓库，提交到master分支
+</pre></div>
+
+
+<p>可多次添加，一次进行提交</p>
+<h2 id="commit">穿越小节（commit到本地分支的可用）</h2>
+<p>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset &ndash;hard commit_id。</p>
+<p>穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。</p>
+<p>要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。</p>
+<h2 id="_7">查看当前状态（告诉你，什么被修改啦）</h2>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ git status
+</pre></div>
+
+
+<h2 id="_8">****状态解释</h2>
+<h3 id="_9"></h3>
+<ul>
+<li>工作区下提示信息</li>
+</ul>
+<blockquote>
+<p><code># On branch master</code></p>
+<p><code># Changes not staged for commit:</code></p>
+<p>表示：在工作区有修改，还没放在缓存区</p>
+<h4 id="_21">撤销工作区的修改</h4>
+<p><code>$ git checkout -- readme.txt</code></p>
+</blockquote>
+<p>//git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</p>
+<hr />
+<h3 id="_10"></h3>
+<ul>
+<li>缓存区下提示信息</li>
+</ul>
+<blockquote>
+<p><code># On branch master</code></p>
+<p><code># Changes to be committed:</code></p>
+<p>表示：添加到了暂存区，还没有提交：</p>
+<h4 id="_22">撤销缓存区的修改</h4>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ git reset HEAD readme.txt
+</pre></div>
+
+
+</blockquote>
+<hr />
+<h3 id="_11"></h3>
+<ul>
+<li>本地分支master下</li>
+</ul>
+<blockquote>
+<h3 id="master">已经提交到本地master分支的可用版本回退撤销提交</h3>
+<p><code>$ git log --pretty=oneline</code>//找到回退的版本id
+<code>$ git reset --hard 3628164</code>//回退到过去某个版本</p>
+</blockquote>
+<hr />
+<p>On branch master(在分支的)</p>
+<blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span> Changes not staged for commit:（改动啦，还没提交的）
+ modified:   readme.txt（此文件已经被改动啦，但还没被提交commit）
+</pre></div>
+
+
+<p>Untracked files:（在learngit的目录下，但还没被add文件）</p>
+</blockquote>
+<p>nothing to commit (working directory clean)：工作区是空的</p>
+<h2 id="commit_1">查看更修改内容（在还没commit之前，告诉你修改的内容）</h2>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ git diff readme.txt
+</pre></div>
+
+
+<h2 id="_12">查看命令日志，有几个历史版本</h2>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ git log
+
+$ git log --pretty=oneline//显示好看
+</pre></div>
+
+
+<h2 id="_13">回退历史版本</h2>
+<p>当前是HEAD,前一个是HEAD^</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ git reset --hard HEAD^
+</pre></div>
+
+
+<p>只要记住git log下 历史版本的commit id前几位就可回到任意时间（穿越过去-未来）</p>
+<h2 id="_14">删除</h2>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ rm test.txt
+</pre></div>
+
+
+<h2 id="_15">远程</h2>
+<h3 id="1">1</h3>
+<ol>
+<li>获得key
+ <code>ssh-keygen -t rsa -C "email"</code>
+- 自选保存key地址(写到.ssh)
+ <code>/c/Users/lenovo/learngit/key/.ssh</code>
+- “Add SSH Key”，在Key文本框里粘贴id_rsa.pub文件的内容
+- 创建远程仓库Create repository，填上仓库名字</li>
+</ol>
+<h3 id="2">2</h3>
+<ol>
+<li>关联本地
+    git remote add origin git@gitlab.com:linglim/learn-git.git</li>
+</ol>
+<blockquote>
+<p>若提示出错信息：fatal: remote origin already exists.</p>
+<p>解决办法如下：</p>
+<p>1、先输入$ git remote rm origin</p>
+<p>2、再输入$ git remote add origin git@github.com:djqiang/gitdemo.git 就不会报错了！</p>
+</blockquote>
+<h2 id="_16">分支</h2>
+<blockquote>
+<p>创建与合并分支</p>
+<p>小结
+Git鼓励大量使用分支：</p>
+<p>查看分支：git branch</p>
+<p>创建分支：git branch <name></p>
+<p>切换分支：git checkout <name></p>
+<p>创建+切换分支：git checkout -b <name></p>
+<p>合并某分支到当前分支：git merge <name></p>
+<p>删除分支：git branch -d <name>
+查看分支合并图：git log &ndash;graph</p>
+</blockquote>
+<h2 id="_17">合并</h2>
+<ul>
+<li>
+<blockquote>
+<p>git merge <name>
+Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>git merge &ndash;no-ff -m &ldquo;merge with no-ff&rdquo; dev</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。</p>
+</blockquote>
+<h1 id="_18">注意：</h1>
+<p>*</p>
+<h2 id="addcommit">每次更改，都要add，然后commit</h2>
+<p>*
+死机时：ctrl+c</p>
+<h1 id="_19">命令</h1>
+<p><img alt="" src="https://camo.githubusercontent.com/e12dfd770f44b37c8a81e0339d3ef6d1aee035dc/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f3434383934636262677731657569676339397a38776a323065343062706a736d2e6a7067" /></p>
+<p>Command line instructions</p>
+<h1 id="_20">问题：</h1>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ git add learngit.md
+fatal: Unable to create &#39;C:/Users/lenovo/learn-git/.git/index.lock&#39;: File exists.
+
+If no other git process is currently running, this probably means a
+git process crashed in this repository earlier. Make sure no other git
+process is running and remove the file manually to continue.
+</pre></div>
+
+
+<p>解决
+    $ rm -f .git/index.lock</p>
+<p>Git global setup</p>
+<p>git config &ndash;global user.name &ldquo;linglim&rdquo;
+git config &ndash;global user.email &ldquo;359128244@qq.com&rdquo;</p>
+<p>Create a new repository</p>
+<p>git clone git@gitlab.com:linglim/shiyanshi.git
+cd shiyanshi
+touch README.md
+git add README.md
+git commit -m &ldquo;add README&rdquo;
+git push -u origin master</p>
+<p>Existing folder or Git repository</p>
+<p>cd existing_folder
+git init
+git remote add origin git@gitlab.com:linglim/shiyanshi.git
+git add .
+git commit
+git push -u origin master</p>
+<p>git status:查看工作区状态状态已更改
+modified已更改</p>
+<p>git diff HEAD &ndash;文件名
+//查看该文件工作区和版本库的不同
+git add :跟踪新文件，将工作区的文件加入到版本库</p>
+<p>git checkout &ndash;文件名
+//丢弃工作区的修改，回到最近一次git commit 或add</p>
+<p>git reset HEAD file
+//已经git add ，可以把暂存区的修改撤销掉（unstage），重新放回工作区：</p>
+                </div>
+                <hr>
+                <div class="alert alert-success">版权声明：<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">自由转载-保持署名</a></div><hr>
+                <!-- /.entry-content -->
+                <div class="comments">
+                <h2>Comments !</h2>
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                           var disqus_identifier = "drafts/git-1.html";
+                           (function() {
+                                var dsq = document.createElement('script');
+                                dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'https://#.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] ||
+                                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                        </script>
+                </div>
+        </article>
+</section>
+        </div><!--/span-->
+
+                <div class="span3 well sidebar-nav" id="sidebar">
+<ul class="nav nav-list">
+<li class="nav-header"><h4><i class="icon-external-link"></i>blogroll</h4></li>
+    <li><a href="https://github.com/Linglim/"><i class="icon-external-link"></i>LinglimGithub</a></li>
+<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
+<li><a href="/" rel="alternate"><i class="icon-bookmark icon-large"></i>atom feed</a></li>
+    <li><a href="https://github.com/Linglim"><i class="icon-LinglimGithub-sign icon-large"></i>LinglimGithub</a></li>
+
+<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+<li>
+<a href="/category/ce-shi.html">
+    <i class="icon-folder-open icon-large"></i>测试
+</a>
+</li>
+<li>
+<a href="/category/ji-zhu-bi-ji.html">
+    <i class="icon-folder-open icon-large"></i>技术笔记
+</a>
+</li>
+<li>
+<a href="/category/misc.html">
+    <i class="icon-folder-open icon-large"></i>misc
+</a>
+</li>
+
+<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+
+
+</ul>        </div><!--/.well -->
+
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+
+
+
+
+        <address id="about">
+            <P>DON'T HESITATE ,JUST DO IT!</P>
+
+                Powered by <a href="http://pelican.notmyidea.org/">Pelican <i class="icon-external-link"></i></a>,
+        </address><!-- /#about -->
+
+       
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+<script type="text/javascript">
+    var disqus_shortname = '#';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/theme/js/jquery-1.7.2.min.js"></script>
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <!-- 设置被百度收录-->
+    <script>
+    (function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+  </body>
+</html>
