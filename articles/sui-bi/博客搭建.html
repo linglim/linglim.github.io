@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Linglim 's Blog - 随笔</title>
+    <title>Blog搭建</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Linglim">
@@ -102,9 +102,20 @@
     <div class="container-fluid">
       <div class="row">
         <div class="span9 offset1" id="content">
-        <div class="article">
-                <h1><a href="/articles/sui-bi/博客搭建.html">Blog搭建</a></h1>
-                <div class="well small"><footer class="post-info">
+<section id="content">
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to Blog搭建">
+                                        Blog搭建
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
 <span class="label">Date</span>
 <abbr class="published" title="2016-09-11T00:00:00+08:00">
         <i class="icon-calendar"></i>2016-09-11(星期日) 00:00
@@ -117,8 +128,8 @@
 
 <span class="label">Tags</span>
 	<a href="/tag/bo-ke.html"><i class="icon-tag"></i>博客</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><h2 id="_1">我的博客搭建：</h2>
+</footer><!-- /.post-info -->                </div>
+                <h2 id="_1">我的博客搭建：</h2>
 <p>keys :pelican+github
 enviroment:win10 + python</p>
 <p> 由于是windows环境搭建出现很多困难，需准备很多python 的环境</p>
@@ -134,37 +145,147 @@ enviroment:win10 + python</p>
 <h2 id="install-preparation">install preparation ：</h2>
 <ol>
 <li>
-<p>python :Python ...</p></li></ol>
-                        <a class="btn primary xsmall" href="/articles/sui-bi/博客搭建.html">more ...</a>
+<p>python :Python 3.4.4 </p>
+</li>
+<li>
+<p>setuptools :win复制脚本，双击运行（http://blog.csdn.net/robertkun/article/details/9751123）</p>
+</li>
+<li><a href="http://lovhttp://lovesoo.org/windows-install-the-pip-method.htmlindows-install-the-pip-method.html">pip 安装(参考)</a>
+<a href="http://www.tuicool.com/articles/INjiui">参考1</a></li>
+</ol>
+<h2 id="pelican">安装pelican</h2>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>`pip install pelican`
+</pre></div>
+
+
+<h2 id="_2">创建博客站点</h2>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>mkdir blog //创建文件夹，名称可根据自己喜欢定
+cd blog
+pelican-quickstart
+</pre></div>
+
+
+<h2 id="blog">blog目录</h2>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>blog/
+
+├── content # 存放输入的markdown或RST源文件 
+│ └── (pages) # 存放手工创建的静态页面，可选 
+│ └── (articles) # 存放手工创建的文章，可选 
+├── output # 存放最终生成的静态博客 
+├── develop_server.sh # 测试服务器 
+├── Makefile # 管理博客的Makefile 
+├── pelicanconf.py # 配置文件 
+└── publishconf.py # 发布文件，可删除
+</pre></div>
+
+
+<h2 id="pelicanpy">配置文件pelican.py</h2>
+<p>主题下载：git clone https://github.com/getpelican/pelican-themes.git
+插件下载：git clone https://github.com/getpelican/pelican-plugins.git</p>
+<p><a href="http://www.tuicool.com/articles/vmiUveq">配置pelican参考</a></p>
+<p><a href="http://www.cnblogs.com/ballwql/p/pelican.html">pelican参考</a></p>
+<p>主题:<code>THEME = 'pelican-themes/xx'</code>
+插件：<code>PLUGIN = 'pelican-themes/xx'</code></p>
+<h2 id="_3">写博文</h2>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>markdown 格式，在content页
+标签：
+Date: 时间
+Title: 标题
+Category:目录
+Tags: 标签
+Slug: 博客搭建
+URL：指定生成的位置（pages/about.html）
+save_as: 保存的位置（pages/about.html）
+Status:drafts(草稿：不被看到)
+</pre></div>
+
+
+<h1 id="_4">标签解读</h1>
+<p>-Slug:</p>
+<ol>
+<li>文档唯一标识，html名，必须唯一.pelican.py中有关url设置
+ <code>ARTICLE_URL = 'articles/{category}/{slug}.html'</code></li>
+<li>官网介绍是：可两篇文章公用一个slug标签，尽管发布的内容不同（语言不通），仍有唯一的相同点——slug（在此处用作识别符）。如果你并未明确定义slug，必须要确保不同语言版本文章的标题是相同的，因为slug将会根据文章标题自动生成。</li>
+<li>
+<p>pelican.py中有关url设置，</p>
+<p><code>ARTICLE_SAVE_AS = 'articles/{category}/{slug}.html</code>
+说明了生成的html存储位置</p>
+</li>
+</ol>
+<p>Status:草稿，这篇文章也会生成html，但不会放在博客的主页及分类索引里，这样普通的读者一般看不到这个文章。</p>
+<h2 id="_5">本地运行预览</h2>
+<p>在blog目录下，博文在content目录下，生成在output目录， -s:配置文件位置
+<code>D:\blog&gt;pelican D:/blog/blog/content -o D:/blog/blog/output -s D:/blog/blog/pelicanconf.py</code></p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>Done: Processed 1 article, 0 drafts, 0 pages and 0 hidden pages in 2.70 seconds.
+</pre></div>
+
+
+<p>预览生成的站点</p>
+<p>For Python 2, run:</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>cd output
+python -m SimpleHTTPServer
+</pre></div>
+
+
+<p>or</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>make html
+</pre></div>
+
+
+<p>For Python 3, run:</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>cd output
+python -m http.server
+</pre></div>
+
+
+<p>or</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>make serve
+</pre></div>
+
+
+<p>在浏览器中输入http://localhost:8000即可看到博文效果。</p>
+<h2 id="github-pages">使用Github Pages创建个人博客页面</h2>
+<p>创建仓库： https://github.com/Linglim/Linglim.github.io</p>
+<p>gitbash 切换环境 cd /&hellip;/&hellip;到git output目录</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>git init
+git add .
+git remote add origin https://github.com/Linglim/Linglim.github.io
+git pull origin master
+git commit -m &#39;first blog&#39;
+git push origin master
+</pre></div>
+
+
+<h1 id="_6">更改模板</h1>
+<p>themes/xx/article下：</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>article :&lt;div class=&quot;alert alert-success&quot;&gt;版权声明：&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh&quot;&gt;自由转载-非商用-非衍生-保持署名&lt;/a&gt;&lt;/div&gt;
+</pre></div>
+
+
+<h1 id="_7">照片保存</h1>
+<p>七牛存储要改照片格式</p>
+<p>七牛处理
+references：<a href="http://www.cnblogs.com/cciejh/archive/2016/02/04/blog_building.html">http://www.cnblogs.com/cciejh/archive/2016/02/04/blog_building.html</a></p>
                 </div>
-        </div>
-        <hr />
-        <div class="article">
-                <h1><a href="/pages/about.html">ABOUT ME</a></h1>
-                <div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2016-08-10T00:00:00+08:00">
-        <i class="icon-calendar"></i>2016-08-10(星期三) 00:00
-</abbr>
-<span class="label">By</span>
-<a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
-<span class="label">Category</span>
-<a href="/category/sui-bi.html"><i class="icon-folder-open"></i>随笔</a>.
-
-
-<span class="label">Tags</span>
-	<a href="/tag/about.html"><i class="icon-tag"></i>ABOUT</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><h1 id="welcome-to-linglims-blog">Welcome to Linglim&rsquo;s Blog.</h1>
-<p>She is lazy,but trying to be diligent</p>
-<p>She is clumsy,but struggling to learning</p>
-<p>She is down-to-earth ,but stilling dreaming of &hellip;</p>
-<p>One day, she will be the one she always wanted.<strong>Fighting ,newbie girl!</strong></p>
-                        <a class="btn primary xsmall" href="/pages/about.html">more ...</a>
+                <hr>
+                <div class="alert alert-success">版权声明：<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">自由转载-保持署名</a></div><hr>
+                <!-- /.entry-content -->
+                <div class="comments">
+                <h2>Comments !</h2>
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                           var disqus_identifier = "articles/sui-bi/博客搭建.html";
+                           (function() {
+                                var dsq = document.createElement('script');
+                                dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'https://#.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] ||
+                                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                        </script>
                 </div>
-        </div>
-        <hr />
-
+        </article>
+</section>
         </div><!--/span-->
 
                 <div class="span3 well sidebar-nav" id="sidebar">
