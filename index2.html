@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>前端基础学习笔记1</title>
+    <title>Linglim 's Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Linglim">
@@ -85,7 +85,7 @@
 						<i class="icon-folder-open icon-large"></i>技术笔记
 					</a>
                   </li>
-                  <li class="active">
+                  <li >
                     <a href="/category/qian-duan.html">
 						<i class="icon-folder-open icon-large"></i>前端
 					</a>
@@ -117,20 +117,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class="span9 offset1" id="content">
-<section id="content">
-        <article>
-                <header>
-                        <h1>
-                                <a href=""
-                                        rel="bookmark"
-                                        title="Permalink to 前端基础学习笔记1">
-                                        前端基础学习笔记1
-                                </a>
-                        </h1>
-                </header>
-                <div class="entry-content">
-                <div class="well">
-<footer class="post-info">
+        <div class="article">
+                <h1><a href="/articles/qian-duan/qian-duan-1.html">前端基础学习笔记1</a></h1>
+                <div class="well small"><footer class="post-info">
 <span class="label">Date</span>
 <abbr class="published" title="2016-07-27T00:00:00+08:00">
         <i class="icon-calendar"></i>2016-07-27(星期三) 00:00
@@ -143,8 +132,8 @@
 
 <span class="label">Tags</span>
 	<a href="/tag/ji-zhu-bi-ji.html"><i class="icon-tag"></i>技术笔记</a>
-</footer><!-- /.post-info -->                </div>
-                <p>Summary：前端教程截图</p>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>Summary：前端教程截图</p>
 <h2 id="_1">前端基础学习笔记</h2>
 <h2 id="1html-and-html5">1html and html5</h2>
 <p><img alt="" src="http://ocr5vav29.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%286%29.png?imageMogr/v2/crop/!600x600a500a250/thumbnail/!500" />
@@ -194,26 +183,65 @@
 <img alt="" src="http://ocr5vav29.bkt.clouddn.com/qd/dom%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%2888%29.png?imageMogr/v2/crop/!1000x600a200a150/thumbnail/!500" /></p>
 <h2 id="5ajax">5.ajax</h2>
 <p><img alt="" src="http://ocr5vav29.bkt.clouddn.com/qd/aj%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%2889%29.png?imageMogr/v2/crop/!800x600a450a130/thumbnail/!500" /></p>
+                        <a class="btn primary xsmall" href="/articles/qian-duan/qian-duan-1.html">more ...</a>
                 </div>
-                <hr>
-                <div class="alert alert-success">版权声明：<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">自由转载-保持署名</a></div><hr>
-                <!-- /.entry-content -->
-                <div class="comments">
-                <h2>Comments !</h2>
-                        <div id="disqus_thread"></div>
-                        <script type="text/javascript">
-                           var disqus_identifier = "articles/qian-duan/qian-duan-1.html";
-                           (function() {
-                                var dsq = document.createElement('script');
-                                dsq.type = 'text/javascript'; dsq.async = true;
-                                dsq.src = 'https://#.disqus.com/embed.js';
-                                (document.getElementsByTagName('head')[0] ||
-                                 document.getElementsByTagName('body')[0]).appendChild(dsq);
-                          })();
-                        </script>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="/articles/hou-duan/novel-config.html">novel的项目spring配置说明</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2016-03-20T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-03-20(星期日) 00:00
+</abbr>
+<span class="label">By</span>
+<a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
+<span class="label">Category</span>
+<a href="/category/hou-duan.html"><i class="icon-folder-open"></i>后端</a>.
+
+
+<span class="label">Tags</span>
+	<a href="/tag/javaweb.html"><i class="icon-tag"></i>javaweb</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>Summary：spring配置文件说明</p>
+<h2 id="_1">前端说明</h2>
+<h2 id="-jsscriptjs">- js处理都放在script.js中</h2>
+<p>/<em>  Handle Backstretch登录界面动态背景，背景在3和8之间循环放映，duration延迟多少秒，fade是阴影
+    /</em>-----------------------------------------------------------------------------------*/
+    var handleBackstretch = function () {
+         $.backstretch([</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    &quot;img/login/3.jpg&quot;
+
+    , &quot;img/login/8.jpg&quot;
+
+    ], {duration: 3000, fade: 750});
+}
+</pre></div>
+
+
+<ul>
+<li>css处理通过查看浏览器</li>
+</ul>
+<h2 id="springcontroller">spring的controller说明</h2>
+<blockquote>
+<p>http://haohaoxuexi.iteye.com/blog/1753271</p>
+<p>控制器Controller 负责处理由DispatcherServlet 分发的请求，它把用户请求的数据经过业务处理层处理之后封装成一个Model ，然后再把该Model 返回给对应的View 进行展示。</p>
+<p>使用：
+只需使用@Controller 标记一个类是Controller ，然后使用@RequestMapping 和@RequestParam 等一些注解用以定义URL ...</p></blockquote>
+                        <a class="btn primary xsmall" href="/articles/hou-duan/novel-config.html">more ...</a>
                 </div>
-        </article>
-</section>
+        </div>
+        <hr />
+
+        <div class="pagination">
+        <ul>
+                        <li class="prev"><a href="/index.html">&larr; Previous</a></li>
+                        <li class=""><a href="/index.html">1</a></li>
+                        <li class="active"><a href="/index2.html">2</a></li>
+                        <li class="next disabled"><a href="#">&rarr; Next</a></li>
+        </ul>
+        </div>
+
         </div><!--/span-->
 
                 <div class="span3 well sidebar-nav" id="sidebar">

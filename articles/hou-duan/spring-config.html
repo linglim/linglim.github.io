@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Linglim 's Blog - 博客</title>
+    <title>spring+hibernate+freemarker配置文件</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Linglim">
@@ -70,7 +70,7 @@
 						<i class="icon-folder-open icon-large"></i>测试
 					</a>
                   </li>
-                  <li >
+                  <li class="active">
                     <a href="/category/hou-duan.html">
 						<i class="icon-folder-open icon-large"></i>后端
 					</a>
@@ -117,44 +117,127 @@
     <div class="container-fluid">
       <div class="row">
         <div class="span9 offset1" id="content">
-        <div class="article">
-                <h1><a href="/articles/sui-bi/博客搭建.html">Blog搭建</a></h1>
-                <div class="well small"><footer class="post-info">
+<section id="content">
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to spring+hibernate+freemarker配置文件">
+                                        spring+hibernate+freemarker配置文件
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2016-09-11T00:00:00+08:00">
-        <i class="icon-calendar"></i>2016-09-11(星期日) 00:00
+<abbr class="published" title="2016-09-20T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-09-20(星期二) 00:00
 </abbr>
 <span class="label">By</span>
 <a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
 <span class="label">Category</span>
-<a href="/category/sui-bi.html"><i class="icon-folder-open"></i>随笔</a>.
+<a href="/category/hou-duan.html"><i class="icon-folder-open"></i>后端</a>.
 
 
 <span class="label">Tags</span>
-	<a href="/tag/bo-ke.html"><i class="icon-tag"></i>博客</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><h2 id="_1">我的博客搭建：</h2>
-<p>keys :pelican+github
-enviroment:win10 + python</p>
-<p> 由于是windows环境搭建出现很多困难，需准备很多python 的环境</p>
+	<a href="/tag/javaweb.html"><i class="icon-tag"></i>javaweb</a>
+</footer><!-- /.post-info -->                </div>
+                <p>Summary：spring+hibernate+freemarker配置文件说明</p>
+<ol>
+<li>web.xml中配置spring及log4j的路径<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>&lt;context-param&gt;
+    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+    &lt;param-value&gt;
+        classpath*:/applicationContext.xml,
+        classpath*:/applicationContext-shiro.xml
+    &lt;/param-value&gt;
+&lt;/context-param&gt;
+</pre></div>
 
-<h2 id="introduction">introduction:</h2>
-<ul>
-<li>pelican:python写的的静态blog生成器，支持markdown，有许多主题和插件，易配置</li>
-<li>setuptools：python 包管理工具，功能：利用EasyInstall自动查找、下载、安装、升级依赖包<blockquote>
-<p>Pelican is a static site generator, written in Python. Highlights include:markdown formats、simple CLI tool、Easy to interface、Completely static output</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="install-preparation">install preparation ：</h2>
+
 <ol>
 <li>
-<p>python :Python ...</p></li></ol>
-                        <a class="btn primary xsmall" href="/articles/sui-bi/博客搭建.html">more ...</a>
-                </div>
-        </div>
-        <hr />
+<p>在spring中配hibernate(applicationContext.xml中)</p>
+<p>//datasource ，加载jdbc.properties
+ <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+    <property name="driverClass" value="${jdbc.driver}" />
+    <property name="jdbcUrl" value="${jdbc.url}" />
+    <property name="user" value="${jdbc.username}" />
+    <property name="password" value="${jdbc.password}" />
+    <property name="initialPoolSize" value="${connection_pools.initial_pool_size}" />
+    <property name="minPoolSize" value="${connection_pools.min_pool_size}" />
+    <property name="maxPoolSize" value="${connection_pools.max_pool_size}" />
+    <property name="maxIdleTime" value="${connection_pools.max_idle_time}" />
+    <property name="acquireIncrement" value="${connection_pools.acquire_increment}" />
+    <property name="checkoutTimeout" value="${connection_pools.checkout_timeout}" />
+</bean></p>
+<p>//配置hibernate类及方言
+<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    <property name="dataSource" ref="dataSource" />
+    <property name="persistenceXmlLocation" value="classpath*:/persistence.xml" />
+    <property name="persistenceUnitName" value="persistenceUnit" />
+    <property name="jpaVendorAdapter">
+        <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+            <property name="showSql" value="false" />
+            <property name="generateDdl" value="true" />
+        </bean>
+    </property>
+    <property name="jpaProperties">
+        <props>
+            <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+            <prop key="hibernate.ejb.naming_strategy">org.hibernate.cfg.ImprovedNamingStrategy</prop>
+            <prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
+            <prop key="hibernate.cache.region.factory_class">${hibernate.cache.region.factory_class}</prop>
+            <prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
+            <prop key="hibernate.jdbc.fetch_size">${hibernate.jdbc.fetch_size}</prop>
+            <prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
+            <prop key="hibernate.connection.isolation">2</prop>
+            <prop key="javax.persistence.validation.mode">none</prop>
+            <prop key="hibernate.search.default.directory_provider">org.hibernate.search.store.FSDirectoryProvider</prop>
+            <prop key="hibernate.search.default.indexBase">${java.io.tmpdir}/${system.project_name}/index</prop>
+        </props>
+    </property>
+</bean></p>
+</li>
+</ol>
+</li>
+</ol>
+<p>3.Spring本身支持了对Freemarker的集成。配置Freemarker的视图解析器。
+sprimg-mvc解析器工作原理：</p>
+<p>（1）Controller的某个方法执行完成以后，返回一个视图（比如：listUser）
+（2）视图解析器要做的工作就是找到某个对象来完成视图的渲染，或者跳转到其他的逻辑视图。这里的渲染对象通常就是我们的jsp文件或者我们下面用的Freemarker(例如listUser.jsp或者listUser.ftl)。
+（3）渲染完成以后，将解析结果发送到客户端浏览器</p>
+<p>在spring中配freemarker(applicationContext.xml中)</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>&lt;bean id=&quot;freeMarkerConfigurer&quot; class=&quot;org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer&quot;&gt;
+        &lt;property name=&quot;templateLoaderPaths&quot; value=&quot;${template.loader_path}&quot; /&gt;
+        &lt;property name=&quot;freemarkerSettings&quot;&gt;
+            &lt;props&gt;
+                &lt;prop key=&quot;defaultEncoding&quot;&gt;${template.encoding}&lt;/prop&gt;
+</pre></div>
 
+
+<p><a href="http://blog.csdn.net/hambition/article/details/22578729">参考：</a></p>
+                </div>
+                <hr>
+                <div class="alert alert-success">版权声明：<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">自由转载-保持署名</a></div><hr>
+                <!-- /.entry-content -->
+                <div class="comments">
+                <h2>Comments !</h2>
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                           var disqus_identifier = "articles/hou-duan/spring-config.html";
+                           (function() {
+                                var dsq = document.createElement('script');
+                                dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'https://#.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] ||
+                                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                        </script>
+                </div>
+        </article>
+</section>
         </div><!--/span-->
 
                 <div class="span3 well sidebar-nav" id="sidebar">

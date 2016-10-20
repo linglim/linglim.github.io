@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Linglim 's Blog - 博客</title>
+    <title>剑指offer试题</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Linglim">
@@ -75,7 +75,7 @@
 						<i class="icon-folder-open icon-large"></i>后端
 					</a>
                   </li>
-                  <li >
+                  <li class="active">
                     <a href="/category/java.html">
 						<i class="icon-folder-open icon-large"></i>java
 					</a>
@@ -117,44 +117,108 @@
     <div class="container-fluid">
       <div class="row">
         <div class="span9 offset1" id="content">
-        <div class="article">
-                <h1><a href="/articles/sui-bi/博客搭建.html">Blog搭建</a></h1>
-                <div class="well small"><footer class="post-info">
+<section id="content">
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to 剑指offer试题">
+                                        剑指offer试题
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2016-09-11T00:00:00+08:00">
-        <i class="icon-calendar"></i>2016-09-11(星期日) 00:00
+<abbr class="published" title="2016-09-22T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-09-22(星期四) 00:00
 </abbr>
 <span class="label">By</span>
 <a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
 <span class="label">Category</span>
-<a href="/category/sui-bi.html"><i class="icon-folder-open"></i>随笔</a>.
+<a href="/category/java.html"><i class="icon-folder-open"></i>java</a>.
 
 
 <span class="label">Tags</span>
-	<a href="/tag/bo-ke.html"><i class="icon-tag"></i>博客</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><h2 id="_1">我的博客搭建：</h2>
-<p>keys :pelican+github
-enviroment:win10 + python</p>
-<p> 由于是windows环境搭建出现很多困难，需准备很多python 的环境</p>
+	<a href="/tag/java.html"><i class="icon-tag"></i>java</a>
+</footer><!-- /.post-info -->                </div>
+                <p>Summary：java试题笔记</p>
+<p>1、java数组长度：</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>row:array[0].length
+lol:array.length
+</pre></div>
 
-<h2 id="introduction">introduction:</h2>
+
+<p>2、java字符串替换</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>return str.toString().replaceAll(&quot; &quot;, &quot;%20&quot;);//空格（//s）替换成%20
+</pre></div>
+
+
+<p>3、java中</p>
 <ul>
-<li>pelican:python写的的静态blog生成器，支持markdown，有许多主题和插件，易配置</li>
-<li>setuptools：python 包管理工具，功能：利用EasyInstall自动查找、下载、安装、升级依赖包<blockquote>
-<p>Pelican is a static site generator, written in Python. Highlights include:markdown formats、simple CLI tool、Easy to interface、Completely static output</p>
-</blockquote>
-</li>
+<li>值传递：</li>
+<li>引用传递</li>
 </ul>
-<h2 id="install-preparation">install preparation ：</h2>
-<ol>
-<li>
-<p>python :Python ...</p></li></ol>
-                        <a class="btn primary xsmall" href="/articles/sui-bi/博客搭建.html">more ...</a>
-                </div>
-        </div>
-        <hr />
+<p>4、java字符串</p>
+<ul>
+<li>String 字符串常量：</li>
+</ul>
+<blockquote>
+<p>不可改变的量，每次改变等同于生成新的String对象，然后将指针指向String对象，常变得变量不用tring,影响性能，内存回收工作，速度慢</p>
+</blockquote>
+<ul>
+<li>StringBuffer 字符串变量（线程安全）</li>
+</ul>
+<blockquote>
+<p>每次结果都会对 StringBuffer 对象本身进行操作，而不是生成新的对象，再改变对象引用。字符串对象经常改变用。但特别情况下， String 对象的字符串拼接其实是被 JVM 解释成了 StringBuffer 对象的拼接，所以这些时候 String 对象的速度并不会比 StringBuffer 对象慢，而特别是以下的字符串对象生成中， String 效率是远要比 StringBuffer 快的：</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span> String S1 = “This is only a” + “ simple” + “ test”;
+ StringBuffer Sb = new StringBuilder(“This is only a”).append(“ simple”).append(“ test”);
 
+String S1 = S2 +S3 + S4;//这种特慢
+</pre></div>
+
+
+<p>StringBuilder 字符串变量（非线程安全）</p>
+<blockquote>
+<p>在大部分情况下 StringBuilder &gt; StringBuffer</p>
+</blockquote>
+<p>5、异常处理
+finally语句在try或catch中的return语句执行之后返回之前执行且finally里的修改语句不能影响try或catch中 return已经确定的返回值，若finally里也有return语句则覆盖try或catch中的return语句直接返回。Try catch finally获取异常错误的结构，try中有两种情况： 1.try中没有异常时，但是有return等跳转语句，这样会引发程序控制流离开当前的try,自动完成finally中资源的释放。 2try中有异常时，catch在获取到异常之前，进行finally执行，接着执行catch中的语句。 由于本题中的finally中有return语句，将try中的return语句覆盖，程序直接跳出。</p>
+<p><a href="http://blog.csdn.net/hguisu/article/details/6155636">异常分类：</a>
+<img alt="" src="http://img.my.csdn.net/uploads/201211/27/1354020417_5176.jpg" />
+Throwable:分异常和错误
+错误：程序无法处理的。jvm或执行应用时问题如OutOfMemoryError
+异常：程序本身可处理
+    RuntimeException 类及其子类表示“JVM 常用操作”引发的错误。例如，若试图使用空值对象引用、除数为零或数组越界，则分别引发运行时异常（NullPointerException、ArithmeticException）和 ArrayIndexOutOfBoundException。
+java异常还可分：
+可查的异常（checked exceptions）：编译器要求必须处理的，必须抛出货try-catch
+不可查的异常（unchecked exceptions）：包括运行时异常（RuntimeException与其子类）和错误（Error）。
+Exception异常：
+运行时异常：都是RuntimeException类及其子类异常，如NullPointerException(空指针异常)，不检查异常
+非运行时异常（编译异常）：是RuntimeException以外的异常，从程序语法角度讲是必须进行处理的异常，如果不处理，程序就不能编译通过。如IOException、SQLException等以及用户自定义的Exception异常，一般情况下不自定义检查异常。</p>
+                </div>
+                <hr>
+                <div class="alert alert-success">版权声明：<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">自由转载-保持署名</a></div><hr>
+                <!-- /.entry-content -->
+                <div class="comments">
+                <h2>Comments !</h2>
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                           var disqus_identifier = "articles/java/剑指offer试题.html";
+                           (function() {
+                                var dsq = document.createElement('script');
+                                dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'https://#.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] ||
+                                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                        </script>
+                </div>
+        </article>
+</section>
         </div><!--/span-->
 
                 <div class="span3 well sidebar-nav" id="sidebar">

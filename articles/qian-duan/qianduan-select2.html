@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Linglim 's Blog - 博客</title>
+    <title>select2使用参考</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Linglim">
@@ -85,7 +85,7 @@
 						<i class="icon-folder-open icon-large"></i>技术笔记
 					</a>
                   </li>
-                  <li >
+                  <li class="active">
                     <a href="/category/qian-duan.html">
 						<i class="icon-folder-open icon-large"></i>前端
 					</a>
@@ -117,44 +117,64 @@
     <div class="container-fluid">
       <div class="row">
         <div class="span9 offset1" id="content">
-        <div class="article">
-                <h1><a href="/articles/sui-bi/博客搭建.html">Blog搭建</a></h1>
-                <div class="well small"><footer class="post-info">
+<section id="content">
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to select2使用参考">
+                                        select2使用参考
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2016-09-11T00:00:00+08:00">
-        <i class="icon-calendar"></i>2016-09-11(星期日) 00:00
+<abbr class="published" title="2016-10-19T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-10-19(星期三) 00:00
 </abbr>
 <span class="label">By</span>
 <a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
 <span class="label">Category</span>
-<a href="/category/sui-bi.html"><i class="icon-folder-open"></i>随笔</a>.
+<a href="/category/qian-duan.html"><i class="icon-folder-open"></i>前端</a>.
 
 
 <span class="label">Tags</span>
-	<a href="/tag/bo-ke.html"><i class="icon-tag"></i>博客</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><h2 id="_1">我的博客搭建：</h2>
-<p>keys :pelican+github
-enviroment:win10 + python</p>
-<p> 由于是windows环境搭建出现很多困难，需准备很多python 的环境</p>
-
-<h2 id="introduction">introduction:</h2>
+	<a href="/tag/jsying-yong.html"><i class="icon-tag"></i>js应用</a>
+</footer><!-- /.post-info -->                </div>
+                <p>Summary：select2笔记 </p>
+<p>简述：解决选择下拉框选项太多，不方便找的情况。可以模糊输入匹配选择</p>
+<p><a href="http://select2.github.io/examples.html">官网案例</a>：</p>
 <ul>
-<li>pelican:python写的的静态blog生成器，支持markdown，有许多主题和插件，易配置</li>
-<li>setuptools：python 包管理工具，功能：利用EasyInstall自动查找、下载、安装、升级依赖包<blockquote>
-<p>Pelican is a static site generator, written in Python. Highlights include:markdown formats、simple CLI tool、Easy to interface、Completely static output</p>
-</blockquote>
+<li>
+<p>中文搜索匹配：Customizing how results are matched</p>
+</li>
+<li>
+<p><a href="http://m.blog.csdn.net/article/details?id=52575823">拼音匹配汉字</a>：亲测可用，但是数据太多会很慢</p>
 </li>
 </ul>
-<h2 id="install-preparation">install preparation ：</h2>
-<ol>
-<li>
-<p>python :Python ...</p></li></ol>
-                        <a class="btn primary xsmall" href="/articles/sui-bi/博客搭建.html">more ...</a>
                 </div>
-        </div>
-        <hr />
-
+                <hr>
+                <div class="alert alert-success">版权声明：<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">自由转载-保持署名</a></div><hr>
+                <!-- /.entry-content -->
+                <div class="comments">
+                <h2>Comments !</h2>
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                           var disqus_identifier = "articles/qian-duan/qianduan-select2.html";
+                           (function() {
+                                var dsq = document.createElement('script');
+                                dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'https://#.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] ||
+                                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                        </script>
+                </div>
+        </article>
+</section>
         </div><!--/span-->
 
                 <div class="span3 well sidebar-nav" id="sidebar">

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Linglim 's Blog - 博客</title>
+    <title>novel的项目spring配置说明</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Linglim">
@@ -70,7 +70,7 @@
 						<i class="icon-folder-open icon-large"></i>测试
 					</a>
                   </li>
-                  <li >
+                  <li class="active">
                     <a href="/category/hou-duan.html">
 						<i class="icon-folder-open icon-large"></i>后端
 					</a>
@@ -117,44 +117,154 @@
     <div class="container-fluid">
       <div class="row">
         <div class="span9 offset1" id="content">
-        <div class="article">
-                <h1><a href="/articles/sui-bi/博客搭建.html">Blog搭建</a></h1>
-                <div class="well small"><footer class="post-info">
+<section id="content">
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to novel的项目spring配置说明">
+                                        novel的项目spring配置说明
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2016-09-11T00:00:00+08:00">
-        <i class="icon-calendar"></i>2016-09-11(星期日) 00:00
+<abbr class="published" title="2016-03-20T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-03-20(星期日) 00:00
 </abbr>
 <span class="label">By</span>
 <a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
 <span class="label">Category</span>
-<a href="/category/sui-bi.html"><i class="icon-folder-open"></i>随笔</a>.
+<a href="/category/hou-duan.html"><i class="icon-folder-open"></i>后端</a>.
 
 
 <span class="label">Tags</span>
-	<a href="/tag/bo-ke.html"><i class="icon-tag"></i>博客</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><h2 id="_1">我的博客搭建：</h2>
-<p>keys :pelican+github
-enviroment:win10 + python</p>
-<p> 由于是windows环境搭建出现很多困难，需准备很多python 的环境</p>
+	<a href="/tag/javaweb.html"><i class="icon-tag"></i>javaweb</a>
+</footer><!-- /.post-info -->                </div>
+                <p>Summary：spring配置文件说明</p>
+<h2 id="_1">前端说明</h2>
+<h2 id="-jsscriptjs">- js处理都放在script.js中</h2>
+<p>/<em>  Handle Backstretch登录界面动态背景，背景在3和8之间循环放映，duration延迟多少秒，fade是阴影
+    /</em>-----------------------------------------------------------------------------------*/
+    var handleBackstretch = function () {
+         $.backstretch([</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    &quot;img/login/3.jpg&quot;
 
-<h2 id="introduction">introduction:</h2>
+    , &quot;img/login/8.jpg&quot;
+
+    ], {duration: 3000, fade: 750});
+}
+</pre></div>
+
+
 <ul>
-<li>pelican:python写的的静态blog生成器，支持markdown，有许多主题和插件，易配置</li>
-<li>setuptools：python 包管理工具，功能：利用EasyInstall自动查找、下载、安装、升级依赖包<blockquote>
-<p>Pelican is a static site generator, written in Python. Highlights include:markdown formats、simple CLI tool、Easy to interface、Completely static output</p>
-</blockquote>
-</li>
+<li>css处理通过查看浏览器</li>
 </ul>
-<h2 id="install-preparation">install preparation ：</h2>
-<ol>
-<li>
-<p>python :Python ...</p></li></ol>
-                        <a class="btn primary xsmall" href="/articles/sui-bi/博客搭建.html">more ...</a>
-                </div>
-        </div>
-        <hr />
+<h2 id="springcontroller">spring的controller说明</h2>
+<blockquote>
+<p>http://haohaoxuexi.iteye.com/blog/1753271</p>
+<p>控制器Controller 负责处理由DispatcherServlet 分发的请求，它把用户请求的数据经过业务处理层处理之后封装成一个Model ，然后再把该Model 返回给对应的View 进行展示。</p>
+<p>使用：
+只需使用@Controller 标记一个类是Controller ，然后使用@RequestMapping 和@RequestParam 等一些注解用以定义URL 请求和Controller 方法之间的映射，这样的Controller 就能被外界访问到。
+例如：</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>@Controller
+</pre></div>
 
+
+<p>@RequestMapping ( &ldquo;/test&rdquo; )//可不写
+  public class MyController {
+    @RequestMapping ( &ldquo;/showView&rdquo; )
+    public ModelAndView showView() {
+       ModelAndView modelAndView = new ModelAndView();
+       modelAndView.setViewName( &ldquo;viewName&rdquo; );
+       modelAndView.addObject( &rdquo; 需要放到 model 中的属性名称 &rdquo; , &rdquo; 对应的属性值，它是一个对象 &rdquo; );
+       return modelAndView;
+    }</p>
+<p>} 
+  <!--1-->
+  @Controller
+  @RequestMapping ( &ldquo;/test&rdquo; )//controller后面加了mapping表示一下的都是在&rdquo;/test&rdquo;目录下</p>
+<hr />
+<p>&lt;!2&ndash;使用 URI 模板 如/test/hello/showView/2.do，此时变量1被赋值为hello、变量2被赋值为2&ndash;&gt;
+  @Controller<br />
+  @RequestMapping ( &ldquo;/test/{variable1}&rdquo; )<br />
+  public class MyController {<br />
+     @RequestMapping ( &ldquo;/showView/{variable2}&rdquo; )<br />
+      public ModelAndView showView( @PathVariable String variable1, @PathVariable ( &ldquo;variable2&rdquo; ) int variable2) {  </p>
+<hr />
+<p>&lt;!3&ndash;使用 @RequestParam 绑定 HttpServletRequest 请求参数到控制器方法参数,绑定了参数name 到控制器方法参数name ，绑定了参数age 到控制器方法参数age 。其中name是非必要的参数 &ndash;&gt;
+   @RequestMapping ( &ldquo;requestParam&rdquo; )
+     public String testRequestParam( @RequestParam(required=false) String name, @RequestParam ( &ldquo;age&rdquo; ) int age) {
+         return &ldquo;requestParam&rdquo; ;
+      } </p>
+<hr />
+<p>《！&ndash;4使用 @CookieValue 绑定 cookie 的值到 Controller 方法参数 ，上面一共绑定了两个参数，一个是明确指定要绑定的是名称为hello 的cookie 的值，一个是没有指定。》
+    @RequestMapping ( &ldquo;cookieValue&rdquo; )
+    public String testCookieValue( @CookieValue ( &ldquo;hello&rdquo; ) String cookieValue, @CookieValue String hello) {
+       System. out .println(cookieValue + &ldquo;-----------&rdquo; + hello);
+       return &ldquo;cookieValue&rdquo; ;
+    } </p>
+<hr />
+<p>《！&ndash;5使用 @RequestHeader 注解绑定 HttpServletRequest 头信息到 Controller 方法参数，   在上面的代码中我们使用了 @RequestHeader 绑定了 HttpServletRequest 请求头 host 到 Controller 的方法参数。上面方法的三个参数都将会赋予同一个值，由此我们可以知道在绑定请求头参数到方法参数的时候规则和 @PathVariable 、 @RequestParam 以及 @CookieValue 是一样的，处理头无大小写之分 》
+  @RequestMapping ( &ldquo;testRequestHeader&rdquo; )
+  public String testRequestHeader( @RequestHeader ( &ldquo;Host&rdquo; ) String hostAddr, @RequestHeader String Host, @RequestHeader String host ) {
+      System. out .println(hostAddr + &ldquo;-----&rdquo; + Host + &ldquo;-----&rdquo; + host );
+      return &ldquo;requestHeader&rdquo; ;
+  } </p>
+<hr />
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>（五） @RequestMapping 的一些高级应用
+</pre></div>
+
+
+<p>1.params属性 
+  《它们分别表示参数param1 的值必须等于value1 ，参数param2 必须存在，值无所谓，参数param3 必须不存在，只有当请求/testParams.do 并且满足指定的三个参数条件的时候才能访问到该方法。》
+     @RequestMapping (value= &ldquo;testParams&rdquo; , params={ &ldquo;param1=value1&rdquo; , &ldquo;param2&rdquo; , &ldquo;!param3&rdquo; })
+  public String testParams() {
+     System. out .println( &ldquo;test Params...........&rdquo; );
+     return &ldquo;testParams&rdquo; ;
+  } 
+2.method属性 
+  《就使用method 参数限制了以GET 或DELETE 方法请求/testMethod.do 的时候才能访问到该Controller 的testMethod 方法。 》
+    @RequestMapping (value= &ldquo;testMethod&rdquo; , method={RequestMethod. GET , RequestMethod. DELETE })
+    public String testMethod() {
+       return &ldquo;method&rdquo; ;
+    } </p>
+</blockquote>
+<h2 id="spring">有关spring的注解：</h2>
+<blockquote>
+<p>cnblogs.com/xdp-gacl/p/3495887.html</p>
+</blockquote>
+<h2 id="_2">常犯愚蠢问题汇总</h2>
+<p>1、Object【】忘了【】不是数组，使得dao层提示没传入第二个变量
+2、jsp中form的action=“url”这个路径是在过滤器设置的</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span> `&lt;servlet-mapping&gt;`
+        &lt;servlet-name&gt;test&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/service/*&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+</pre></div>
+                </div>
+                <hr>
+                <div class="alert alert-success">版权声明：<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">自由转载-保持署名</a></div><hr>
+                <!-- /.entry-content -->
+                <div class="comments">
+                <h2>Comments !</h2>
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                           var disqus_identifier = "articles/hou-duan/novel-config.html";
+                           (function() {
+                                var dsq = document.createElement('script');
+                                dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'https://#.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] ||
+                                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                        </script>
+                </div>
+        </article>
+</section>
         </div><!--/span-->
 
                 <div class="span3 well sidebar-nav" id="sidebar">

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Linglim 's Blog - 博客</title>
+    <title>Linglim 's Blog - javaweb</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Linglim">
@@ -118,39 +118,163 @@
       <div class="row">
         <div class="span9 offset1" id="content">
         <div class="article">
-                <h1><a href="/articles/sui-bi/博客搭建.html">Blog搭建</a></h1>
+                <h1><a href="/articles/hou-duan/spring-config.html">spring+hibernate+freemarker配置文件</a></h1>
                 <div class="well small"><footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2016-09-11T00:00:00+08:00">
-        <i class="icon-calendar"></i>2016-09-11(星期日) 00:00
+<abbr class="published" title="2016-09-20T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-09-20(星期二) 00:00
 </abbr>
 <span class="label">By</span>
 <a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
 <span class="label">Category</span>
-<a href="/category/sui-bi.html"><i class="icon-folder-open"></i>随笔</a>.
+<a href="/category/hou-duan.html"><i class="icon-folder-open"></i>后端</a>.
 
 
 <span class="label">Tags</span>
-	<a href="/tag/bo-ke.html"><i class="icon-tag"></i>博客</a>
+	<a href="/tag/javaweb.html"><i class="icon-tag"></i>javaweb</a>
 </footer><!-- /.post-info --></div>
-                <div class="summary"><h2 id="_1">我的博客搭建：</h2>
-<p>keys :pelican+github
-enviroment:win10 + python</p>
-<p> 由于是windows环境搭建出现很多困难，需准备很多python 的环境</p>
+                <div class="summary"><p>Summary：spring+hibernate+freemarker配置文件说明</p>
+<ol>
+<li>web.xml中配置spring及log4j的路径<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>&lt;context-param&gt;
+    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+    &lt;param-value&gt;
+        classpath*:/applicationContext.xml,
+        classpath*:/applicationContext-shiro.xml
+    &lt;/param-value&gt;
+&lt;/context-param&gt;
+</pre></div>
 
-<h2 id="introduction">introduction:</h2>
-<ul>
-<li>pelican:python写的的静态blog生成器，支持markdown，有许多主题和插件，易配置</li>
-<li>setuptools：python 包管理工具，功能：利用EasyInstall自动查找、下载、安装、升级依赖包<blockquote>
-<p>Pelican is a static site generator, written in Python. Highlights include:markdown formats、simple CLI tool、Easy to interface、Completely static output</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="install-preparation">install preparation ：</h2>
+
 <ol>
 <li>
-<p>python :Python ...</p></li></ol>
-                        <a class="btn primary xsmall" href="/articles/sui-bi/博客搭建.html">more ...</a>
+<p>在spring中配hibernate(applicationContext.xml中)</p>
+<p>//datasource ，加载jdbc.properties
+ <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+    <property name="driverClass" value="${jdbc.driver}" />
+    <property name="jdbcUrl" value="${jdbc.url}" />
+    <property name="user" value="${jdbc.username}" />
+    <property name="password" value="${jdbc.password}" />
+    <property name="initialPoolSize" value="${connection_pools.initial_pool_size}" />
+    <property name="minPoolSize" value="${connection_pools.min_pool_size}" />
+    <property name="maxPoolSize" value="${connection_pools.max_pool_size}" />
+    <property name="maxIdleTime" value="${connection_pools.max_idle_time}" />
+    <property name="acquireIncrement" value="${connection_pools.acquire_increment}" />
+    <property name="checkoutTimeout" value="${connection_pools.checkout_timeout}" />
+</bean></p>
+<p>//配置hibernate类及方言
+<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    <property name="dataSource" ref="dataSource" />
+    <property name="persistenceXmlLocation" value="classpath*:/persistence.xml" />
+    <property name="persistenceUnitName" value="persistenceUnit" />
+    <property name="jpaVendorAdapter">
+        <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+            <property name="showSql" value="false" />
+            <property name="generateDdl" value="true" />
+        </bean>
+    </property>
+    <property name="jpaProperties">
+        <props>
+            <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+            <prop key="hibernate.ejb.naming_strategy">org.hibernate.cfg.ImprovedNamingStrategy</prop>
+            <prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
+            <prop key="hibernate.cache.region.factory_class">${hibernate.cache.region.factory_class}</prop>
+            <prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
+            <prop key="hibernate.jdbc.fetch_size">${hibernate.jdbc.fetch_size}</prop>
+            <prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
+            <prop key="hibernate.connection.isolation">2</prop>
+            <prop key="javax.persistence.validation.mode">none ...</prop></props></property></property></property></property></bean></p></li></ol></li></ol>
+                        <a class="btn primary xsmall" href="/articles/hou-duan/spring-config.html">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="/articles/hou-duan/部署.html">中药材项目部署</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2016-09-20T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-09-20(星期二) 00:00
+</abbr>
+<span class="label">By</span>
+<a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
+<span class="label">Category</span>
+<a href="/category/hou-duan.html"><i class="icon-folder-open"></i>后端</a>.
+
+
+<span class="label">Tags</span>
+	<a href="/tag/javaweb.html"><i class="icon-tag"></i>javaweb</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>Summary：部署</p>
+<h2 id="java-web">java web部署</h2>
+<h3 id="_1">概要</h3>
+<ol>
+<li>下载配置服务器环境或直接将你电脑的jdk，tomcat，mysql复制粘贴到服务器</li>
+<li>
+<p>打成war就可以，拷贝到你的服务器的tomcat下的webapps中，启动服务器，访问：http://IP:port/项目名称</p>
+</li>
+<li>
+<p>登陆服务器</p>
+</li>
+</ol>
+<h3 id="_2">详细：</h3>
+<ol>
+<li>
+<p>将工程打包（<em>.war或者</em>.ear）。eclipse下右击项目文件，选择弹出菜单中的“Export”菜单，选择“J2EE”下面的随便一个，点击下一步，选在保存目录，输入文件名后，点击完成就行。</p>
+</li>
+<li>
+<p>部署，通过winscp连接远程服务器。把工程文件放入到tomcat安装目录下的webapps下，举例：tomcat6.0\apache-tomcat-6.0.32\webapps。</p>
+<p>连接远程:</p>
+<ul>
+<li>
+<p>ip:123.57.72.171（好像是阿里云）</p>
+</li>
+<li>
+<p>windows ...</p></li></ul></li></ol>
+                        <a class="btn primary xsmall" href="/articles/hou-duan/部署.html">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="/articles/hou-duan/novel-config.html">novel的项目spring配置说明</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2016-03-20T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-03-20(星期日) 00:00
+</abbr>
+<span class="label">By</span>
+<a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
+<span class="label">Category</span>
+<a href="/category/hou-duan.html"><i class="icon-folder-open"></i>后端</a>.
+
+
+<span class="label">Tags</span>
+	<a href="/tag/javaweb.html"><i class="icon-tag"></i>javaweb</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>Summary：spring配置文件说明</p>
+<h2 id="_1">前端说明</h2>
+<h2 id="-jsscriptjs">- js处理都放在script.js中</h2>
+<p>/<em>  Handle Backstretch登录界面动态背景，背景在3和8之间循环放映，duration延迟多少秒，fade是阴影
+    /</em>-----------------------------------------------------------------------------------*/
+    var handleBackstretch = function () {
+         $.backstretch([</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    &quot;img/login/3.jpg&quot;
+
+    , &quot;img/login/8.jpg&quot;
+
+    ], {duration: 3000, fade: 750});
+}
+</pre></div>
+
+
+<ul>
+<li>css处理通过查看浏览器</li>
+</ul>
+<h2 id="springcontroller">spring的controller说明</h2>
+<blockquote>
+<p>http://haohaoxuexi.iteye.com/blog/1753271</p>
+<p>控制器Controller 负责处理由DispatcherServlet 分发的请求，它把用户请求的数据经过业务处理层处理之后封装成一个Model ，然后再把该Model 返回给对应的View 进行展示。</p>
+<p>使用：
+只需使用@Controller 标记一个类是Controller ，然后使用@RequestMapping 和@RequestParam 等一些注解用以定义URL ...</p></blockquote>
+                        <a class="btn primary xsmall" href="/articles/hou-duan/novel-config.html">more ...</a>
                 </div>
         </div>
         <hr />

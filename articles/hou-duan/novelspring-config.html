@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Linglim 's Blog - 博客</title>
+    <title>zhongyaocai项目部署</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Linglim">
@@ -70,7 +70,7 @@
 						<i class="icon-folder-open icon-large"></i>测试
 					</a>
                   </li>
-                  <li >
+                  <li class="active">
                     <a href="/category/hou-duan.html">
 						<i class="icon-folder-open icon-large"></i>后端
 					</a>
@@ -117,44 +117,70 @@
     <div class="container-fluid">
       <div class="row">
         <div class="span9 offset1" id="content">
-        <div class="article">
-                <h1><a href="/articles/sui-bi/博客搭建.html">Blog搭建</a></h1>
-                <div class="well small"><footer class="post-info">
+<section id="content">
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to zhongyaocai项目部署">
+                                        zhongyaocai项目部署
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2016-09-11T00:00:00+08:00">
-        <i class="icon-calendar"></i>2016-09-11(星期日) 00:00
+<abbr class="published" title="2016-09-20T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-09-20(星期二) 00:00
 </abbr>
 <span class="label">By</span>
 <a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
 <span class="label">Category</span>
-<a href="/category/sui-bi.html"><i class="icon-folder-open"></i>随笔</a>.
+<a href="/category/hou-duan.html"><i class="icon-folder-open"></i>后端</a>.
 
 
 <span class="label">Tags</span>
-	<a href="/tag/bo-ke.html"><i class="icon-tag"></i>博客</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><h2 id="_1">我的博客搭建：</h2>
-<p>keys :pelican+github
-enviroment:win10 + python</p>
-<p> 由于是windows环境搭建出现很多困难，需准备很多python 的环境</p>
-
-<h2 id="introduction">introduction:</h2>
-<ul>
-<li>pelican:python写的的静态blog生成器，支持markdown，有许多主题和插件，易配置</li>
-<li>setuptools：python 包管理工具，功能：利用EasyInstall自动查找、下载、安装、升级依赖包<blockquote>
-<p>Pelican is a static site generator, written in Python. Highlights include:markdown formats、simple CLI tool、Easy to interface、Completely static output</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="install-preparation">install preparation ：</h2>
-<ol>
-<li>
-<p>python :Python ...</p></li></ol>
-                        <a class="btn primary xsmall" href="/articles/sui-bi/博客搭建.html">more ...</a>
+	<a href="/tag/javaweb.html"><i class="icon-tag"></i>javaweb</a>
+<span class="label">Lang</span>
+	<a href="/articles/hou-duan/novelspring-config.html"><i class="icon-edit"></i>zh</a>
+</footer><!-- /.post-info -->                </div>
+                <p>Summary：部署</p>
+<h2 id="java-web">java web部署</h2>
+<p>1、打成war就可以，拷贝到你的服务器的tomcat下的webapps中，启动服务器，访问：http://IP:port/项目名称
+2、登陆服务器</p>
+<p>关于打包：
+1、1.将工程打包（<em>.war或者</em>.ear）。右击项目文件，选择弹出菜单中的“Export”菜单，选择“J2EE”下面的随便那个，点击下一步，选在保存目录，输入文件名后，点击完成就行。
+2. 在刚才选择的目录里面找到生成的工程文件，把工程文件放入到tomcat安装目录下的webapps下，就像这个：D:\tomcat6.0\apache-tomcat-6.0.32\webapps。
+3.   然后启动tomcat,在tomcat的安装目录下，找到bin目录下的startup文件，点击就可以启动tomcat了。
+4.   接下来，在浏览器里面输入url就可以了访问我们想访问的东西了，大功告成。</p>
+<p>参考：
+http://blog.csdn.net/change_on/article/details/49205901</p>
+<p>ip:123.57.72.171（好像是阿里云）
+windows：可远程桌面登陆
+linux：putty登陆或云账号登陆
+然后下载配置环境或直接将你电脑的jdk，tomcat，mysql复制粘贴到服务器</p>
                 </div>
-        </div>
-        <hr />
-
+                <hr>
+                <div class="alert alert-success">版权声明：<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">自由转载-保持署名</a></div><hr>
+                <!-- /.entry-content -->
+                <div class="comments">
+                <h2>Comments !</h2>
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                           var disqus_identifier = "articles/hou-duan/novelspring-config.html";
+                           (function() {
+                                var dsq = document.createElement('script');
+                                dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'https://#.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] ||
+                                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                        </script>
+                </div>
+        </article>
+</section>
         </div><!--/span-->
 
                 <div class="span3 well sidebar-nav" id="sidebar">
@@ -203,56 +229,6 @@ enviroment:win10 + python</p>
 </li>
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-<li class="tag-[<pelican.contents.Article object at 0x0000000004878B00>]">
-    <a href="/tag/shi-ti.html">
-        <i class="icon-tag icon-large"></i>试题
-    </a>
-</li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000048CA908>]">
-    <a href="/tag/about.html">
-        <i class="icon-tag icon-large"></i>ABOUT
-    </a>
-</li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000048FEBA8>]">
-    <a href="/tag/java.html">
-        <i class="icon-tag icon-large"></i>java
-    </a>
-</li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000048F24E0>]">
-    <a href="/tag/shu-ju-jie-gou.html">
-        <i class="icon-tag icon-large"></i>数据结构
-    </a>
-</li>
-<li class="tag-[<pelican.contents.Article object at 0x0000000004939E80>]">
-    <a href="/tag/test.html">
-        <i class="icon-tag icon-large"></i>test
-    </a>
-</li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000048CABA8>]">
-    <a href="/tag/bo-ke.html">
-        <i class="icon-tag icon-large"></i>博客
-    </a>
-</li>
-<li class="tag-[<pelican.contents.Article object at 0x0000000004935F98>]">
-    <a href="/tag/jsying-yong.html">
-        <i class="icon-tag icon-large"></i>js应用
-    </a>
-</li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000048DE400>, <pelican.contents.Article object at 0x0000000004878A90>]">
-    <a href="/tag/ji-zhu-bi-ji.html">
-        <i class="icon-tag icon-large"></i>技术笔记
-    </a>
-</li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000049396D8>, <pelican.contents.Article object at 0x00000000048FE048>, <pelican.contents.Article object at 0x000000000492CCF8>]">
-    <a href="/tag/javaweb.html">
-        <i class="icon-tag icon-large"></i>javaweb
-    </a>
-</li>
-
-<!---->
-
-
-
 
 
 </ul>        </div><!--/.well -->

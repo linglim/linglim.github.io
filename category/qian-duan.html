@@ -71,6 +71,16 @@
 					</a>
                   </li>
                   <li >
+                    <a href="/category/hou-duan.html">
+						<i class="icon-folder-open icon-large"></i>后端
+					</a>
+                  </li>
+                  <li >
+                    <a href="/category/java.html">
+						<i class="icon-folder-open icon-large"></i>java
+					</a>
+                  </li>
+                  <li >
                     <a href="/category/ji-zhu-bi-ji.html">
 						<i class="icon-folder-open icon-large"></i>技术笔记
 					</a>
@@ -78,6 +88,11 @@
                   <li class="active">
                     <a href="/category/qian-duan.html">
 						<i class="icon-folder-open icon-large"></i>前端
+					</a>
+                  </li>
+                  <li >
+                    <a href="/category/shu-ju-jie-gou.html">
+						<i class="icon-folder-open icon-large"></i>数据结构
 					</a>
                   </li>
                   <li >
@@ -102,6 +117,79 @@
     <div class="container-fluid">
       <div class="row">
         <div class="span9 offset1" id="content">
+        <div class="article">
+                <h1><a href="/articles/qian-duan/qianduan-select2.html">select2使用参考</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2016-10-19T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-10-19(星期三) 00:00
+</abbr>
+<span class="label">By</span>
+<a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
+<span class="label">Category</span>
+<a href="/category/qian-duan.html"><i class="icon-folder-open"></i>前端</a>.
+
+
+<span class="label">Tags</span>
+	<a href="/tag/jsying-yong.html"><i class="icon-tag"></i>js应用</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>Summary：select2笔记 </p>
+<p>简述：解决选择下拉框选项太多，不方便找的情况。可以模糊输入匹配选择</p>
+<p><a href="http://select2.github.io/examples.html">官网案例</a>：</p>
+<ul>
+<li>
+<p>中文搜索匹配：Customizing how results are matched</p>
+</li>
+<li>
+<p><a href="http://m.blog.csdn.net/article/details?id=52575823">拼音匹配汉字</a>：亲测可用，但是数据太多会很慢</p>
+</li>
+</ul>
+                        <a class="btn primary xsmall" href="/articles/qian-duan/qianduan-select2.html">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="/articles/qian-duan/js-shiti.html">js试题</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2016-09-21T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-09-21(星期三) 00:00
+</abbr>
+<span class="label">By</span>
+<a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
+<span class="label">Category</span>
+<a href="/category/qian-duan.html"><i class="icon-folder-open"></i>前端</a>.
+
+
+<span class="label">Tags</span>
+	<a href="/tag/shi-ti.html"><i class="icon-tag"></i>试题</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>Summary：js试题</p>
+<p>1、找出元素 item 在给定数组 arr 中的位置</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>function indexOf(arr,item){
+  if(!arr){
+ return -1;
+  }
+  for(var i=0;i&lt;arr.length;i++){
+if(arr[i]==item){
+  return i;
+}
+  }
+  return -1;
+}
+</pre></div>
+
+
+<p>注意：js中的 var arr1=arr;改变arr1就会改变arr
+数组复制：
+1. slice(start,end)<br />
+    slice() 方法可从已有的数组中返回选定的元素。
+2. concat() concat() 方法用于连接两个或多个数组。
+    该方法不会改变现有的数组 ...</p>
+                        <a class="btn primary xsmall" href="/articles/qian-duan/js-shiti.html">more ...</a>
+                </div>
+        </div>
+        <hr />
         <div class="article">
                 <h1><a href="/articles/qian-duan/qian-duan-1.html">前端基础学习笔记1</a></h1>
                 <div class="well small"><footer class="post-info">
@@ -190,6 +278,16 @@
 </a>
 </li>
 <li>
+<a href="/category/hou-duan.html">
+    <i class="icon-folder-open icon-large"></i>后端
+</a>
+</li>
+<li>
+<a href="/category/java.html">
+    <i class="icon-folder-open icon-large"></i>java
+</a>
+</li>
+<li>
 <a href="/category/ji-zhu-bi-ji.html">
     <i class="icon-folder-open icon-large"></i>技术笔记
 </a>
@@ -200,12 +298,67 @@
 </a>
 </li>
 <li>
+<a href="/category/shu-ju-jie-gou.html">
+    <i class="icon-folder-open icon-large"></i>数据结构
+</a>
+</li>
+<li>
 <a href="/category/sui-bi.html">
     <i class="icon-folder-open icon-large"></i>随笔
 </a>
 </li>
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+<li class="tag-[<pelican.contents.Article object at 0x0000000004878B00>]">
+    <a href="/tag/shi-ti.html">
+        <i class="icon-tag icon-large"></i>试题
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x00000000048CA908>]">
+    <a href="/tag/about.html">
+        <i class="icon-tag icon-large"></i>ABOUT
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x00000000048FEBA8>]">
+    <a href="/tag/java.html">
+        <i class="icon-tag icon-large"></i>java
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x00000000048F24E0>]">
+    <a href="/tag/shu-ju-jie-gou.html">
+        <i class="icon-tag icon-large"></i>数据结构
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x0000000004939E80>]">
+    <a href="/tag/test.html">
+        <i class="icon-tag icon-large"></i>test
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x00000000048CABA8>]">
+    <a href="/tag/bo-ke.html">
+        <i class="icon-tag icon-large"></i>博客
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x0000000004935F98>]">
+    <a href="/tag/jsying-yong.html">
+        <i class="icon-tag icon-large"></i>js应用
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x00000000048DE400>, <pelican.contents.Article object at 0x0000000004878A90>]">
+    <a href="/tag/ji-zhu-bi-ji.html">
+        <i class="icon-tag icon-large"></i>技术笔记
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x00000000049396D8>, <pelican.contents.Article object at 0x00000000048FE048>, <pelican.contents.Article object at 0x000000000492CCF8>]">
+    <a href="/tag/javaweb.html">
+        <i class="icon-tag icon-large"></i>javaweb
+    </a>
+</li>
+
+<!---->
+
+
+
 
 
 </ul>        </div><!--/.well -->

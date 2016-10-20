@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Linglim 's Blog - 博客</title>
+    <title>Linglim 's Blog - 试题</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Linglim">
@@ -118,39 +118,44 @@
       <div class="row">
         <div class="span9 offset1" id="content">
         <div class="article">
-                <h1><a href="/articles/sui-bi/博客搭建.html">Blog搭建</a></h1>
+                <h1><a href="/articles/qian-duan/js-shiti.html">js试题</a></h1>
                 <div class="well small"><footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2016-09-11T00:00:00+08:00">
-        <i class="icon-calendar"></i>2016-09-11(星期日) 00:00
+<abbr class="published" title="2016-09-21T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-09-21(星期三) 00:00
 </abbr>
 <span class="label">By</span>
 <a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
 <span class="label">Category</span>
-<a href="/category/sui-bi.html"><i class="icon-folder-open"></i>随笔</a>.
+<a href="/category/qian-duan.html"><i class="icon-folder-open"></i>前端</a>.
 
 
 <span class="label">Tags</span>
-	<a href="/tag/bo-ke.html"><i class="icon-tag"></i>博客</a>
+	<a href="/tag/shi-ti.html"><i class="icon-tag"></i>试题</a>
 </footer><!-- /.post-info --></div>
-                <div class="summary"><h2 id="_1">我的博客搭建：</h2>
-<p>keys :pelican+github
-enviroment:win10 + python</p>
-<p> 由于是windows环境搭建出现很多困难，需准备很多python 的环境</p>
+                <div class="summary"><p>Summary：js试题</p>
+<p>1、找出元素 item 在给定数组 arr 中的位置</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>function indexOf(arr,item){
+  if(!arr){
+ return -1;
+  }
+  for(var i=0;i&lt;arr.length;i++){
+if(arr[i]==item){
+  return i;
+}
+  }
+  return -1;
+}
+</pre></div>
 
-<h2 id="introduction">introduction:</h2>
-<ul>
-<li>pelican:python写的的静态blog生成器，支持markdown，有许多主题和插件，易配置</li>
-<li>setuptools：python 包管理工具，功能：利用EasyInstall自动查找、下载、安装、升级依赖包<blockquote>
-<p>Pelican is a static site generator, written in Python. Highlights include:markdown formats、simple CLI tool、Easy to interface、Completely static output</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="install-preparation">install preparation ：</h2>
-<ol>
-<li>
-<p>python :Python ...</p></li></ol>
-                        <a class="btn primary xsmall" href="/articles/sui-bi/博客搭建.html">more ...</a>
+
+<p>注意：js中的 var arr1=arr;改变arr1就会改变arr
+数组复制：
+1. slice(start,end)<br />
+    slice() 方法可从已有的数组中返回选定的元素。
+2. concat() concat() 方法用于连接两个或多个数组。
+    该方法不会改变现有的数组 ...</p>
+                        <a class="btn primary xsmall" href="/articles/qian-duan/js-shiti.html">more ...</a>
                 </div>
         </div>
         <hr />

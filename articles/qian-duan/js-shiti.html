@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>第一次上传测试</title>
+    <title>js试题</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Linglim">
@@ -65,7 +65,7 @@
             <ul class="nav">
                   <li><a href="pages/about.html">About</a></li>
                           <li class="divider-vertical"></li>
-                  <li class="active">
+                  <li >
                     <a href="/category/ce-shi.html">
 						<i class="icon-folder-open icon-large"></i>测试
 					</a>
@@ -85,7 +85,7 @@
 						<i class="icon-folder-open icon-large"></i>技术笔记
 					</a>
                   </li>
-                  <li >
+                  <li class="active">
                     <a href="/category/qian-duan.html">
 						<i class="icon-folder-open icon-large"></i>前端
 					</a>
@@ -123,8 +123,8 @@
                         <h1>
                                 <a href=""
                                         rel="bookmark"
-                                        title="Permalink to 第一次上传测试">
-                                        第一次上传测试
+                                        title="Permalink to js试题">
+                                        js试题
                                 </a>
                         </h1>
                 </header>
@@ -132,43 +132,255 @@
                 <div class="well">
 <footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2016-08-10T00:00:00+08:00">
-        <i class="icon-calendar"></i>2016-08-10(星期三) 00:00
+<abbr class="published" title="2016-09-21T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-09-21(星期三) 00:00
 </abbr>
 <span class="label">By</span>
 <a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
 <span class="label">Category</span>
-<a href="/category/ce-shi.html"><i class="icon-folder-open"></i>测试</a>.
+<a href="/category/qian-duan.html"><i class="icon-folder-open"></i>前端</a>.
 
 
 <span class="label">Tags</span>
-	<a href="/tag/test.html"><i class="icon-tag"></i>test</a>
+	<a href="/tag/shi-ti.html"><i class="icon-tag"></i>试题</a>
 </footer><!-- /.post-info -->                </div>
-                <p>Summary：本文仅仅用于测试+博文标签解读
-Slug: first-test
-Status:draft</p>
-<h2 id="7">7夕</h2>
-<ul>
-<li>
-<p>L:今天好像是7夕&hellip;</p>
-</li>
-<li>
-<p>M:然并没什么用。</p>
-</li>
-</ul>
-<h1 id="_1">标签解读</h1>
-<p>-Slug:</p>
-<ol>
-<li>文档唯一标识，html名，必须唯一.pelican.py中有关url设置
- <code>ARTICLE_URL = 'articles/{category}/{slug}.html'</code></li>
-<li>官网介绍是：可两篇文章公用一个slug标签，尽管发布的内容不同（语言不通），仍有唯一的相同点——slug（在此处用作识别符）。如果你并未明确定义slug，必须要确保不同语言版本文章的标题是相同的，因为slug将会根据文章标题自动生成。</li>
-<li>
-<p>pelican.py中有关url设置，</p>
-<p><code>ARTICLE_SAVE_AS = 'articles/{category}/{slug}.html</code>
-说明了生成的html存储位置</p>
-</li>
-</ol>
-<p>-Status:草稿，这篇文章也会生成html，但不会放在博客的主页及分类索引里，这样普通的读者一般看不到这个文章。</p>
+                <p>Summary：js试题</p>
+<p>1、找出元素 item 在给定数组 arr 中的位置</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>function indexOf(arr,item){
+  if(!arr){
+ return -1;
+  }
+  for(var i=0;i&lt;arr.length;i++){
+if(arr[i]==item){
+  return i;
+}
+  }
+  return -1;
+}
+</pre></div>
+
+
+<p>注意：js中的 var arr1=arr;改变arr1就会改变arr
+数组复制：
+1. slice(start,end)<br />
+    slice() 方法可从已有的数组中返回选定的元素。
+2. concat() concat() 方法用于连接两个或多个数组。
+    该方法不会改变现有的数组，而仅仅会返回被连接数组的一个副本。
+    语法:
+    arrayObject.concat(arrayX,arrayX,......,arrayX) </p>
+<p>2、移除数组 arr 中的所有值与 item 相等的元素。不要直接修改数组 arr，结果返回新的数组</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>function remove(arr, item) {
+  var arr1= arr.slice(0);;
+  for(var i = arr1.length - 1; i &gt;= 0; i--){
+  if(arr1[i]==item){
+ arr1.splice(i,1); 
+  }
+
+  }
+
+return arr1;
+}
+</pre></div>
+
+
+<p>3、移除数组 arr 中的所有值与 item 相等的元素，直接在给定的 arr 数组上进行操作，并将结果返回 </p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>function removeWithoutCopy(arr, item) { 
+for(var i=0;i&lt;arr.length;i++){
+if(arr[i]==item){
+ arr.splice(i,1);
+i--;
+}
+}return arr;
+}
+</pre></div>
+
+
+<p>4、添加元素   push() <br><br />
+　删除/添加/修改 元素　
+　<code>splice(arrayObject.splice(index,howmany,item1,.....,itemX))//item1添加项，index修改项</code>
+5、合并数组 arr1 和数组 arr2。不要直接修改数组 arr，结果返回新的数组 </p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>function concat(arr1, arr2) {
+var arr3=arr1.slice();
+  for(var i=0;i&lt;arr2.length;i++)
+ {
+ arr3.push(arr2[i]);
+ }
+return arr3;
+}
+</pre></div>
+
+
+<p>6、函数内可获取全局变量，外不能读内部变量。生命内部变量要var , 不然是全局变量。闭包：声明一个父函数读取子函数的变量</p>
+<p>统计数组 arr 中值等于 item 的元素出现的次数<a href="http://www.w3cfuns.com/notes/32286/fb137a9a393a6c811d1f2f083fa245a0.html">http://www.w3cfuns.com/notes/32286/fb137a9a393a6c811d1f2f083fa245a0.html</a></p>
+<p>7、js找出数组 arr 中重复出现过的元素 </p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>function duplicates(arr) {  
+var result = [];  
+arr.forEach(function(item){  
+if(arr.indexOf(item)!=arr.lastIndexOf(item)&amp;&amp;result.indexOf(item)==-1)  
+result.push(item);  
+})  
+return result;  
+}
+</pre></div>
+
+
+<p>arr.indexOf:</p>
+<blockquote>
+<p>arr.indexOf(searchElement[, fromIndex = 0])
+searchElement: 是指定要查找的数组项
+fromIndex: 开始查找的位置。
+ <ul>
+ <li>fromIndex)大于或等于数组长度(length)，意味着不会在数组里查找，返回-1
+ <li>fromIndex)是负数，表示从倒数第几个起，已然从前往后</p>
+</blockquote>
+<p>arr.lastIndexOf:</p>
+<blockquote>
+<p>arr.lastIndexOf(searchElement[, fromIndex = arr.length - 1])
+searchElement：需要查找的数组项
+fromIndex: 从数组的末尾开始向前查找，默认值为arr.length -1</p>
+</blockquote>
+<p>对象:c是obj对象的方法，可通过obj.c()来调用
+c:function(){}</p>
+<p>8.将数组 arr 中的元素作为调用函数 fn 的参数 
+输入例子:
+argsAsArray(function (greeting, name, punctuation) {return greeting + &lsquo;, &lsquo; + name + (punctuation || &lsquo;!&rsquo;);}, [&lsquo;Hello&rsquo;, &lsquo;Ellie&rsquo;, &lsquo;!&rsquo;])</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>function argsAsArray(fn, arr) {
+    return fn.apply(this,arr);
+
+}
+</pre></div>
+
+
+<p>输出例子:
+Hello, Ellie!</p>
+<p>9、
+每个函数都包含两个非继承而来的方法：apply（）he call（），这两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内this对象的值。</p>
+<p>10、闭包
+（闭包只能得到包含函数中变量的最后一个值,使用闭包函数一定要有参数
+<a href="http://www.nowcoder.com/practice/578026cd24e3446bbf27fe565473dc26?tpId=6&amp;tqId=10972&amp;rp=2&amp;ru=/ta/js-assessment&amp;qru=/ta/js-assessment/question-ranking">题目：</a>
+答案：
+    function makeClosures(arr, fn) {</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>   var result=[];
+
+   arr.forEach(function(num){
+   result.push(function(){return fn(num);})
+   })
+
+return result;
+}
+</pre></div>
+
+
+<p>call()、apply()、bind()的用法和<a href="http://www.cnblogs.com/xljzlw/p/3775162.html">作用域</a>
+call()和apply()直接执行，bind()返回一个函数，一般object设为null</p>
+<p>题目描述</p>
+<p>已知函数 fn 执行需要 3 个参数。请实现函数 partial，调用之后满足如下条件：
+1、返回一个函数 result，该函数接受一个参数
+2、执行 result(str3) ，返回的结果与 fn(str1, str2, str3) 一致 
+答案：
+//bind
+function partial(fn, str1, str2) {
+return fn.bind(null,str1,str2);
+}
+//call
+function partial(fn, str1, str2) {
+return function(str3){
+return fn.call(this,str1,str2,str3);
+}
+}
+//
+function partial(fn, str1, str2) {
+return function(str3){
+return fn(str1,str2,str3);
+}
+}</p>
+<p>11、使用arguments
+题目描述</p>
+<p>函数 useArguments 可以接收 1 个及以上的参数。请实现函数 useArguments，返回所有调用参数相加后的结果。本题的测试参数全部为 Number 类型，不需考虑参数转换。 </p>
+<p>方法：</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>function useArguments() {
+//1:
+var result=Array.prototype.slice.call(arguments);
+return result.reduce(function(a,b){return a+b;});
+//2:
+var result=Array.prototype.reduce.call(arguments,function(a,b){return a+b;});
+return result;
+//3
+var result=Array.prototype.slice.call(arguments);
+var sum=0;
+for (var i=0;i&lt;result.length;i++){
+sum+=result[i];
+}
+return sum;
+}
+</pre></div>
+
+
+<p>12、字符转换：parse和toString</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>parseInt( numString [, radix ] )//radix 把numString 当作什么进制基数来看
+var n=parseInt(&#39;111&#39;,2)//把111当作2进制，转换为整数
+
+
+number.toString(radix);//把number转化为 radix进制的数，再转为字符串
+</pre></div>
+
+
+<p><code>15.toString(2);</code></p>
+<p>13、prototype属性：所有内部 JavaScript 对象都有一个只读的 prototype 属性。  可将属性和方法添加到原型中，但不能为对象分配其他原型。<br />
+<code>objectName.prototype</code> 
+14、push 输出格式：<code>["foo: bar", "baz: bim"]</code></p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>+=的输出：`&quot;foo: barbaz: bim&quot;`
+</pre></div>
+
+
+<p>数组map方法：对数组的每个元素调用定义的回调函数并返回包含结果的数组。
+    array1.map(callbackfn[, thisArg]) </p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>array1</td>
+<td align="center">必需。 一个数组对象。</td>
+</tr>
+<tr>
+<td>callbackfn</td>
+<td align="center">必需。 一个接受最多三个参数的函数。 对于数组中的每个元素，map 方法都会调用 callbackfn 函数一次。</td>
+</tr>
+<tr>
+<td>thisArg</td>
+<td align="center">可选。 可在 callbackfn 函数中为其引用 this 关键字的对象。 如果省略 thisArg，则 undefined 将用作 this 值。</td>
+</tr>
+</tbody>
+</table>
+<p>others答案http://www.2cto.com/kf/201608/535843.html</p>
+<p>15、正则匹配<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions</a></p>
+<p>/a/:匹配内容a</p>
+<p><a href="https://segmentfault.com/a/1190000000699097#articleHeader3">字符匹配：</a>对应看字符匹配</p>
+<p>位置：^（前）、$(后)</p>
+<p>表达式标准（放在//后面）：g(全局)，i（不区分大小写）</p>
+<p>重复匹配（匹配n到m个）：{n,m}</p>
+<p>记录字符匹配（连续匹配同一个）：\1</p>
+<p>？：匹配0或1次</p>
+<p>+：匹配1次到多次</p>
+<p>*：匹配0次到多次</p>
+<p>RegExp匹配方法：/&hellip;/.test(s):s中是否匹配/../的内容（匹配在前，字符串在后）</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>  exec（）：返回数组，匹配项
+  compile()：可增加参数
+  test():返回布尔型
+</pre></div>
+
+
+<p>String对象中的表达式方法：对象在前,匹配在后,obj.match(p),p是匹配模式</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>match(p)
+replace(p,r)
+search(p)
+split(p)
+</pre></div>
                 </div>
                 <hr>
                 <div class="alert alert-success">版权声明：<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">自由转载-保持署名</a></div><hr>
@@ -177,7 +389,7 @@ Status:draft</p>
                 <h2>Comments !</h2>
                         <div id="disqus_thread"></div>
                         <script type="text/javascript">
-                           var disqus_identifier = "articles/ce-shi/di-yi-ci-shang-chuan-ce-shi.html";
+                           var disqus_identifier = "articles/qian-duan/js-shiti.html";
                            (function() {
                                 var dsq = document.createElement('script');
                                 dsq.type = 'text/javascript'; dsq.async = true;

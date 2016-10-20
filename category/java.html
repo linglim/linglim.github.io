@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Linglim 's Blog - 博客</title>
+    <title>Linglim 's Blog - java</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Linglim">
@@ -75,7 +75,7 @@
 						<i class="icon-folder-open icon-large"></i>后端
 					</a>
                   </li>
-                  <li >
+                  <li class="active">
                     <a href="/category/java.html">
 						<i class="icon-folder-open icon-large"></i>java
 					</a>
@@ -118,39 +118,51 @@
       <div class="row">
         <div class="span9 offset1" id="content">
         <div class="article">
-                <h1><a href="/articles/sui-bi/博客搭建.html">Blog搭建</a></h1>
+                <h1><a href="/articles/java/剑指offer试题.html">剑指offer试题</a></h1>
                 <div class="well small"><footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2016-09-11T00:00:00+08:00">
-        <i class="icon-calendar"></i>2016-09-11(星期日) 00:00
+<abbr class="published" title="2016-09-22T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-09-22(星期四) 00:00
 </abbr>
 <span class="label">By</span>
 <a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
 <span class="label">Category</span>
-<a href="/category/sui-bi.html"><i class="icon-folder-open"></i>随笔</a>.
+<a href="/category/java.html"><i class="icon-folder-open"></i>java</a>.
 
 
 <span class="label">Tags</span>
-	<a href="/tag/bo-ke.html"><i class="icon-tag"></i>博客</a>
+	<a href="/tag/java.html"><i class="icon-tag"></i>java</a>
 </footer><!-- /.post-info --></div>
-                <div class="summary"><h2 id="_1">我的博客搭建：</h2>
-<p>keys :pelican+github
-enviroment:win10 + python</p>
-<p> 由于是windows环境搭建出现很多困难，需准备很多python 的环境</p>
+                <div class="summary"><p>Summary：java试题笔记</p>
+<p>1、java数组长度：</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>row:array[0].length
+lol:array.length
+</pre></div>
 
-<h2 id="introduction">introduction:</h2>
+
+<p>2、java字符串替换</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>return str.toString().replaceAll(&quot; &quot;, &quot;%20&quot;);//空格（//s）替换成%20
+</pre></div>
+
+
+<p>3、java中</p>
 <ul>
-<li>pelican:python写的的静态blog生成器，支持markdown，有许多主题和插件，易配置</li>
-<li>setuptools：python 包管理工具，功能：利用EasyInstall自动查找、下载、安装、升级依赖包<blockquote>
-<p>Pelican is a static site generator, written in Python. Highlights include:markdown formats、simple CLI tool、Easy to interface、Completely static output</p>
-</blockquote>
-</li>
+<li>值传递：</li>
+<li>引用传递</li>
 </ul>
-<h2 id="install-preparation">install preparation ：</h2>
-<ol>
-<li>
-<p>python :Python ...</p></li></ol>
-                        <a class="btn primary xsmall" href="/articles/sui-bi/博客搭建.html">more ...</a>
+<p>4、java字符串</p>
+<ul>
+<li>String 字符串常量：</li>
+</ul>
+<blockquote>
+<p>不可改变的量，每次改变等同于生成新的String对象，然后将指针指向String对象，常变得变量不用tring,影响性能，内存回收工作，速度慢</p>
+</blockquote>
+<ul>
+<li>StringBuffer 字符串变量（线程安全）</li>
+</ul>
+<blockquote>
+<p>每次结果都会对 StringBuffer 对象本身进行操作，而不是生成新的对象，再改变对象引用。字符串对象经常改变用。但特别情况下， String 对象的字符串拼接其实是被 JVM ...</p></blockquote>
+                        <a class="btn primary xsmall" href="/articles/java/剑指offer试题.html">more ...</a>
                 </div>
         </div>
         <hr />
