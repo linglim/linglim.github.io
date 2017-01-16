@@ -1,0 +1,4096 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>leetcode算法精简总结第一遍：</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Linglim">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+    </style>
+    <link href="/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/theme/css/font-awesome.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png">
+
+    <link href="/" type="application/atom+xml" rel="alternate" title="Linglim 's Blog ATOM Feed" />
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/index.html">Linglim 's Blog </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                  <li><a href="pages/about.html">About</a></li>
+                          <li class="divider-vertical"></li>
+                  <li >
+                    <a href="/category/ce-shi.html">
+						<i class="icon-folder-open icon-large"></i>测试
+					</a>
+                  </li>
+                  <li >
+                    <a href="/category/hou-duan.html">
+						<i class="icon-folder-open icon-large"></i>后端
+					</a>
+                  </li>
+                  <li >
+                    <a href="/category/java.html">
+						<i class="icon-folder-open icon-large"></i>java
+					</a>
+                  </li>
+                  <li >
+                    <a href="/category/javayu-yan.html">
+						<i class="icon-folder-open icon-large"></i>java语言
+					</a>
+                  </li>
+                  <li >
+                    <a href="/category/ji-zhu-bi-ji.html">
+						<i class="icon-folder-open icon-large"></i>技术笔记
+					</a>
+                  </li>
+                  <li >
+                    <a href="/category/qian-duan.html">
+						<i class="icon-folder-open icon-large"></i>前端
+					</a>
+                  </li>
+                  <li >
+                    <a href="/category/shu-ju-jie-gou.html">
+						<i class="icon-folder-open icon-large"></i>数据结构
+					</a>
+                  </li>
+                  <li class="active">
+                    <a href="/category/suan-fa.html">
+						<i class="icon-folder-open icon-large"></i>算法
+					</a>
+                  </li>
+                  <li >
+                    <a href="/category/sui-bi.html">
+						<i class="icon-folder-open icon-large"></i>随笔
+					</a>
+                  </li>
+
+                          <ul class="nav pull-right">
+  <!--functions-->          <li><a href="/functions/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
+            </ul>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+            <!--添加百度搜索-->
+           <a href="https://github.com/linglim"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="span9 offset1" id="content">
+<section id="content">
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to leetcode算法精简总结第一遍：">
+                                        leetcode算法精简总结第一遍：
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2016-11-28T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-11-28(星期一) 00:00
+</abbr>
+<span class="label">By</span>
+<a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
+<span class="label">Category</span>
+<a href="/category/suan-fa.html"><i class="icon-folder-open"></i>算法</a>.
+
+
+<span class="label">Tags</span>
+	<a href="/tag/javasuan-fa.html"><i class="icon-tag"></i>java算法</a>
+</footer><!-- /.post-info -->                </div>
+                <p>Summary：算法</p>
+<h1 id="string">第一部分：String</h1>
+<p>1、 Reverse String </p>
+<blockquote>
+<p>Example:
+Given s = &ldquo;hello&rdquo;, return &ldquo;olleh&rdquo;.</p>
+</blockquote>
+<p>tip:
+ Array----&gt;String（数组转字符串）:</p>
+<ul>
+<li>return new String(array);</li>
+<li>return String.valueOf(array);</li>
+</ul>
+<p>二分查找交换：循环长度的一半，最后一个和第一个交换</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public String reverseString(String s) {
+        if (s == null || s.length() &lt; 2){
+            return s;
+        }
+        char[] array = s.toCharArray();
+        int j = array.length;
+        for (int i = 0;  i &lt; j / 2; i++){
+            char temp = array[i];
+
+            array[i] = array[j - i - 1];
+            array[j - i - 1] = temp;
+        }
+
+    return new String(array);
+
+    //way2 return String.valueOf(array);
+    }
+
+}
+</pre></div>
+
+
+<p>复杂度分析：
+O(N),except Binary recursion(O(N)=logn),other O(N)=n</p>
+<p>70、Climbing Stairs：</p>
+<blockquote>
+<p>You are climbing a stair case. It takes n steps to reach to the top.</p>
+<p>Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+注意：0个台阶对应1种方法。
+思路：<a href="http://blog.crayygy.com/14599905787744.html">http://blog.crayygy.com/14599905787744.html</a>
+取决于上一个和上上一个台阶：这个人爬n层楼梯，那么它也不是一下子就可以爬这么高的，他只有两个选择，要么从n-2层爬过来，要么从n-1层爬过来。除此之外，他没有别的选择。
+</p>
+</blockquote>
+<p>1、递归法（leetcode 超时）空间O（1.618<sup>N</sup>）时间复杂度O（N）</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int climbStairs(int n) {
+        /***
+        递归 
+        **/
+        if (n &lt;= 2){
+            return n;
+        }
+        return climbStairs(n - 1) + climbStairs(n - 2);
+    }
+}
+</pre></div>
+
+
+<p>2、动态规划 空间O（N）时间复杂度O（N）记得对2求雨</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int climbStairs(int n) {
+        /***
+        动态
+        **/
+        if (n &lt; 2){
+            return 1;
+        }
+        int[] dp = new int[2];
+        dp[0] = 1;
+        dp[1] = 1;
+        for (int i = 2; i &lt;= n; i++){
+            dp[i % 2] = dp[(i - 1) % 2] + dp[(i - 2) % 2];
+        }
+        return dp[n%2];
+    }
+}
+
+public class Solution {
+    public int climbStairs(int n) {
+        /***
+        动态,best
+        **/
+        int[] dp = new int[]{1, 1, 2};
+        if (n &lt; 3){
+            return dp[n];
+        }
+        for (int i = 3; i &lt;= n; i++){
+            dp[0] = dp[1];
+            dp[1] = dp[2];
+            dp[2] = dp[1] + dp[0];
+        }
+        return dp[2];
+    }
+}
+</pre></div>
+
+
+<p>3、波菲利纳数列：O（logn）o(1）
+    public class Solution {
+        public int climbStairs(int n) {
+            /<strong>*
+            fibonacci
+            </strong>/
+            double sqrt5 = Math.sqrt(5.0);
+            double pfi = (1.0 + sqrt5) / 2;
+            return (int) ((Math.pow(pfi, n + 1) - Math.pow(-pfi, -(n + 1))) / sqrt5 + 0.5);
+        }
+    }
+387、First Unique Character in a String(第一个不重复的字符)</p>
+<blockquote>
+<p>Given a string, find the first no
+n-repeating character in it and return it&rsquo;s index. If it doesn&rsquo;t exist, return -1.
+s = &ldquo;leetcode&rdquo;
+return 0.</p>
+<p>s = &ldquo;loveleetcode&rdquo;,
+return 2.</p>
+</blockquote>
+<p><strong>tips：注意把字符串转换成char[]数组的效率更高。</strong></p>
+<p>1、15ms，O(N),O(1).思路：alp统计26个字母出现次数；先遍历字符串数组，然后查找alp表第一个次数为1的位置。</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>Public class Solution{
+    public int firstUniqChar(String s) {
+           int[] alp =new int[26];
+            char[] arr =s.toCharArray();
+
+        for(char c : arr ){
+            alp[c-&#39;a&#39;]++;
+        }
+
+        for(int i=0;i&lt;arr.length;i++){
+            if (alp[arr[i]-&#39;a&#39;]==1) return i;
+        }
+
+        return -1;
+}
+
+public int firstUniqChar(String s) {
+    if(s.length() == 0 || s == null) return -1;
+    char[] chars = s.toCharArray();
+    int[] count = new int[26];
+    for(int i=0; i&lt;chars.length; i++){
+        count[chars[i] - &#39;a&#39;] ++;
+    }
+    int index = s.length();
+    for(int i=0; i&lt;26; i++){
+        if(count[i] == 1){
+            int idx = s.indexOf(&#39;a&#39; + i);
+            index = Math.min(idx, index);
+        }
+    }
+    return index == s.length() ? -1 : index; //all the chars are not unique
+}
+</pre></div>
+
+
+<p>2、16ms,O(N),O(1).思路：先给26个字母频率统一赋初值-1；遍历字符串数组，pos记录26个字符的位置，重复的赋值-2；循环pos，找出最小的正数（包括0），该数就是第一个不重复的字符的位置。</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int firstUniqChar(String s) {
+        int[] pos = new int[26];
+        for(int i=0; i&lt;26; i++){
+            pos[i]=-1;
+        }
+        char[] arr = s.toCharArray();
+        for (int i = 0; i&lt;arr.length; i++){
+            int idx = arr[i]-&#39;a&#39;;
+            if (pos[idx]==-1){
+                pos[idx]=i;
+            }else {
+                pos[idx]=-2;
+            }
+        } 
+        int ret = arr.length;
+        for(int i = 0; i &lt; 26; i++){
+            if(pos[i]&gt;=0){
+                ret = Math.min(ret,pos[i]);
+            }
+        }
+        return ret == arr.length ? -1 : ret; //all the chars are not unique
+    }
+}
+</pre></div>
+
+
+<p>3、与第一种类似，区别是：count统计26个字母出现次数；先遍历次数表找到次数为1的字符，然后比较字符在字符串中位置谁靠前。</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int firstUniqChar(String s) {
+        int l=s.length();
+        if(l==0)  return -1;
+        if(l==1) return 0;
+
+        for(int i=0;i&lt;l;i++){
+            char c=s.charAt(i);
+            if(i&lt;l-1) {
+
+            if(s.indexOf(c,i+1)==-1 &amp;&amp; s.indexOf(c)==i) return i;
+
+            }
+            else{
+                if( s.indexOf(c)==i) return i;
+            }
+        }
+
+        return -1;
+    }
+}
+</pre></div>
+
+
+<p>415、 Add Strings</p>
+<blockquote>
+<p>Given two non-negative numbers num1 and num2 represented as string, return the sum of num1 and num2.</p>
+<p>Note:</p>
+<p>The length of both num1 and num2 is &lt; 5100.
+Both num1 and num2 contains only digits 0-9.
+Both num1 and num2 does not contain any leading zero.
+You must not use any built-in BigInteger library or convert the inputs to integer directly.</p>
+</blockquote>
+<p>tip:StringBuilder存储结果；设置标志位；最大串的长度当循环截至；变量val=标志位，<strong>从后往前</strong>，val依次加第一个串的字符，第二个串的字符。个位数加入到结果，最后判断有无标志位，加入结果，结果反转并转为字符串。</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public String addStrings(String num1, String num2) {
+        StringBuilder sb = new StringBuilder();
+        int l1 = num1.length();
+        int l2 = num2.length();
+        int max = Math.max(l1, l2);
+        int carry = 0;
+        for (int i = 0; i &lt; max; i++) {
+            int val = carry;
+            if (i &lt; l1) {
+                val += num1.charAt(l1-i-1) - &#39;0&#39;;
+            }
+            if (i &lt; l2) {
+                val += num2.charAt(l2-i-1) - &#39;0&#39;;
+            }
+            sb.append(val % 10);
+            carry = val / 10;
+        }
+        if (carry &gt; 0) {
+            sb.append(carry);
+        }
+        return sb.reverse().toString();
+    }
+}
+</pre></div>
+
+
+<p>not AC原因:
+1、0+0，无结果&mdash;&gt;i起始为0
+2、2位数加错&mdash;&gt;l1-i-1,不是i</p>
+<ol>
+<li>Repeated Substring Pattern(是否由重复子串组成)</li>
+</ol>
+<blockquote>
+<p>Given a non-empty string check if it can be constructed by taking a substring of it and appending multiple copies of the substring together. You may assume the given string consists of lowercase English letters only and its length will not exceed 10000.</p>
+<p>Example 1:
+Input: &ldquo;abab&rdquo;</p>
+<p>Output: True</p>
+<p>Explanation: It&rsquo;s the substring &ldquo;ab&rdquo; twice.
+Example 2:
+Input: &ldquo;aba&rdquo;</p>
+<p>Output: False</p>
+</blockquote>
+<p>解法：<a href="http://blog.csdn.net/v_july_v/article/details/7041827">kmp原理：</a>res[]记录每个字符的部分匹配表，最长公共前后缀个数的值。算法复杂度O(n)。
+kmp方法：next存储前后缀最大相同子串长度。cur当前字符与下一个字符相同，存在一个相同前后缀，不相同就继续往后比，如果cur 是第一个后进，如果cur不是cur回退。
+    public class Solution {
+        public boolean repeatedSubstringPattern(String str) {
+            int len = str.length();
+            int[] next = new int[len];
+            next[0] = 0;
+            int cur = 0;
+            int j = 1;
+            while (j &lt; len) {
+                char c = str.charAt(j);
+                if (c == str.charAt(cur)) {
+                    next[j++] = ++cur;
+                } else {
+                    if (cur == 0) {
+                        next[j++] = 0;
+                    } else {
+                        cur = next[cur - 1];
+                    }
+                }
+            }
+            return next[len - 1] &gt; 0 &amp;&amp; len % (len - next[len - 1]) == 0;
+        }
+    }</p>
+<ol>
+<li>
+<p>Reverse Vowels of a String：反转元音字符串</p>
+<blockquote>
+<p>Write a function that takes a string as input and reverse only the vowels of a string.</p>
+<p>Example 1:
+Given s = &ldquo;hello&rdquo;, return &ldquo;holle&rdquo;.</p>
+<p>Example 2:
+Given s = &ldquo;leetcode&rdquo;, return &ldquo;leotcede&rdquo;.</p>
+</blockquote>
+<p>public class Solution {
+    public String reverseVowels(String s) {
+        int[] pos = new int[s.length()];
+        int cnt = 0;
+        HashSet<Character> vowel = new HashSet<Character>();
+        vowel.add(&lsquo;a&rsquo;);
+        vowel.add(&lsquo;e&rsquo;);
+        vowel.add(&lsquo;i&rsquo;);
+        vowel.add(&lsquo;o&rsquo;);
+        vowel.add(&lsquo;u&rsquo;);
+        vowel.add(&lsquo;A&rsquo;);
+        vowel.add(&lsquo;E&rsquo;);
+        vowel.add(&lsquo;I&rsquo;);
+        vowel.add(&lsquo;O&rsquo;);
+        vowel.add(&lsquo;U&rsquo;);</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    for (int i = 0; i &lt; s.length(); i++) {
+        if (vowel.contains(s.charAt(i))) {
+            pos[cnt] = i;
+            cnt++;
+        }
+    }
+
+    char[] ans = new char[s.length()];
+    ans = s.toCharArray();
+    for (int i = 0; i &lt; cnt; i++) {
+        ans[pos[i]] = s.charAt(pos[cnt - i - 1]);
+    }
+    return String.valueOf(ans);
+}
+</pre></div>
+
+
+<p>}</p>
+</li>
+</ol>
+<p>优化：
+    public class Solution {
+        public String reverseVowels(String s) {
+            int[] pos = new int[s.length()];
+            int cnt = 0;
+            HashSet<Character> vowel = new HashSet<Character>();
+            vowel.add(&lsquo;a&rsquo;);
+            vowel.add(&lsquo;e&rsquo;);
+            vowel.add(&lsquo;i&rsquo;);
+            vowel.add(&lsquo;o&rsquo;);
+            vowel.add(&lsquo;u&rsquo;);
+            vowel.add(&lsquo;A&rsquo;);
+            vowel.add(&lsquo;E&rsquo;);
+            vowel.add(&lsquo;I&rsquo;);
+            vowel.add(&lsquo;O&rsquo;);
+            vowel.add(&lsquo;U&rsquo;);</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>        for (int i = 0; i &lt; s.length(); i++) {
+            if (vowel.contains(s.charAt(i))) {
+                pos[cnt] = i;
+                cnt++;
+            }
+        }
+
+        char[] ans = new char[s.length()];
+        ans = s.toCharArray();
+        for (int i = 0; i &lt; cnt/2; i++) {
+            char temp = ans[pos[i]];
+            ans[pos[i]] = ans[pos[cnt - i - 1]];
+            ans[pos[cnt - i - 1]] = temp;
+
+        }
+        return String.valueOf(ans);
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Number of Segments in a String（字符串由多少分段组成）<blockquote>
+<p>Count the number of segments in a string, where a segment is defined to be a contiguous sequence of non-space characters.</p>
+<p>Please note that the string does not contain any non-printable characters.</p>
+<p>Example:</p>
+<p>Input: &ldquo;Hello, my name is John&rdquo;
+Output: 5</p>
+</blockquote>
+</li>
+</ol>
+<p>1、O（n）o(1)当前不为空，前一个为空。
+    public int countSegments(String s) {
+        int res=0;
+        for(int i=0; i&lt;s.length(); i++)
+            if(s.charAt(i)!=&rsquo; &lsquo; &amp;&amp; (i==0 || s.charAt(i-1)==&rsquo; &lsquo;))
+                res++;      <br />
+        return res;
+    }
+2、O（n）O(n)split():时间复杂度高O（m*n）用StringTokenizer（）方法会高效</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int countSegments(String s) {
+        String ss = s.trim();
+        if (ss.length() == 0) {
+            return 0;
+        } else {
+            return ss.split(&quot;\\s+&quot;).length;
+        }
+
+    }
+}
+
+
+**438. Find All Anagrams in a String   （返回变位词出现的位置） 不太懂，待求教**O（n）
+
+Given a string s and a non-empty string p, find all the start indices of p&#39;s anagrams in s.
+
+Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
+
+The order of output does not matter.
+
+Example 1:
+
+Input:
+s: &quot;cbaebabacd&quot; p: &quot;abc&quot;
+
+Output:
+[0, 6]
+
+Explanation:
+The substring with start index = 0 is &quot;cba&quot;, which is an anagram of &quot;abc&quot;.
+The substring with start index = 6 is &quot;bac&quot;, which is an anagram of &quot;abc&quot;.
+
+public class Solution {
+    public List&lt;Integer&gt; findAnagrams(String s, String p) {
+        List&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+        if (s == null || s.length() == 0 || p == null || p.length() == 0) {
+            return list;
+        }
+        int [] hash = new int[256];
+        for (char c : p.toCharArray()) {
+            hash[c]++;
+        }
+        int left = 0;
+        int right = 0;
+        int count = p.length();
+        while (right &lt; s.length()) {
+            if (hash[s.charAt(right++)]-- &gt;= 1) {
+                count--;
+            }
+            if (count == 0) {
+                list.add(left);
+            }
+            if (right - left == p.length() &amp;&amp; hash[s.charAt(left++)]++ &gt;= 0){
+                count++;
+            }
+        }
+        return list;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>
+<p>Isomorphic Strings(同构字符串)：判断是否同构字符串</p>
+<blockquote>
+<p>Given two strings s and t, determine if they are isomorphic.</p>
+<p>Two strings are isomorphic if the characters in s can be replaced to get t.</p>
+<p>All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character but a character may map to itself.</p>
+<p>For example,
+  Given &ldquo;egg&rdquo;, &ldquo;add&rdquo;, return true.</p>
+<p>Given &ldquo;foo&rdquo;, &ldquo;bar&rdquo;, return false.</p>
+<p>Given &ldquo;paper&rdquo;, &ldquo;title&rdquo;, return true.</p>
+</blockquote>
+<p>public class Solution {
+    public boolean isIsomorphic(String s, String t) {
+        int [] m = new int[512];
+        for (int i = 0; i &lt; s.length(); i++) {
+            char a = s.charAt(i);
+            char b = t.charAt(i);
+            if (m[(int) a] != m[(int) b + 256]) {
+                return false;
+            }
+            m[(int) b + 256] = i + 1;
+            m[(int) a] = i + 1;
+        }
+        return true;
+    }
+}</p>
+</li>
+</ol>
+<p>339.Nested List Weight Sum 嵌套链表权重和</p>
+<p>注意：变量命名必须以小写开头驼峰法。
+    Given a nested list of integers, return the sum of all integers in the list weighted by their depth.</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>Each element is either an integer, or a list -- whose elements may also be integers or other lists.
+
+Example 1:
+Given the list [[1,1],2,[1,1]], return 10. (four 1&#39;s at depth 2, one 2 at depth 1)
+
+Example 2:
+Given the list [1,[4,[6]]], return 27. (one 1 at depth 1, one 4 at depth 2, and one 6 at depth 3; 1 + 4*2 + 6*3 = 27)
+
+/**NestedInteger接口有以下三个方法。
+ * // This is the interface that allows for creating nested lists.
+ * // You should not implement it, or speculate about its implementation
+ * public interface NestedInteger {
+ *
+ *     // @return true if this NestedInteger holds a single integer,
+ *     // rather than a nested list.
+ *     public boolean isInteger();
+ *
+ *     // @return the single integer that this NestedInteger holds,
+ *     // if it holds a single integer
+ *     // Return null if this NestedInteger holds a nested list
+ *     public Integer getInteger();
+ *
+ *     // @return the nested list that this NestedInteger holds,
+ *     // if it holds a nested list
+ *     // Return null if this NestedInteger holds a single integer
+ *     public List&lt;NestedInteger&gt; getList();
+ * }
+ */
+public class Solution {
+    public int depthSum(List&lt;NestedInteger&gt; nestedList) {
+        // Write your code here
+        if (nestedList == null || nestedList.size() == 0) {
+            return 0;
+        }
+        int sum = 0;
+        Queue&lt;NestedInteger&gt; queue = new LinkedList&lt;NestedInteger&gt;();
+        for (NestedInteger nestedInt : nestedList) {
+            queue.offer(nestedInt);//入栈，对于有限长度，效果比add好
+        }
+
+        int depth = 0;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            depth++;
+            for (int i = 0; i &lt; size; i++) {
+                NestedInteger nestedInt = queue.poll();//poll取出队首元素，并删除
+                if (nestedInt.isInteger()) {
+                    sum += nestedInt.getInteger() * depth;
+                } else {
+                    for (NestedInteger innerInt : nestedInt.getList()) {
+                        queue.offer(innerInt);
+                    }
+                }
+            }
+        }
+        return sum;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Fizz Buzz ：3的倍数输出Fizz,5的倍数输出Buzz,同时是3和5的倍数，就输出FizzBuzz.O(N)O(N)
+NotAC:elseif后才可加条件，else后不可加条件。结果为字符串型:String.ValueOf(i)
+    public class Solution {
+        public List<String> fizzBuzz(int n) {
+            List<String> results = new ArrayList<String>();
+            for (int i = 1; i &lt;= n; i++) {
+                if (i % 15 == 0) {
+                    results.add(&ldquo;FizzBuzz&rdquo;);
+                } else if (i % 5 == 0) {
+                    results.add(&ldquo;Buzz&rdquo;);
+                } else if (i % 3 == 0) {
+                    results.add(&ldquo;Fizz&rdquo;);
+                } else {
+                    results.add(String.valueOf(i));
+                }
+            } 
+            return results;
+        }
+    }</li>
+</ol>
+<p>359.Logger Rate Limiter 记录速率限制器:这道题让我们设计一个记录系统每次接受信息并保存时间戳，然后让我们打印出该消息，前提是最近10秒内没有打印出这个消息。</p>
+<p>思路：这不是一道难题，我们可以用哈希表来做，建立消息和时间戳之间的映射，如果某个消息不再哈希表表，我们建立其和时间戳的映射，并返回true。如果应经在哈希表里了，我们看当前时间戳是否比哈希表中保存的时间戳大10，如果是，更新哈希表，并返回true，反之返回false，</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Logger {
+    private HashMap&lt;String, Integer&gt; map;
+    /** Initialize your data structure here. */
+    public Logger() {
+        map = new HashMap&lt;String,Integer&gt;();
+    }
+
+    /** Returns true if the message should be printed in the given timestamp, otherwise returns false.
+        If this method returns false, the message will not be printed.
+        The timestamp is in seconds granularity. */
+    public boolean shouldPrintMessage(int timestamp, String message) {
+        if(map.containsKey(message)&amp;&amp;(timestamp-map.get(message))&lt;10)
+        {
+            return false;
+        }
+        map.put(message,timestamp);
+        return true;
+
+    }
+}
+
+/**
+ * Your Logger object will be instantiated and called as such:
+ * Logger obj = new Logger();
+ * boolean param_1 = obj.shouldPrintMessage(timestamp,message);
+ */
+</pre></div>
+
+
+<ol>
+<li>
+<p><a href="https://leetcode.com/problems/island-perimeter/">Island Perimeter: 计算小岛周长</a>
+思路：数组元素为1，增加4条边，有一个相邻的，周长减少2。
+notac: 数组越界，一定先判定i&lt;height -1,然后再判断是否有邻接。</p>
+<p>public class Solution {
+    public int islandPerimeter(int[][] grid) {
+        int result = 0;
+        int height = grid.length;
+        int width = grid[0].length;
+        for (int i = 0; i &lt; height; i++) {
+            for (int j = 0; j &lt; width; j++) {
+                if (grid[i][j] == 1) {
+                    result += 4;
+                    if (i &lt; height - 1 &amp;&amp; grid[i + 1][j] == 1) {
+                        result -= 2;
+                    }
+                    if (j &lt; width - 1 &amp;&amp; grid[i][j + 1] == 1) {
+                        result -= 2;
+                    }
+                }
+            }
+        }
+        return result;
+    }
+}</p>
+</li>
+</ol>
+<p>346.Moving Average from Data Stream 从数据流中移动平均值</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.
+
+For example,
+MovingAverage m = new MovingAverage(3);
+m.next(1) = 1
+m.next(10) = (1 + 10) / 2
+m.next(3) = (1 + 10 + 3) / 3
+m.next(5) = (10 + 3 + 5) / 3
+</pre></div>
+
+
+<blockquote>
+<p>思路：这道题定义了一个MovingAverage类，里面可以存固定个数字，然后我们每次读入一个数字，如果加上这个数字后总个数大于限制的个数，那么我们移除最早进入的数字，然后返回更新后的平均数，这种先进先出的特性最适合使用队列queue来做，而且我们还需要一个double型的变量sum来记录当前所有数字之和，这样有新数字进入后，如果没有超出限制个数，则sum加上这个数字，如果超出了，那么sum先减去最早的数字，再加上这个数字，然后返回sum除以queue的个数即可</p>
+<p>该方法用双端队列实现，也可用队列实现，注意变量名要不同。</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class MovingAverage {
+    private Deque&lt;Integer&gt; deque = new LinkedList&lt;&gt;();
+    private int size;
+    private double sum;
+    public MovingAverage(int num) {
+        this.num = size;//这个两个变量名要不同
+    }
+    public double next(int val) {
+        if (deque.size() == size) {
+            sum -= deque.pollFirst();
+        }
+        deque.offerLast(val);
+        sum += val;
+        return sum / deque.size();
+    }
+}
+</pre></div>
+
+
+<p>266.Palindrome Permutation 回文全排列
+Given a string, determine if a permutation of the string could form a palindrome.</p>
+<p>For example,
+&ldquo;code&rdquo; -False, &ldquo;aab&rdquo; -True, &ldquo;carerac&rdquo; -True.
+    hint:hashset的add、remove 及contains 方法的时间复杂度是一个常量 O(1)。</p>
+<blockquote>
+<p>回文特性：那么根据题目中的提示，我们分字符串的个数是奇偶的情况来讨论，如果是偶数的话，由于回文字符串的特性，每个字母出现的次数一定是偶数次，当字符串是奇数长度时，只有一个字母出现的次数是奇数，其余均为偶数，</p>
+</blockquote>
+<p>该算法O（n）:set中插入字符，set中存在就删除该字符，最后统计set.size,如果多余1就说明不是回文。<strong>空间复杂度不知道</strong>,设置容量后O(1)</p>
+<p><a href="http://www.cnblogs.com/xiezie/p/5511840.html">set的容量问题</a>：默认初始容量是16，加载因子是0.75.即当 元素个数 超过 容量长度的0.75倍 时，进行扩容
+每次自动扩容的效果不好，可以提前给他添加size.</p>
+<p>注意：++i比i++少循环一次，但达到同样效果，在做迭代的时候，++i比i++好，省去了一个无名对象的构建跟析构成本
+    public class Solution {
+        public boolean canPermutePalindrome(String s) {
+            Set<Character> set=new HashSet<Character>(26);
+            for(int i=0; i&lt;s.length(); ++i){
+                if (!set.contains(s.charAt(i)))
+                    set.add(s.charAt(i));
+                else 
+                    set.remove(s.charAt(i));
+            }
+            return set.size()==0 || set.size()==1;
+        }
+    }</p>
+<p>O(N),O(1)
+public boolean canPermutePalindrome(String s) {
+    if (s == null || s.length() == 0) {
+        return false;
+    }</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>int[] chars = new int[128];
+for (char c : s.toCharArray()) {
+    chars[(int) c]++;
+}
+
+int count = 0;
+for (int i : chars) {
+    if (i % 2 == 1) {
+        count++;
+    }
+}
+if (count &gt; 1) {
+    return false;
+}
+return true;
+</pre></div>
+
+
+<p>}</p>
+<p>292.Nim Game.轮流取石子，一次只能取1-3块，你是第一个拿的人，谁拿最后一块石子就赢，判断你能否赢？
+hint:N只要是4的倍数个，我们一定会输，所以对4取余即可</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public boolean canWinNim(int n) {
+        return n % 4 != 0;
+    }
+}
+</pre></div>
+
+
+<p>293.Flip Game : 第一次反转的可能性</p>
+<blockquote>
+<p>For example, given s = &ldquo;++++&rdquo;, after one move, it may become one of the following states:</p>
+</blockquote>
+<p>[
+  &ldquo;&ndash;++&rdquo;,
+  &ldquo;+&ndash;+&rdquo;,
+  &ldquo;++&ndash;&rdquo;
+]</p>
+<p>这道题让我们把相邻的两个++变成&ndash;，每次判断当前字母是否为+，和之前那个字母是否为+，如果都为加，则将翻转后的字符串存入结果。</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public List&lt;String&gt; generatePossibleNextMoves(String s) {
+    List list = new ArrayList();
+    for (int i=-1; (i = s.indexOf(&quot;++&quot;, i+1)) &gt;= 0; )//s.indexOf(&quot;要找到字符串&quot;，int indexfrom：从第几个索引开始找)
+        list.add(s.substring(0, i) + &quot;--&quot; + s.substring(i+2));
+    return list;
+}
+</pre></div>
+
+
+<ol>
+<li>Single Number<blockquote>
+<p>Given an array of integers, every element appears twice except for one. Find that single one.
+要求：线性复杂度，空间O（1）
+lint:异或可用来交换元素。两个相同的数异或为0，任何数与0异或为原数。
+1=3^1^2^2^3
+//方法1
+    public class Solution{
+        public int singleNumber(int[] nums){
+            int res = 0;
+            res = nums[0];
+            for(int i = 1; i &lt; nums.length; i++){
+                res = res ^ nums[i]; 
+            }
+            return res;
+        }
+    }
+//方法2
+    public class Solution {
+        public int singleNumber(int[] nums) {
+            int res = 0;
+            for (int num : nums) res ^= num;
+            return res;
+        }
+    }</p>
+</blockquote>
+</li>
+</ol>
+<p>137.Single Number II 单独的数字之二：每个字符出现3次，只有一个出现2次。</p>
+<blockquote>
+<p>Given an array of integers, every element appears three times except for one. Find that single one.
+利用计算机按位储存数字的特性来做的，这道题就是除了一个单独的数字之外，数组中其他的数字都出现了三次，那么还是要利用位操作 Bit Operation 来解此题。
+我们可以建立一个32位的数字，来统计每一位上1出现的个数，我们知道如果某一位上为1的话，那么如果该整数出现了三次，对3去余为0，我们把每个数的对应位都加起来对3取余，最终剩下来的那个数就是单独的数字。</p>
+</blockquote>
+<p>hint：各个位数相加，然后对3求余,各个位就是该数的二进制。|=：相当于两数相加。</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int singleNumber(int[] nums) {
+        int res = 0;
+        int[] bitInt = new int[32];
+        for (int i = 0; i &lt; 32; i++) {
+            for (int j = 0; j &lt; nums.length; j++) {
+                bitInt[i] += (nums[j] &gt;&gt; i) &amp; 1;
+            }
+            res |= (bitInt[i] % 3) &lt;&lt; i；
+        }
+        return res;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Single Number III<blockquote>
+<p>Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.</p>
+</blockquote>
+</li>
+</ol>
+<p>For example:</p>
+<p>Given nums = [1, 2, 1, 3, 2, 5], return [3, 5].要求o(n) o(1)
+思路：
+（位运算，第一次异或得到了两个只出一次的结果，C = A XOR B。那么结果出现1的位置，这两个值必然有一个为1，一个为0.由此划分为两组数字。在进行一次异或就可得到结果。回归到Single Number II）flag:是找出C中bit位为1的，k是索引。
+1、异或求出C=C = A XOR B
+2、找出任意为1的位k和flag
+3、再次异或找出这两个数
+    public class Solution {
+        public int singleNumber(int[] nums) {
+            int [] res = new int [2];
+            int tmp = 0;
+            for (int c : nums) {
+                tmp ^= c;
+            }
+            int flag = 0;
+            int k = -1;
+            while (flag != 0) {
+                k++;
+                flag = (tmp &gt;&gt; k) &amp; 1;
+            }
+            for (int c : nums) {
+                if (((c &gt;&gt; k) &amp; 1) == 1) {
+                    res[0] ^= c;
+                } else {
+                    res[1] ^= c;
+                }
+            }
+            return res;
+        }
+    }</p>
+<ol>
+<li>Sum of Two Integers<blockquote>
+<p>Calculate the sum of two integers a and b, but you are not allowed to use the operator + and -.</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>Example:
+Given a = 1 and b = 2, return 3.
+a^b=无进位的加法， (a&amp;b)&lt;&lt;1取进位。
+    public class Solution {
+        public int getSum(int a, int b) {
+            while (b != 0) {
+                int carry = (a &amp; b) &lt;&lt; 1;
+                a = a ^ b;
+                b = carry;
+            }
+            return a ;
+        }
+    }</p>
+</blockquote>
+<ol>
+<li>Sum of Left Leaves(求左叶子节点的和）
+Find the sum of all left leaves in a given binary tree.<blockquote>
+<p>Example:[3,9,20,null,null,15,7]</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>3
+</pre></div>
+
+
+<p>/ \
+  9  20
+    /  \
+   15   7</p>
+<p>There are two left leaves in the binary tree, with values 9 and 15 respectively. Return 24.</p>
+</blockquote>
+</li>
+</ol>
+<p>两种方法：递归和迭代
+迭代：
+    /*<em>
+     * Definition for a binary tree node.
+     * public class TreeNode {
+     *     int val;
+     *     TreeNode left;
+     *     TreeNode right;
+     *     TreeNode(int x) { val = x; }
+     * }
+     </em>/
+    public class Solution {
+        public int sumOfLeftLeaves(TreeNode root) {
+            if (root == null ) {
+                return 0;
+            }
+            int res = 0;
+            Stack<TreeNode> stack = new Stack<TreeNode>();
+            stack.push(root);
+            while (!stack.empty()) {
+                TreeNode treenode = stack.pop();
+                if (treenode.left != null) {
+                    if (treenode.left.left == null &amp;&amp; treenode.left.right == null) {
+                        res += treenode.left.val;
+                    } else {
+                        stack.push(treenode.left);
+                    }
+                }
+                if (treenode.right != null){
+                    if (treenode.right.left != null || treenode.right.right != null) {
+                        stack.push(treenode.right);
+                    }
+                }
+            }
+            return res;
+        }
+    }</p>
+<p>递归：
+    /*<em>
+     * Definition for a binary tree node.
+     * public class TreeNode {
+     *     int val;
+     *     TreeNode left;
+     *     TreeNode right;
+     *     TreeNode(int x) { val = x; }
+     * }
+     </em>/
+    public class Solution {
+        public int sumOfLeftLeaves(TreeNode root) {
+            if (root == null) {
+                return 0;
+            }
+            int ans = 0;
+            if (root.left != null) {
+                if (root.left.left == null &amp;&amp; root.left.right == null) {
+                    ans += root.left.val;
+                } else {
+                    ans += sumOfLeftLeaves(root.left);
+                }
+            }
+            ans += sumOfLeftLeaves(root.right);
+            return ans;
+        }
+    }</p>
+<p>精简：</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int sumOfLeftLeaves(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int ans = 0;
+        if (root.left != null &amp;&amp; root.left.left == null &amp;&amp; root.left.right == null) {
+                ans += root.left.val;
+        } else {
+            ans += sumOfLeftLeaves(root.left);
+        }
+        ans += sumOfLeftLeaves(root.right);
+        return ans;
+    }
+}
+</pre></div>
+
+
+<p>用stack:是先序遍历，用queue是层序遍历。</p>
+<hr />
+<p>2016/12/26 21:11:52 </p>
+<p><strong>相似题目</strong>：<strong>利用递归</strong>：回溯
+ Path Sum II 二叉树路径之和之二，Subsets II 子集合之二，Permutations 全排列，Permutations II 全排列之二，Combinations 组合项。  都是指数级的时间复杂度
+Next challenges: (M) Letter Combinations of a Phone Number  (M) Combination Sum II  (M) Combinations  (M) Combination Sum III  (M) Factor Combinations  (M) Combination Sum IV</p>
+<hr />
+<ol>
+<li>Combination Sum(组合的和为指定数，每个数可重复用)</li>
+</ol>
+<p>For example, given candidate set [2, 3, 6, 7] and target 7, 
+A solution set is: 
+[
+  [7],
+  [2, 2, 3]
+]
+注意； res.add(new ArrayList<Integer>(temp));//copy返回，原temp还要用，因为这个temp到其他递归层中还要用的，如果直接用这个等会他会被改变， 这个加进去的也就不对了哈～</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; combinationSum(int[] candidates, int target) {
+        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();
+        if (candidates == null) {
+            return res;
+        }
+        Arrays.sort(candidates);
+        backtrack(res, new ArrayList&lt;Integer&gt;(), candidates, 0, target);
+        return res;
+    }
+    private void backtrack(List&lt;List&lt;Integer&gt;&gt; res, ArrayList&lt;Integer&gt; temp, int[] a, int index, int target) {
+        if (target == 0) {
+            res.add(new ArrayList&lt;Integer&gt;(temp));
+            return;
+        } 
+        int pre = -1;
+        for (int i = index; i &lt; a.length; i++) {
+            if (a[i] &gt; target) {
+                break;
+            }      
+            if (pre != -1 &amp;&amp; a[i] == a[i - 1]) {
+                continue;
+            }
+            temp.add(a[i]);
+            backtrack(res, temp, a, i, target - a[i]);
+            temp.remove(temp.size() - 1);
+            pre = a[i];
+        }
+
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Combination Sum II(从数组中找出之和等于target的组合，数组中的每个数只可以被用一次)</li>
+</ol>
+<blockquote>
+<p>For example, given candidate set [10, 1, 2, 7, 6, 1, 5] and target 8, 
+A solution set is: 
+[
+  [1, 7],
+  [1, 2, 5],
+  [2, 6],
+  [1, 1, 6]
+]
+tip : 在上题基础上，递归的时候传i+1，而不是i,要求不重复，所以从下一个开始传。</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; combinationSum2(int[] candidates, int target) {
+        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();
+        if (candidates == null) {
+            return res;
+        }
+        Arrays.sort(candidates);
+        backtrack(res, new ArrayList&lt;Integer&gt;(), candidates, 0, target);
+        return res;
+    }
+    private void backtrack(List&lt;List&lt;Integer&gt;&gt; res, ArrayList&lt;Integer&gt; temp, int[] a, int index, int target) {
+            if (target == 0) {
+                res.add(new ArrayList&lt;Integer&gt;(temp));
+                return;
+            }
+            int pre = -1;
+            for (int i = index; i &lt; a.length; i++) {
+                if (a[i] &gt; target) {
+                    break;
+                }      
+                if (pre != -1 &amp;&amp; a[i] == a[i - 1]) {
+                    continue;
+                }
+                temp.add(a[i]);
+                backtrack(res, temp, a, i + 1, target - a[i]);
+                temp.remove(temp.size() - 1);
+                pre = a[i];
+            }
+
+        }
+}
+</pre></div>
+
+
+<ol>
+<li>Combinations(从1到n中找出k个数的组合，使得小于最大数小于n)</li>
+</ol>
+<blockquote>
+<p>Given two integers n and k, return all possible combinations of k numbers out of 1 &hellip; n.</p>
+<p>For example,
+If n = 4 and k = 2, a solution is:</p>
+<p>[
+  [2,4],
+  [3,4],
+  [2,3],
+  [1,2],
+  [1,3],
+  [1,4],
+]</p>
+</blockquote>
+<p>tip: 主函数忘记return，子函数忘记return，for循环从start开始不是从1开始，传参数也是从1开始</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; combine(int n, int k) {
+        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();
+        backtrack(res, new ArrayList&lt;Integer&gt;(), n, k, 1);
+        return res;
+    }
+    public static void backtrack(List&lt;List&lt;Integer&gt;&gt; res, List&lt;Integer&gt; tep, int n, int k, int start) {
+        if (k == 0) {
+            res.add(new ArrayList&lt;Integer&gt;(tep));
+            return;
+        }
+        for (int i = start; i &lt;= n; i++) {
+            tep.add(i);
+            backtrack(res, tep, n, k - 1, i + 1);
+            tep.remove(tep.size() - 1);
+        }
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Combination Sum III(从1-n中k个数之和等于n)</li>
+</ol>
+<blockquote>
+<p>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.</p>
+<p>Example 1:</p>
+<p>Input: k = 3, n = 7</p>
+<p>Output:</p>
+<p>[[1,2,4]]</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; combinationSum3(int k, int n) {
+        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();
+        backtrack(res, new ArrayList&lt;Integer&gt;(), k, n, 1);
+        return res;
+    }
+    public static void backtrack(List&lt;List&lt;Integer&gt;&gt; res, ArrayList&lt;Integer&gt; tep, int k, int n, int start){
+        if (k == 0 &amp;&amp; n==0) {
+            res.add(new ArrayList&lt;Integer&gt;(tep));
+            return;
+        }
+        for (int i = start; i &lt;= 9; i++) {
+            tep.add(i);
+            backtrack(res, tep, k - 1, n - i, i + 1);
+            tep.remove(tep.size() - 1);
+        }
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Combination Sum IV（组合的和等于指定数，但要求写出全部组合，顺序不同也算）</li>
+</ol>
+<blockquote>
+<p>Example:</p>
+<p>nums = [1, 2, 3]
+target = 4</p>
+<p>The possible combination ways are:
+(1, 1, 1, 1)
+(1, 1, 2)
+(1, 2, 1)
+(1, 3)
+(2, 1, 1)
+(2, 2)
+(3, 1)</p>
+<p>Note that different sequences are counted as different combinations.</p>
+<p>Therefore the output is 7.</p>
+</blockquote>
+<p>tip： 与以上的回溯法不同，需要用动态规划。
+not ac : dp定义错写成int，长度设为nums+1的长度</p>
+<blockquote>
+<p>类似 Climbing Stairs，我们需要一个一维数组dp，其中dp[i]表示目标数为i的解的个数，然后我们从1遍历到target，对于每一个数i，遍历nums数组，如果i&gt;=x, dp[i] += dp[i - x]。这个也很好理解，比如说对于[1,2,3] 4，这个例子，当我们在计算dp[3]的时候，3可以拆分为1+x，而x即为dp[2]，3也可以拆分为2+x，此时x为dp[1]，3同样可以拆为3+x，此时x为dp[0]，我们把所有的情况加起来就是组成3的所有情况了</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int combinationSum4(int[] nums, int target) {
+        int[] dp = new int[target + 1];
+        dp[0] = 1;
+        Arrays.sort(nums);
+        for (int i = 1; i &lt;= target; i++) {
+            for (int a : nums) {
+                if(i &lt; a) {
+                   break;
+                }
+                dp[i] += dp[i - a];
+            }
+        }
+        return dp[target];
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Subsets</li>
+</ol>
+<blockquote>
+<p>Given a set of distinct integers, nums, return all possible subsets.
+If nums = [1,2,3], a solution is:</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>[
+  [3],
+  [1],
+  [2],
+  [1,2,3],
+  [1,3],
+  [2,3],
+  [1,2],
+  []
+]
+</pre></div>
+
+
+<p>tip：三种方法
+1、非递归：</p>
+<blockquote>
+<p>我们可以一位一位的网上叠加，比如对于题目中给的例子[1,2,3]来说，最开始是空集，那么我们现在要处理1，就在空集上加1，为[1]，现在我们有两个自己[]和[1]，下面我们来处理2，我们在之前的子集基础上，每个都加个2，可以分别得到[2]，[1, 2]，那么现在所有的子集合为[], [1], [2], [1, 2]，同理处理3的情况可得[3], [1, 3], [2, 3], [1, 2, 3], 再加上之前的子集就是所有的子集合了，</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; subsets(int[] nums) {
+        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();
+        res.add(new ArrayList&lt;Integer&gt;());
+        if (nums == null || nums.length == 0) {
+            return res;
+        }
+        Arrays.sort(nums);
+        for (int i = 0; i &lt; nums.length; i++) {
+            int s = res.size();
+            for (int j = 0; j &lt; s; j++) {
+                ArrayList&lt;Integer&gt; tep = new ArrayList&lt;Integer&gt;(res.get(j));
+                tep.add(nums[i]);
+                res.add(tep);
+            }
+        }
+        return res;
+    }
+}
+</pre></div>
+
+
+<p>2、按位赋值：</p>
+<blockquote>
+<p>把数组中所有的数分配一个状态，true表示这个数在子集中出现，false表示在子集中不出现，那么对于一个长度为n的数组，每个数字都有出现与不出现两种情况，所以共有2n中情况，那么我们把每种情况都转换出来就是子集了，我们还是用题目中的例子, [1 2 3]这个数组共有8个子集，每个子集的序号的二进制表示，把是1的位对应原数组中的数字取出来就是一个子集，八种情况都取出来就是所有的子集了，参见代码如下：</p>
+<p>1   2   3   Subset
+0 F   F   F   []
+1 F   F   T   3
+2 F   T   F   2
+3 F   T   T   23
+4 T   F   F   1
+5 T   F   T   13
+6 T   T   F   12
+7 T   T   T   123</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public static List&lt;List&lt;Integer&gt;&gt; subsets(int[] nums) {
+        Arrays.sort(nums);
+        List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;&gt;();
+        int n = nums.length;
+        for (int i = 0; i &lt; (1 &lt;&lt; n); i++) {
+            ArrayList&lt;Integer&gt; tep = new ArrayList&lt;Integer&gt;();
+            for (int j = 0; j &lt; n; j++) {
+                if ((i &amp; (1 &lt;&lt; j)) != 0) {
+                    tep.add(nums[j]);
+                }
+            }
+            result.add(tep);
+        }
+        return result;
+    }
+}
+</pre></div>
+
+
+<p>3、<a href="http://www.cnblogs.com/TenosDoIt/p/3451902.html">递归：</a></p>
+<blockquote>
+<p>思路： 求集合的所有子集问题。题目要求子集中元素非递减序排列，因此我们先要对原来的集合进行排序。原集合中每一个元素在子集中有两种状态：要么存在、要么不存在。这样构造子集的过程中每个元素就有两种选择方法：选择、不选择，因此可以构造一颗二叉树，例如对于例子中给的集合[1,2,3]，构造的二叉树如下（左子树表示选择该层处理的元素，右子树不选择），最后得到的叶子节点就是子集：</p>
+</blockquote>
+<p>notac :递归时候应该传入i+1，而不是start</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public static List&lt;List&lt;Integer&gt;&gt; subsets(int[] nums) {
+        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();
+        if (nums == null || nums.length == 0) {
+            return res;
+        }
+        Arrays.sort(nums);
+        backtrack(res, new ArrayList&lt;Integer&gt;(), nums, 0);
+        return res;
+    }
+    public static void backtrack(List&lt;List&lt;Integer&gt;&gt; res, ArrayList&lt;Integer&gt; temp, int[] nums, int start) {
+        res.add(new ArrayList&lt;Integer&gt;(temp));
+        for (int i = start; i &lt; nums.length; i++) {
+            temp.add(nums[i]);
+            backtrack(res, temp, nums, i + 1);
+            temp.remove(temp.size() - 1);
+        }
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Subsets II(数组中存在重复的数，但结果不能重复)</li>
+</ol>
+<blockquote>
+<p>For example,
+If nums = [1,2,2], a solution is:</p>
+<p>[
+  [2],
+  [1],
+  [1,2,2],
+  [2,2],
+  [1,2],
+  []
+]
+1、oj 表现好：
+    public List<List<Integer>&gt; subsetsWithDup(int[] nums) {
+        Arrays.sort(nums);
+        List<List<Integer>&gt; result = new ArrayList<List<Integer>&gt;();
+        result.add(new ArrayList<Integer>());//开始加入一个空集
+        int begin = 0;
+        for(int i = 0; i &lt; nums.length; i++){
+            if(i == 0 || nums[i] != nums[i - 1]) begin = 0;
+        //如果有重复数字，即将操作的子集的数目和上次相同
+            int size = result.size();
+            for(int j = begin; j &lt; size; j++){
+                List<Integer> cur = new ArrayList<Integer>(result.get(j));
+                cur.add(nums[i]);
+                result.add(cur);
+            }
+            begin = size;
+        }
+        return result;
+    }</p>
+</blockquote>
+<p>2、递归</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; subsetsWithDup(int[] nums) {
+        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();
+        Arrays.sort(nums);
+        if (nums.length == 0 || nums == null) {
+            return res;
+        }
+        backtrack(res, new ArrayList&lt;Integer&gt;(), nums, 0);
+        return res;
+    }
+    public void backtrack(List&lt;List&lt;Integer&gt;&gt; res, ArrayList&lt;Integer&gt; temp, int[] nums, int start) {
+        res.add(new ArrayList&lt;Integer&gt;(temp));
+        for (int i = start; i &lt; nums.length; i++) {
+            if (i != 0 &amp;&amp; nums[i] == nums[i - 1] &amp;&amp; i &gt; start) {
+                continue;
+            }
+            temp.add(nums[i]);
+            backtrack(res, temp ,nums, i + 1);
+            temp.remove(temp.size() - 1);
+         }
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Permutations（全排列）</li>
+</ol>
+<blockquote>
+<p>Given a collection of distinct numbers, return all possible permutations.</p>
+<p>For example,
+[1,2,3] have the following permutations:
+[
+  [1,2,3],
+  [1,3,2],
+  [2,1,3],
+  [2,3,1],
+  [3,1,2],
+  [3,2,1]
+]</p>
+</blockquote>
+<p>1、不断交换两个数，递归
+    public class Solution {
+        public List<List<Integer>&gt; permute(int[] num) {
+            List<List<Integer>&gt; rst = new ArrayList<List<Integer>&gt;();
+            backtrack(num, rst, 0);
+            return rst;
+        }
+        public void backtrack(int[] num, List<List<Integer>&gt; rst, int start) {
+            if (start &gt;= num.length) {
+                List<Integer> temp = new ArrayList<Integer>();
+                for (int i = 0; i &lt; num.length; i++) {
+                    temp.add(num[i]);
+                }
+                rst.add(temp);
+                return;
+            } else {
+                for (int i = start; i &lt; num.length; i++) {
+                    swap(start, i, num);
+                    backtrack(num, rst, start + 1);
+                    swap(start, i, num);
+                }
+            }
+        }
+        public void swap (int a, int b, int[] num) {
+            int temp = num[a];
+            num[a] = num[b];
+            num[b] = temp;
+        }
+    }</p>
+<p>2、非递归，不断在前一个组合的不同位置删插入元素。
+public List<List<Integer>&gt; permute(int[] num) {</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>List&lt;List&lt;Integer&gt;&gt; rst = new ArrayList&lt;List&lt;Integer&gt;&gt;();
+
+rst.add(new ArrayList&lt;Integer&gt;());
+
+for (int i = 0; i &lt; num.length; i++) {
+    List&lt;List&lt;Integer&gt;&gt; tmpRst = new ArrayList&lt;List&lt;Integer&gt;&gt;();
+    for (List&lt;Integer&gt; pm : rst) {
+        for (int j = 0; j &lt; pm.size() + 1; j++) {
+            List&lt;Integer&gt; tmpPm = new ArrayList&lt;Integer&gt;(pm);
+            tmpPm.add(j, num[i]);
+            tmpRst.add(tmpPm);
+        }
+    }
+
+    rst = new ArrayList&lt;List&lt;Integer&gt;&gt;(tmpRst);
+}
+
+return rst;
+</pre></div>
+
+
+<p>}
+47. Permutations II（全排列2&ndash;数组有重复的元素）</p>
+<blockquote>
+<p>For example,
+[1,1,2] have the following unique permutations:
+[
+  [1,1,2],
+  [1,2,1],
+  [2,1,1]
+]</p>
+</blockquote>
+<ol>
+<li>Next Permutation（求下一个全排列，无额外空间）</li>
+</ol>
+<blockquote>
+<p>Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.
+1,2,3 → 1,3,2
+3,2,1 → 1,2,3
+1,1,5 → 1,5,1</p>
+<p>tip:如果给定数组是降序，则说明是全排列的最后一种情况，则下一个排列就是最初始情况</p>
+</blockquote>
+<p>1　　2　　7　　4　　3　　1</p>
+<p>下一个排列为：</p>
+<p>1　　3　　1　　2　　4　　7</p>
+<p>那么是如何得到的呢，我们通过观察原数组可以发现，如果从末尾往前看，数字逐渐变大，到了2时才减小的，然后我们再从后往前找第一个比2大的数字，是3，那么我们交换2和3，再把此时3后面的所有数字转置一下即可，步骤如下：</p>
+<p>1　　<strong>2</strong>　　7　　4　　3　　1</p>
+<p>1　　<strong>2</strong>　　7　　4　　<strong>3</strong>　　1</p>
+<p>1　　<strong>3</strong>　　7　　4　　<strong>2</strong>　　1</p>
+<p>1　　3　　<strong>1　　2　　4　　7</strong></p>
+<p>思路：1、从后往前找到第一个比后一个小的数的位置
+2、从后往前找第一个比这个数大的数，交换
+3、将这个位置以后的书翻转，使得排列最小。</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public void nextPermutation(int[] nums) {
+        if (nums.length == 0 || nums == null) {
+            return;
+        }
+        // find the first smaller
+        int index = nums.length - 1;
+        while(index &gt; 0){
+            if(nums[index-1]&lt;nums[index])
+                break;
+            index--;
+        }
+        // find the bigger one and swap
+        if (index == 0) {
+            reverse(0, nums.length - 1, nums);
+        } else {
+            int i = nums.length - 1;
+            int temp = nums[index - 1];
+            while(i &gt;= index) {
+                if (nums[i] &gt; temp) {
+                    break;
+                }
+                i--;
+            }
+           swap(index - 1, i, nums);
+           reverse(index, nums.length - 1, nums);
+           return;
+        }
+    }
+    public void reverse(int start, int end, int[] nums) {
+        while(start &lt;= end){
+            swap(start++, end--, nums);
+        }
+    }
+    public void swap(int i, int j, int[] nums) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Permutation Sequence（返回n个数的第k个全排列）</li>
+</ol>
+<p>Given n and k, return the kth permutation sequence.
+思路借鉴：http://www.cnblogs.com/grandyang/p/4358678.html
+以【1，2，3，4】为例子，第一位，有4个选择，每个出现6次，a2 = k1 / (n - 2)!
+k2 = k1 % (n - 2)!</p>
+<p>tip:以数组形式存下阶乘会省时间。</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public String getPermutation(int n, int k) {
+        StringBuilder res = new StringBuilder();
+        ArrayList&lt;Integer&gt; nums = new ArrayList&lt;&gt;();
+        int[] je = new int[n + 1];
+        je[0] = 1;
+        int sum = 1;
+        for (int i = 1; i &lt;= n; ++i) {
+            nums.add(i);
+            sum *= i;
+            je[i] = sum;
+        }
+        for (int i = 1, l = k - 1; i &lt;= n; ++i) {
+            int index = l / je[n - i];
+            res.append(nums.remove(index));
+            l = l % je[n - i];
+        }
+        return res.toString();
+    }
+}
+</pre></div>
+
+
+<p>266.Palindrome Permutation 回文全排列</p>
+<blockquote>
+<p>Given a string, determine if a permutation of the string could form a palindrome.</p>
+</blockquote>
+<p>tip：回文特性。1.字符串长度为偶数，则每个字母出现的次数一定是偶数次出现2.字符串长度为基数，只有一个字母出现的次数是奇数，其余均为偶数。</p>
+<p>三种方法：</p>
+<p>1、重复删除添加set：这种方法用到了一个set，我们遍历字符串，如果某个字母不在set中，我们加入这个字母，如果字母已经存在，我们删除该字母，那么最终如果set中没有字母或是只有一个字母时，说明是回文串</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public boolean canPermutePalindrome(String s) {
+        Set&lt;Character&gt; set=new HashSet&lt;Character&gt;();
+        for(int i=0; i&lt;s.length(); ++i){
+            if (!set.contains(s.charAt(i)))
+                set.add(s.charAt(i));
+            else 
+                set.remove(s.charAt(i));
+        }
+        return set.size()==0 || set.size()==1;
+    }
+}
+</pre></div>
+
+
+<p>2、用bitset</p>
+<blockquote>
+<p>建立一个256大小的bitset，每个字母根据其ASCII码值的不同都有其对应的位置，然后我们遍历整个字符串，遇到一个字符，就将其对应的位置的二进制数flip一下，就是0变1，1变0，那么遍历完成后，所有出现次数为偶数的对应位置还应该为0，而出现次数为奇数的时候，对应位置就为1了，那么我们最后只要统计1的个数，就知道出现次数为奇数的字母的个数了，只要个数小于2就是回文数，</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public boolean canPermutePalindrome(String s) {
+    BitSet bs = new BitSet();
+    for (byte b : s.getBytes())
+        bs.flip(b);
+    return bs.cardinality() &lt; 2;
+}
+</pre></div>
+
+
+<p>3.建立每个字母和其出现次数的映射，然后我们遍历哈希表，统计出现次数为奇数的字母的个数</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public boolean canPermutePalindrome(String s) {
+    char[] sc = s.toCharArray();
+    Map&lt;Character, Integer&gt; map = new HashMap();
+    for(char c:sc){
+        map.put(c,map.getOrDefault(c,0)+1);
+    }
+    if(sc.length%2 == 0){
+        for(int val:map.values()){
+            if(val%2!=0) return false;
+        }
+    } else {
+        boolean oneOdd = false;
+        for(int val:map.values()){
+            if(val%2!=0){
+                if(!oneOdd) oneOdd = true;
+                else return false;
+            } 
+        }            
+    }
+    return true;
+}
+</pre></div>
+
+
+<p>267 .Palindrome Permutation II :(判断是否能组成回文，是，返回回文的全全排列，不是返回空)
+思路：用map<charcter,integer> 保存字符串的每个字符，并判断是否能组成回文。odd表示基数个数。然后添加一半字符，并全排列，然后，反转就可组成完整回文。</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public List&lt;String&gt; generatePalindromes(String s) {
+    int odd = 0;
+    String mid = &quot;&quot;;
+    List&lt;String&gt; res = new ArrayList&lt;&gt;();
+    List&lt;Character&gt; list = new ArrayList&lt;&gt;();
+    Map&lt;Character, Integer&gt; map = new HashMap&lt;&gt;();
+
+    // step 1. build character count map and count odds
+    for (int i = 0; i &lt; s.length(); i++) {
+        char c = s.charAt(i);
+        map.put(c, map.containsKey(c) ? map.get(c) + 1 : 1);
+        odd += map.get(c) % 2 != 0 ? 1 : -1;
+    }
+
+    // cannot form any palindromic string
+    if (odd &gt; 1) return res;
+
+    // step 2. add half count of each character to list
+    for (Map.Entry&lt;Character, Integer&gt; entry : map.entrySet()) {
+        char key = entry.getKey();
+        int val = entry.getValue();
+
+        if (val % 2 != 0) mid += key;
+
+        for (int i = 0; i &lt; val / 2; i++) list.add(key);
+    }
+
+    // step 3. generate all the permutations
+    getPerm(list, mid, new boolean[list.size()], new StringBuilder(), res);
+
+    return res;
+}
+
+// generate all unique permutation from list
+void getPerm(List&lt;Character&gt; list, String mid, boolean[] used, StringBuilder sb, List&lt;String&gt; res) {
+    if (sb.length() == list.size()) {
+        // form the palindromic string
+        res.add(sb.toString() + mid + sb.reverse().toString());
+        sb.reverse();
+        return;
+    }
+
+    for (int i = 0; i &lt; list.size(); i++) {
+        // avoid duplication
+        if (i &gt; 0 &amp;&amp; list.get(i) == list.get(i - 1) &amp;&amp; !used[i - 1]) continue;
+
+        if (!used[i]) {
+            used[i] = true; sb.append(list.get(i));
+            // recursion
+            getPerm(list, mid, used, sb, res);
+            // backtracking
+            used[i] = false; sb.deleteCharAt(sb.length() - 1);
+        }
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Valid Sudoku(判断是否为有效数独)</li>
+</ol>
+<blockquote>
+<p>Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
+判断：每列没有重复，每行没有重复，每九宫格没有重复。
+方法：在检测行是否合法时，i 表示矩阵的行，j 表示矩阵的列；
+检测列是否合法时，i 表示矩阵的列，j 表示矩阵的行；
+检测九宫格是否合法时，i 表示九宫格的标号，j 表示九宫格里的每个元素（只是我们需要根据i、j定位相应的元素到原来的矩阵：第 i 个九宫格里面的第 j 个元素在原矩阵的第 3<em>(i/3) + j/3 行，第 3</em>(i%3) + j%3）列，“/” 表示整数除法）</p>
+</blockquote>
+<p>或者暴力破解。分别一个循环体解决一个检查问题。</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public boolean isValidSudoku(char[][] board) {
+        int [] vset = new int [9];
+        int [] hset = new int [9];
+        int [] bckt = new int [9];
+        int idx = 0;
+        for (int i = 0; i &lt; 9; i++) {
+            for (int j = 0; j &lt; 9; j++) {
+                if (board[i][j] != &#39;.&#39;) {
+                    idx = 1 &lt;&lt; (board[i][j] - &#39;0&#39;) ;
+                    if ((hset[i] &amp; idx) &gt; 0 ||
+                        (vset[j] &amp; idx) &gt; 0 ||
+                        (bckt[(i / 3) * 3 + j / 3] &amp; idx) &gt; 0) return false;
+                    hset[i] |= idx;
+                    vset[j] |= idx;
+                    bckt[(i / 3) * 3 + j / 3] |= idx;
+                }
+            }
+        }
+        return true;
+    }
+}
+</pre></div>
+
+
+<p>public class Solution {
+    public boolean isValidSudoku(char[][] board) {
+        HashSet<Character> row = new HashSet&lt;&gt;();
+        HashSet<Character> col = new HashSet&lt;&gt;();
+        HashSet<Character> block = new HashSet&lt;&gt;();
+        for (int i = 0; i &lt; 9; ++i) {
+            for (int j = 0; j &lt; 9; ++j) {
+                if (board[i][j] != &lsquo;.&rsquo; &amp;&amp; !row.add(board[i][j])) {
+                    return false;
+                }
+                if (board[j][i] != &lsquo;.&rsquo; &amp;&amp; !col.add(board[j][i])) {
+                    return false;
+                }
+                int rowIndex = 3 * (i / 3);
+                int colIndex = 3 * (i % 3);
+                if (board[rowIndex + j / 3][colIndex + j % 3] != &lsquo;.&rsquo; &amp;&amp; !block.add(board[rowIndex + j / 3][colIndex + j % 3])) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+}</p>
+<p>36.Sudoku Solver 求解数独</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public void solveSudoku(char[][] board) {
+        if (board == null || board.length == 0) {
+            return;
+        }
+        solve(board);
+    }
+    //
+    public boolean solve(char[][] board) {
+        for (int i = 0; i &lt; board.length; i++) {
+            for (int j = 0; j &lt; board[0].length; j++) {
+                if (board[i][j] == &#39;.&#39;) {
+                    for (char c = &#39;1&#39;; c &lt;= &#39;9&#39;; c++)//trial. Try 1 through 9 {
+                        if (isValidSudoku(board, i, j, c)) {
+                           board[i][j] = c;//Put c for this cell
+                           if (solve(board)) {
+                            return true;//If it&#39;s the solution return true
+                           } else {
+                            board[i][j] = &#39;.&#39;;//Otherwise go back
+                           }
+                        }
+                    }
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    //判断是该数是否合适，只需监测改行货该列是否重复就可。
+    public boolean isValidSudoku(char[][] board, int row, int col, char c) {
+        for (int i = 0; i &lt; 9; i++) {
+            if (board[row][i] != &#39;.&#39; &amp;&amp; board[row][i] == c) {
+                return false;
+            }
+            if (board[i][col] != &#39;.&#39; &amp;&amp; board[i][col] == c) {
+                return false;
+            }
+            if (board[3 * (row / 3) + i / 3][3 * (col / 3) + i % 3] != &#39;.&#39; &amp;&amp; board[3 * (row / 3) + i / 3][3 * (col / 3) + i % 3] == c) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>N-Queens(给出所有方案)
+参考：
+<a href="http://blog.csdn.net/hackbuteer1/article/details/6657109">有关取反，移动位置等操作</a>
+算法比较：<a href="http://www.cnblogs.com/TenosDoIt/p/3801621.html">http://www.cnblogs.com/TenosDoIt/p/3801621.html</a></li>
+</ol>
+<blockquote>
+<p>The n-queens puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.</p>
+</blockquote>
+<p>tip:当前列，左、右对角线不能有重复的。</p>
+<p>高效的算法1、位计算</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+     private List&lt;List&lt;String&gt;&gt; res = new ArrayList&lt;&gt;();
+     public List&lt;List&lt;String&gt;&gt; solveNQueens(int n) {
+        int upperlim = (1 &lt;&lt; n) - 1;//低n位全部置1
+        char[][] chars = new char[n][n];
+        for (char[] tmp : chars) {
+            Arrays.fill(tmp, &#39;.&#39;);
+        }
+        helper(0, 0, 0, chars, 0, upperlim);
+        return res;
+    }
+    public void helper(int row ,int ld, int rd, char[][] chars, int index, int upperlim) {
+        int pos, p;
+        if (row != upperlim) {
+            pos = upperlim &amp;(~(row | ld | rd));//pos中二进制为1的位，表示可以在当前行的对应列放皇后,和upperlim与运算，主要是ld在上一层是通过左移位得到的，它的高位可能有无效的1存在，这样会清除ld高位无效的1
+            while (pos != 0) {
+                p = pos &amp; (~pos + 1);//获取pos最右边的1,例如pos = 010110，则p = 000010
+                pos = pos - p;//pos最右边的1清0
+                setChar(chars, index, p,&#39;Q&#39;);//在当前行，p中1对应的列放置皇后
+                helper(row | p, (ld | p) &lt;&lt; 1, (rd | p) &gt;&gt; 1, chars, index + 1, upperlim);
+                setChar(chars, index, p,&#39;.&#39;);//  (ld | p)&lt;&lt; 1 是因为由ld造成的占位在下一行要右移一下；
+            }
+        } else {//找到一个解,记录到res里
+            setQueen(chars);
+        }
+    }
+    //第row行，第loc1(p)列的位置放置一个queen或者清空queen，loc1(p)表示p中二进制1的位置
+    private void setChar(char[][] chars, int row, int p, char val) {
+        int col = 0;
+        while((p &amp; 1) == 0) {
+            p &gt;&gt;= 1;
+            col++;
+        }
+        chars[row][col] = val;   
+    }
+    //将char[][]转换成string,然后加入到结果里
+    private void setQueen(char[][] map) {
+        List&lt;String&gt; cur = new ArrayList&lt;String&gt;();
+        for (char[] i : map) cur.add(String.valueOf(i));
+        res.add(cur);
+    }
+}
+</pre></div>
+
+
+<p>更高效的：</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>private long MASK;
+    public List&lt;List&lt;String&gt;&gt; solveNQueens(int n) {
+        List&lt;List&lt;String&gt;&gt; res = new ArrayList&lt;&gt;();
+        MASK = (1 &lt;&lt; n) - 1;
+        dfs(0, n, 0L, 0L, 0L, new ArrayList&lt;&gt;(), res);
+        return res;
+    }
+
+    private void dfs(int index, int n, long row, long ld, long rd, List&lt;String&gt; crt, List&lt;List&lt;String&gt;&gt; res) {
+        if (index == n) {
+            res.add(new ArrayList&lt;&gt;(crt));
+            return;
+        }
+        long status = ~(row | ld | rd) &amp; MASK;
+        while (status &gt; 0) {
+            long pos = status &amp; -status;
+            crt.add(getString(pos, n));
+            dfs(index + 1, n, row | pos, (ld | pos) &lt;&lt; 1, (rd | pos) &gt;&gt; 1, crt, res);
+            crt.remove(index);
+            status -= pos;
+        }
+    }
+
+    private String getString(long pos, int n) {
+        char[] vals = new char[n];
+        int i = n;
+        while (pos  &gt; 0) {
+            pos &gt;&gt;= 1;
+            i--;
+        }
+        for (int j = 0; j &lt; n; j++) {
+            vals[j] = &#39;.&#39;; 
+        }
+        vals[i] = &#39;Q&#39;;
+        return new String(vals);
+    }
+</pre></div>
+
+
+<p>2、高效算法2（对角线）：
+一条正对角线的元素其i - j 是定值
+一条负对角线上的元素其i+j是定值</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public List&lt;List&lt;String&gt;&gt; solveNQueens(int n) {
+        boolean[] 
+            //ocp0 = new boolean[n], //whether there&#39;s a queen ocupying nth row, I don&#39;t need it
+            ocp90 = new boolean[n], //whether there&#39;s a queen ocupying nth column
+            ocp45 = new boolean[2 * n - 1], // mark 45 degree occupation
+            ocp135 = new boolean[2 * n - 1]; // mark 135 degree occupation
+        List&lt;List&lt;String&gt;&gt; ans = new ArrayList&lt;List&lt;String&gt;&gt;();
+        char[][] map = new char[n][n];
+        for (char[] tmp : map) Arrays.fill(tmp, &#39;.&#39;); //init
+
+        solve(0, n, map, ans, ocp45, ocp90, ocp135);
+        return ans;
+    }
+
+    private void solve(int depth, int n, char[][] map, List&lt;List&lt;String&gt;&gt; ans, 
+    boolean[] ocp45, boolean[] ocp90, boolean[] ocp135) {
+        if (depth == n) {
+            addSolution(ans, map);
+            return;
+        }
+
+        for (int j = 0; j &lt; n; j++)
+            if (!ocp90[j] &amp;&amp; !ocp45[depth + j] &amp;&amp; !ocp135[j - depth + n - 1]) {
+                ocp90[j] = true;
+                ocp45[depth + j] = true;
+                ocp135[j - depth + n - 1] = true;
+                map[depth][j] = &#39;Q&#39;;
+                solve(depth + 1, n, map, ans, ocp45, ocp90, ocp135);
+                ocp90[j] = false;
+                ocp45[depth + j] = false;
+                ocp135[j - depth + n - 1] = false;
+                map[depth][j] = &#39;.&#39;;
+            }
+    }
+
+    private void addSolution(List&lt;List&lt;String&gt;&gt; ans, char[][] map) {
+        List&lt;String&gt; cur = new ArrayList&lt;String&gt;();
+        for (char[] i : map) cur.add(String.valueOf(i));
+        ans.add(cur);
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>N-Queens II（只输出多少种解决方法）</li>
+</ol>
+<p>参考：http://www.cnblogs.com/TenosDoIt/p/3801621.html</p>
+<p>Now, instead outputting board configurations, return the total number of distinct solutions.</p>
+<p>public class Solution {
+    int res = 0;
+    public int totalNQueens(int n) {
+        boolean[] col = new boolean[n];
+        boolean[] d1 = new boolean[2 * n ];
+        boolean[] d2 = new boolean[2 * n ];
+        helper(col, d1, d2, 0, n);
+        return res;
+    }
+    void helper(boolean[] col, boolean[] d1, boolean[] d2, int row, int n) {
+        if (row == n) {
+            res++;
+        } 
+        for (int l = 0; l &lt; n; l++) {
+            int l1 = l - row + n;
+            int l2 = l + row;
+            if (col[l] || d1[l1] || d2[l2]) {
+                continue;
+            }
+            col[l] = d1[l1] = d2[l2] = true;
+            helper(col, d1, d2, row + 1, n);
+            col[l] = d1[l1] = d2[l2] = false;
+        }</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>}
+</pre></div>
+
+
+<p>}</p>
+<p>最高效率:</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    int res = 0;
+    private long MASK;
+    public int totalNQueens(int n) {
+        MASK = (1 &lt;&lt; n) - 1;
+        helper(0, n, 0L,0L, 0L);
+        return res;
+    }
+    void helper(int index, int n, long row, long ld, long rd) {
+        if (index == n) {
+            res++;
+        } 
+        long pos = ~(row | ld | rd) &amp; MASK;//找到该插入的位置,位于该行上的冲突位置就用row、ld和rd中的1来表示。把它们三个并起来，得到该行所有的禁位，取反后就得到所有可以放的位置（用pos来表示）
+        while(pos &gt; 0) {
+            long p = pos &amp; -pos;
+            helper(index + 1, n, row | p, (ld | p) &lt;&lt; 1, (rd | p) &gt;&gt; 1);
+            pos -= p;
+        }
+
+
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Palindrome Partitioning(列出s的回文字串)</li>
+</ol>
+<blockquote>
+<p>For example, given s = &ldquo;aab&rdquo;,
+Return</p>
+<p>[
+  [&ldquo;aa&rdquo;,&rdquo;b&rdquo;],
+  [&ldquo;a&rdquo;,&rdquo;a&rdquo;,&rdquo;b&rdquo;]
+]</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    boolean isvalid(char[] c, int l, int h) {
+        while(l &lt; h) {
+            if (c[l++] != c[h--]) {
+                return false;
+            } 
+        }
+        return true;
+    }
+    public List&lt;List&lt;String&gt;&gt; partition(String s) {
+        List&lt;List&lt;String&gt;&gt; res = new ArrayList&lt;&gt;();
+        dfs(res, new ArrayList&lt;String&gt;(), s.toCharArray(), 0);
+        return res;
+    }
+    void dfs(List&lt;List&lt;String&gt;&gt; res, ArrayList&lt;String&gt; list, char[] c, int start) {
+        int n = c.length;
+        if (start == n) {
+            res.add(new ArrayList&lt;String&gt;(list));
+        }
+        for (int i = start; i &lt; n; i++) {
+            if (isvalid(c, start, i)) {
+                list.add(new String(c, start, i - start + 1));
+                dfs(res, list, c, i + 1);
+                list.remove(list.size() - 1);
+            }
+        }
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Palindrome Partitioning II（求可以把字符串截断为回文的最少操作）</li>
+</ol>
+<blockquote>
+<p>For example, given s = &ldquo;aab&rdquo;,
+Return 1 since the palindrome partitioning [&ldquo;aa&rdquo;,&rdquo;b&rdquo;] could be produced using 1 cut.</p>
+</blockquote>
+<p>tip：</p>
+<blockquote>
+<p>This can be solved by two points:</p>
+<p>cut[i] is the minimum of cut[j - 1] + 1 (j &lt;= i), if [j, i] is palindrome.
+If [j, i] is palindrome, [j + 1, i - 1] is palindrome, and c[j] == c[i].
+The 2nd point reminds us of using dp (caching).</p>
+<p>a   b   a   |   c  c
+                j  i
+       j-1  |  [j, i] is palindrome
+   cut(j-1) +  1</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int minCut(String s) {
+        char[] c = s.toCharArray();
+        int len = c.length;
+        boolean[][] p = new boolean[len][len];
+        int[] dp = new int[len];
+        for (int i = 0; i &lt; len; ++i) {
+            int min = i;
+            for(int j = 0; j &lt;= i; ++j) {
+                if (c[i] == c[j] &amp;&amp; (j + 1 &gt; i - 1 || p[j + 1][i - 1])) {
+                    p[j][i] = true;
+                    min = j == 0 ? 0 : Math.min(min, dp[j - 1] + 1);
+                }
+            }
+            dp[i] = min; 
+        }
+        return dp[len - 1];
+    }
+}
+</pre></div>
+
+
+<hr />
+<p><strong>动态问题+循环遍历</strong></p>
+<ol>
+<li>Word Break（将字符串拆分，看子串有没有在字典里，返回一个boolean[]数组）</li>
+</ol>
+<p>Given a string s and a dictionary of words dict, determine if s can be segmented into a space-separated sequence of one or more dictionary words.</p>
+<p>思路：动态数组res[s的规模+1]，找出字典中最长的字符长度maxlength，遍历的时候，j 从后往前变量，条件：j&gt;=0&amp;&amp; i - j &lt;= maxlength.</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public boolean wordBreak(String s, Set&lt;String&gt; wordDict) {
+        if (s == null &amp;&amp; s.length() == 0) {
+            return true;
+        }
+        int maxlength = 0;
+        for (String ele : wordDict) {
+            maxlength = Math.max(maxlength, ele.length());
+        }
+        boolean[] res = new boolean[s.length() + 1];
+        res[0] = true;
+        for (int i = 1; i &lt;= s.length(); i++) {
+            for (int j = i; j &gt;= 0 &amp;&amp; i - j &lt;= maxlength; j--) {
+                if (res[j] &amp;&amp; wordDict.contains(s.substring(j,i))) {
+                    res[i] = true;
+                    break;
+                }  
+            }
+        }
+        return res[s.length()];
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Word Break II(标出所有子串)</li>
+</ol>
+<blockquote>
+<p>For example, given
+s = &ldquo;catsanddog&rdquo;,
+dict = [&ldquo;cat&rdquo;, &ldquo;cats&rdquo;, &ldquo;and&rdquo;, &ldquo;sand&rdquo;, &ldquo;dog&rdquo;].</p>
+<p>A solution is [&ldquo;cats and dog&rdquo;, &ldquo;cat sand dog&rdquo;].</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public List&lt;String&gt; wordBreak(String s, List&lt;String&gt; wordDict) {
+        List&lt;String&gt; res = new ArrayList&lt;&gt;();
+        wordBreak(s, res, wordDict, 0, &quot;&quot;, new boolean[s.length() + 1]);
+        return res;
+    }
+    boolean wordBreak(String s, List&lt;String&gt; res, List&lt;String&gt; wordDict, int left, String prev, boolean[] isvalid){
+        int n = s.length();
+        if (left == n) {
+            res.add(prev.trim());
+            return true;
+        }  
+        boolean possible = false;
+        for (int i = left + 1; i &lt;= s.length(); i++) {
+            if (isvalid[i]) {
+                continue;
+            }
+            String sub = s.substring(left,i);
+            if (wordDict.contains(sub)) {
+                boolean flag = wordBreak(s, res, wordDict, i, prev.concat(&quot; &quot;).concat(sub), isvalid);
+                possible = flag || possible;
+            }
+        }
+        isvalid[left] = !possible;
+        return possible;
+    }
+}
+</pre></div>
+
+
+<hr />
+<ol>
+<li>
+<p>Path Sum :树的路径，到叶子节点的和是否等于给出的值.DFS:深度优先算法</p>
+<blockquote>
+<p>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</p>
+</blockquote>
+<p>/*<em>
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ </em>/
+public class Solution {
+    public boolean hasPathSum(TreeNode root, int sum) {
+        if (root == null) {
+            return false;
+        }
+        if (root.left == null &amp;&amp; root.right == null) {
+            return sum == root.val;
+        }
+        return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum -root.val);
+    }
+}
+notac:
+注意：类型不同的不能同名，如sum和sums，某个节点的值为tree.val</p>
+</li>
+<li>
+<p>Path Sum II 二叉树路径之和之二 （依然用DFS,）</p>
+</li>
+</ol>
+<blockquote>
+<p>Given a binary tree and a sum, find all root-to-leaf paths where each path&rsquo;s sum equals the given sum.</p>
+<p>For example:
+Given the below binary tree and sum = 22,</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>          5
+         / \
+        4   8
+       /   / \
+      11  13  4
+     /  \    / \
+    7    2  5   1
+</pre></div>
+
+
+<blockquote>
+<p>return</p>
+<p>[
+   [5,4,11,2],
+   [5,8,4,5]
+]
+ArrayList实现,访问每个节点为O(1),linkedList会为O（n）,
+notac:integer错写成interger;传参没写参数名，没有；</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; pathSum(TreeNode root, int sum) {
+        List&lt;Integer&gt; cur= new ArrayList&lt;Integer&gt;();
+        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;List&lt;Integer&gt;&gt;();
+        pathSum(cur, res, root, sum);
+        return res;
+    }
+    public void pathSum(List&lt;Integer&gt; cur, List&lt;List&lt;Integer&gt;&gt; res, TreeNode root, int sum){
+        if (root == null) {
+            return;
+        }
+        cur.add(root.val);
+        if (root.left == null &amp;&amp; root.right == null &amp;&amp; root.val == sum) {
+            res.add(new ArrayList(cur));//一定要new一个对象，不然一直是都指向同一个对象
+        } else {
+            pathSum(cur, res, root.left, sum - root.val);
+            pathSum(cur,res, root.right, sum - root.val);
+        }
+        cur.remove(cur.size() - 1);//一定要回溯
+    }
+}
+</pre></div>
+
+
+<p><strong>437. Path Sum III </strong> （不用从root&ndash;leave,只要其中一段之和相等即可）不造
+ Add to List QuestionEditorial Solution  My Submissions。
+Total Accepted: 9434
+Total Submissions: 24383
+Difficulty: Easy
+Contributors: Stomach_ache
+You are given a binary tree in which each node contains an integer value.</p>
+<p>Find the number of paths that sum to a given value.</p>
+<p>The path does not need to start or end at the root or a leaf, but it must go downwards (traveling only from parent nodes to child nodes).</p>
+<p>The tree has no more than 1,000 nodes and the values are in the range -1,000,000 to 1,000,000.</p>
+<p>Example:</p>
+<p>root = [10,5,-3,3,2,null,11,3,-2,null,1], sum = 8</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>  10
+ /  \
+5   -3
+</pre></div>
+
+
+<p>/ \    \
+  3   2   11
+ / \   \
+3  -2   1</p>
+<p>Return 3. The paths that sum to 8 are:</p>
+<ol>
+<li>5 -&gt; 3</li>
+<li>5 -&gt; 2 -&gt; 1</li>
+<li>-3 -&gt; 11</li>
+</ol>
+<p>思路：
+递归来做，相当于先序遍历二叉树，对于每一个节点都有记录了一条从根节点到当前节点到路径，同时用一个变量curSum记录路径节点总和，然后我们看curSum和sum是否相等，相等的话结果res加1，不等的话我们来继续查看子路径和有没有满足题意的，做法就是每次去掉一个节点，看路径和是否等于给定值，注意最后必须留一个节点，不能全去掉了，因为如果全去掉了，路径之和为0，而如果假如给定值刚好为0的话就会有问题，</p>
+<ol>
+<li>Combination Sum</li>
+</ol>
+<blockquote>
+<p>For example, given candidate set [2, 3, 6, 7] and target 7, 
+A solution set is: 
+[
+  [7],
+  [2, 2, 3]
+]</p>
+</blockquote>
+<ol>
+<li>
+<p>Dungeon Game（地老游戏，求出王子就公主的最小初始血量，注意，到达任何地方血量都应该&gt;=1,）
+tip：从最后往最前出发。动态规划，省略空间。建立一个和迷宫大小相同的二维数组用来表示当前位置出发的起始血量，最先初始化的是公主所在的房间的起始生命值，然后慢慢向第一个房间扩散，不断的得到各个位置的最优的起始生命值。递归方程为: 递归方程是dp[i][j] = max(1, min(dp[i+1][j], dp[i][j+1]) - dungeon[i][j]).
+notac: 新建health数组时，else if 里的是h[][]-d[][];</p>
+<p>public class Solution {
+    public int calculateMinimumHP(int[][] dungeon) {
+        if (dungeon.length == 0) {
+            return 0;
+        }
+        int w = dungeon[0].length;
+        int h = dungeon.length;
+        int[][] health = new int[h][w];
+        health[h - 1][w - 1] = Math.max(1, 1 - dungeon[h - 1][w - 1]);
+        for (int i = h - 2; i &gt;= 0; i&ndash;) {
+            health[i][w - 1] = Math.max(1, health[i + 1][w - 1] - dungeon[i][w - 1]);
+        }
+        for (int j = w - 2; j &gt;= 0; j&ndash;) {
+            health[h - 1][j] = Math.max(1, health[h - 1][j + 1] - dungeon[h - 1][j]);
+        }
+        for (int i = h - 2; i &gt;= 0; i&ndash;) {
+            for (int j = w - 2; j &gt;= 0; j&ndash;){
+                    health[i][j] = Math.max(1,Math.min(health[i + 1][j] - dungeon[i][j], health[i][j + 1] - dungeon[i][j]));
+            }
+        }
+        return health[0][0];
+    }
+}</p>
+</li>
+<li>
+<p>Minimum Path Sum</p>
+</li>
+</ol>
+<p>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.每次只能向右或向下移动一次。</p>
+<p>我们维护一个二维的dp数组，其中dp[i][j]表示当前位置的最小路径和，递推式也容易写出来 dp[i][j] = grid[i][j] + min(dp[i - 1][j],</p>
+<p><strong>Path Sum III  ：求任何一段路径之和为sum</strong>不是很懂：
+思路：相当于先序遍历二叉树，对于每一个节点都有记录了一条从根节点到当前节点到路径，同时用一个变量curSum记录路径节点总和，然后我们看curSum和sum是否相等，相等的话结果res加1，不等的话我们来继续查看子路径和有没有满足题意的，做法就是每次去掉一个节点，看路径和是否等于给定值，注意最后必须留一个节点，不能全去掉了，因为如果全去掉了，路径之和为0，而如果假如给定值刚好为0的话就会有问题。</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public int pathSum(TreeNode root, int sum) {
+        HashMap&lt;Integer, Integer&gt; presum = new HashMap&lt;Integer, Integer&gt;();
+        presum.put(0,1);
+        return helper(root, 0, sum, presum);
+    }
+    public int helper(TreeNode root, int sum, int target, HashMap&lt;Integer, Integer&gt; presum) {
+         if (root == null) {
+             return 0;
+         }
+         sum += root.val;
+         int res = presum.getOrDefault(sum - target, 0);
+         presum.put(sum, presum.getOrDefault(sum, 0) + 1);
+         res += helper(root.right, sum, target, presum) + helper(root.left, sum, target, presum);
+         presum.put(sum, presum.get(sum) - 1);//不懂为啥要-1 ////Remove the current node so it wont affect other path
+         return res;
+    }
+}
+</pre></div>
+
+
+<h1 id="array">第二部分：array</h1>
+<ol>
+<li>Minimum Moves to Equal Array Elements(使得数组中的元素变为相同的，要做多少次改变)<blockquote>
+<p>Example:</p>
+<p>Input:
+[1,2,3]</p>
+<p>Output:
+3</p>
+<p>Explanation:
+Only three moves are needed (remember each move increments two elements):</p>
+<p>[1,2,3]  = [2,3,3]  = [3,4,3]  = [4,4,4]</p>
+</blockquote>
+</li>
+</ol>
+<p>解法：建立一个2元方程求要动M次，最后每个元素都变为f，</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>sum(array)+m*(n-1)=n*f
+
+f-min(array)=m
+
+求得m=sum(array)-n*min(array)
+</pre></div>
+
+
+<p>tips1： 除了一个元素外其他元素递增，相当于让一个元素递减。sum - 个数*最小值。</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int minMoves(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        int res = 0;
+        int min = nums[0];
+        for (int i = 1; i &lt; nums.length; i++) {
+            if (nums[i] &gt;= min) {
+                res += nums[i] - min;
+            } else {
+                res += (min - nums[i]) * i;
+                min = nums[i];
+            }
+        }
+        return res;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Intersection of Two Arrays 不包括重复的值<blockquote>
+<p>Given two arrays, write a function to compute their intersection.</p>
+<p>Example:
+Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].
+方法：3种
+1、先对两个数组排序。然后相同的元素加入res
+2、二分查找：一个数组排序，遍历另一个数组，把遍历到的每个数字在排序号的数组中用二分查找法搜索，如果能找到则放入结果set中，这里我们用到了set的去重复的特性，最后我们将set。</p>
+</blockquote>
+</li>
+</ol>
+<p>3、tip: 建立两个hashset，第一个存储nums1的值，第二个存储共有的值，最后转换为数组。</p>
+<p>转换为数组的方法：
+1、循环
+2、sream：return list.stream().mapToInt(i-&gt;i).toArray();</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int[] intersection(int[] nums1, int[] nums2) {
+        Set&lt;Integer&gt; set1 = new HashSet&lt;Integer&gt;();
+        Set&lt;Integer&gt; set2 = new HashSet&lt;Integer&gt;();
+        for (int i : nums1) {
+            set1.add(i);
+        }
+        for (int i : nums2) {
+            if (set1.contains(i)) {
+                set2.add(i);
+            }
+        }
+        int[] result = new int[set2.size()];
+        int j = 0;
+        for (Integer i : set2) {
+            result[j++] = i;
+        }
+        return result;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Intersection of Two Arrays II （重复值）注意说内存限制</li>
+</ol>
+<p>用hashmap
+1、如果数组排序了就用第一种
+2、如果只有nums2内存限制，就先将nums1加入hashmap， 如果都限制内存，就都排序然后一个一个取出比较
+3、如果nums1.的规模小，就hash</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int[] intersect(int[] nums1, int[] nums2) {
+        Map&lt;Integer,Integer&gt; map = new HashMap&lt;Integer,Integer&gt;();
+        int[] result = new int[nums1.length];
+        int count = 0;
+        for (Integer i : nums1) {
+            map.put(i,map.getOrDefault(i, 0) + 1);
+        }
+        for (Integer i : nums2) {
+            Integer c = map.get(i);
+            if (c != null &amp;&amp; c &gt; 0) {
+                map.put(i, map.get(i) - 1);
+                result[count++] = i;
+            }
+        }
+        return Arrays.copyOf(result, count);
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>
+<p>Remove Duplicates from Sorted Array （去重，求有序数组中不重复的元素个数，要求不许分配额外的数组。）
+思路：有序数组，只需比较连个挨着的元素是否一样。当nums[k]!=nums[i],i所在的值就是当前值，否则i处的值就移到k处。k+1的值就是数组长度。</p>
+<p>public class Solution {
+    public int removeDuplicates(int[] nums) {
+        int k = 0;
+        for (int i = 1; i &lt; nums.length; i++) {
+            if (nums[k] != nums[i]) {
+                nums[++k] = nums[i];
+            }
+        }
+        return k + 1;
+    }
+}
+巧妙地方法：
+public class Solution {
+    public int removeDuplicates(int[] nums) {
+        int i = 0;
+        for (int c : nums) {
+            if (i == 0 || c &gt; nums[i-1]) {
+                nums[i++] = c;
+            }
+        }
+        return i;
+    }
+}</p>
+</li>
+<li>
+<p>Remove Duplicates from Sorted Array II(允许出现2次)
+<a href="http://www.sigmainfy.com/blog/leetcode-remove-duplicates-from-sorted-array-i-and-ii.html">方法：</a>
+i表示新的索引。
+O(N)O(1)
+    public class Solution {
+        public int removeDuplicates(int[] nums) {
+            if (nums == null) {
+                return 0;
+            }
+            int count = 1;
+            int i = 1;
+            int j = 1;
+            while (j &lt; nums.length) {
+                if (nums[j] != nums[j - 1]) {
+                    nums[i++] = nums[j];
+                    count = 1;
+                } else {
+                    if (count &lt; 2) {
+                        nums[i++] = nums[j];
+                        count++;
+                    }
+                }
+                ++j;
+            }
+            return i;
+        }
+    }</p>
+</li>
+<li>
+<p>Remove Duplicates from Sorted List</p>
+<blockquote>
+<p>For example,
+Given 1-&gt;1-&gt;2, return 1-&gt;2.
+Given 1-&gt;1-&gt;2-&gt;3-&gt;3, return 1-&gt;2-&gt;3.
+tips:定义个指针指向该链表的第一个元素，然后第一个元素和第二个元素比较，如果重复了，则删掉第二个元素，如果不重复，指针指向第二个元素。</p>
+</blockquote>
+<p>public class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode node = head;
+        while (node.next != null) {
+            if (node.val == node.next.val) {
+                node.next = node.next.next;
+            } else {
+                node = node.next;
+            }
+        }
+        return head;
+    }
+}</p>
+</li>
+<li>
+<p>Remove Element</p>
+<blockquote>
+<p>Example:
+Given input array nums = [3,2,2,3], val = 3</p>
+</blockquote>
+</li>
+</ol>
+<p>Your function should return length = 2, with the first two elements of nums being 2.</p>
+<p>tip:两个指针。动尽量少的元素可以减少运行时间，将重复的元素被尾部的元素替换</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int removeElement(int[] nums, int val) {
+        int end = nums.length - 1;
+        int i = 0;
+        while (i &lt;= end) {
+            if (nums[i] == val) {
+                nums[i] = nums[end--];
+            } else {
+                i++;
+            }
+        }
+        return end + 1;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Remove Nth Node From End of List（删除倒数的第n个节点）</li>
+</ol>
+<blockquote>
+<p>For example,</p>
+<p>Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.</p>
+<p>After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.</p>
+</blockquote>
+<p>要求：一次遍历，就删除掉。</p>
+<p>tip:preDelete,head两个指针,head先移动n个位置，如果此时fast为空，说明不溢出。然后两个指针一起移动，当head为空时，preDelete恰好到该移除的节点前一个节点。一定放一个前缀节点指向head,防止空指针异常和省略了判断fast移动了n+1的判断；</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        if (n &lt;= 0) {
+            return null;
+        }
+
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+
+        ListNode preDelete = dummy;
+        for (int i = 0; i &lt; n; i++) {
+            if (head == null) {
+                return null;
+            }
+            head = head.next;
+        }
+        while (head != null) {
+            head = head.next;
+            preDelete = preDelete.next;
+        }
+        preDelete.next = preDelete.next.next;
+        return dummy.next;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Remove Linked List Elements</li>
+</ol>
+<blockquote>
+<p>Example
+Given: 1 &ndash;&gt; 2 &ndash;&gt; 6 &ndash;&gt; 3 &ndash;&gt; 4 &ndash;&gt; 5 &ndash;&gt; 6, val = 6
+Return: 1 &ndash;&gt; 2 &ndash;&gt; 3 &ndash;&gt; 4 &ndash;&gt; 5
+tip：预先加一个空节点。留一个指针当head.
+    public class Solution {
+        public ListNode removeElements(ListNode head, int val) {
+            ListNode dumpty = new ListNode(0);
+            dumpty.next = head;
+            head = dumpty;
+            while(head.next != null) {
+                if (head.next.val == val) {
+                    head.next = head.next.next;
+                } else {
+                    head = head.next;
+                }
+            }
+            return dumpty.next;
+        }
+    }</p>
+</blockquote>
+<ol>
+<li>
+<p>Remove Duplicates from Sorted List II</p>
+<blockquote>
+<p>For example,
+Given 1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;4-&gt;5, return 1-&gt;2-&gt;5.
+Given 1-&gt;1-&gt;1-&gt;2-&gt;3, return 2-&gt;3.</p>
+</blockquote>
+<p>public class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode dumpty = new ListNode(0 == head.val ? 1 : 0);//要让dumpt和head不同。
+        dumpty.next = head;
+        ListNode cur = head;
+        ListNode pre = dumpty;
+        head = dumpty;
+        // 只有前一个值不等与当前的，当前的 ！= 下一个。当前值才是唯一的 
+        while (cur != null &amp;&amp; cur.next != null) {
+            if (pre.val != cur.val &amp;&amp; cur.val != cur.next.val) {
+                head.next = cur;
+                head = head.next;
+            }
+            pre = cur;
+            cur = cur.next;
+        }
+        //注意判断最后一个节点，最后一个cur节点
+        if (pre.val != cur.val) {
+            head.next = cur;
+            head = head.next;
+        }
+        //让最后一个的next为空。
+        head.next = null;
+        return dumpty.next;
+    }
+}
+注释的地方很重要</p>
+</li>
+</ol>
+<p>[LeetCode] Merge Sorted Array 混合插入有序数组</p>
+<blockquote>
+<p>Given two sorted integer arrays A and B, merge B into A as one sorted array.</p>
+<p>Note:
+You may assume that A has enough space (size that is greater or equal to m + n) to hold additional elements from B. The number of elements initialized in A and B are m andn respectively.</p>
+</blockquote>
+<p>tip: A数组长度为n+m.从后往前插入比较，谁大放谁。最后谁剩下就全部填充到前面。if-else 比 3目比较（ <code>nums1[index--] = nums1[m] &gt; nums2[n] ? nums1[m--] : nums2[n--];</code>） 更快些</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int index = m + n - 1;
+        --m;
+        --n;
+        while (m &gt;= 0 &amp;&amp; n &gt;= 0) {
+            if (nums1[m] &gt; nums2[n]) {
+                nums1[index--] =  nums1[m--];
+            } else {
+                nums1[index--] =  nums2[n--];
+            }
+        }
+        while (n &gt;= 0) {
+            nums1[index--] = nums2[n--];
+        }
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Merge Two Sorted Lists(合并两个有序链表)</li>
+</ol>
+<blockquote>
+<p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+tip：依次比较两个链表的大小
+1.o(n)空间
+notac:最后判断谁不为空，head.next 错指向 l.next</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode dumpty = new ListNode(0);
+        ListNode head = dumpty;
+        while (l1 != null &amp;&amp; l2 != null) {
+            if (l1.val &lt; l2.val) {
+                head.next = l1;
+                l1 = l1.next;
+            } else {
+                head.next = l2;
+                l2 = l2.next;
+            }
+            head = head.next;
+        }
+        if (l1 != null) {
+            head.next = l1;
+        } else {
+            head.next = l2;
+        }
+        return dumpty.next;
+    }
+}
+</pre></div>
+
+
+<p>2.O(1)空间</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>if(l1 == null) return l2;
+if(l2 == null) return l1;
+
+if(l1.val &lt; l2.val) {
+    l1.next = mergeTwoLists(l1.next, l2);
+    return l1;
+} else {
+    l2.next = mergeTwoLists(l2.next, l1);
+    return l2;
+}
+</pre></div>
+
+
+<p>这是queue的递归，始终重写同一块空间（BFS无论递归还是迭代，BFS都是属于队列结构的算法）
+而stack 结构的递归，会占用很多额外的空间，规模庞大会堆栈溢出。(DFS)</p>
+<ol>
+<li>Insert Interval（给一组有序的区间插入一个区间）</li>
+</ol>
+<blockquote>
+<p>Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).</p>
+<p>You may assume that the intervals were initially sorted according to their start times.</p>
+<p>Example 1:
+Given intervals [1,3],[6,9], insert and merge [2,5] in as [1,5],[6,9].</p>
+<p>Example 2:
+Given [1,2],[3,5],[6,7],[8,10],[12,16], insert and merge [4,9] in as [1,2],[3,10],[12,16].</p>
+</blockquote>
+<p>This is because the new interval [4,9] overlaps with [3,5],[6,7],[8,10].</p>
+<p>tip: 遍历区间列表，分三种情况比较
+注意：集合里foreach是有iterator实现的，用iterator更快
+for循环适合访问顺序存储结构(arraylist)
+Iterator适合访问链式存储结构（linkdelist）
+数组插入的时间复杂度为O(N)，查找O(1)
+链表插入O(1),查找O(N)
+1. o(1)空间，o(n)时间
+    public List<Interval> insert(List<Interval> intervals, Interval newInterval) {``
+            int i=0;
+            while(i&lt;intervals.size() &amp;&amp; intervals.get(i).end&lt;newInterval.start) i++;
+            while(i&lt;intervals.size() &amp;&amp; intervals.get(i).start&lt;=newInterval.end){
+                newInterval = new Interval(Math.min(intervals.get(i).start, newInterval.start), Math.max(intervals.get(i).end, newInterval.end));
+                intervals.remove(i);
+            }
+            intervals.add(i,newInterval);
+            return intervals;
+    }
+2. o(n),o(n)
+      if (newInterval == null || intervals == null) {
+                return intervals;
+            }</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>        ArrayList&lt;Interval&gt; results = new ArrayList&lt;Interval&gt;();
+        int insertPos = 0;
+
+        for (Interval interval : intervals) {
+            if (interval.end &lt; newInterval.start) {
+                results.add(interval);
+                insertPos++;
+            } else if (interval.start &gt; newInterval.end) {
+                results.add(interval);
+            } else {
+                newInterval.start = Math.min(interval.start, newInterval.start);
+                newInterval.end = Math.max(interval.end, newInterval.end);
+            }
+        }
+
+        results.add(insertPos, newInterval);
+
+        return results;
+</pre></div>
+
+
+<ol>
+<li>Merge Intervals</li>
+</ol>
+<blockquote>
+<p>Given a collection of intervals, merge all overlapping intervals.</p>
+<p>For example,
+Given [1,3],[2,6],[8,10],[15,18],
+return [1,6],[8,10],[15,18].</p>
+</blockquote>
+<p>注意：一定要将i == n - 1 放到 start[i + 1] &gt; end[i]前面，否则越界
+public class Solution {
+    public List<Interval> merge(List<Interval> intervals) {
+        int n = intervals.size();
+        int[] start = new int[n];
+        int[] end = new int[n];
+        for (int i = 0; i &lt; n; i++) {
+            start[i] = intervals.get(i).start;
+            end[i] = intervals.get(i).end;
+        }
+        Arrays.sort(start);
+        Arrays.sort(end);
+        int j = 0;
+        List<Interval> res = new ArrayList<Interval>();
+        for (int i = 0; i &lt; n; i++){
+            if (i == n - 1 || start[i + 1] &gt; end[i]) {
+                res.add(new Interval(start[j], end[i]));
+                j = i + 1;
+            }
+        }
+        return res;
+    }
+}
+not ac : collections 写错了；最后忘了添加最后的元素res.add()；判断忘记判断相等的情况
+    public class Solution {
+        public List<Interval> merge(List<Interval> intervals) {
+            if (intervals == null || intervals.size() &lt; 2) {
+                return intervals;
+            }
+            Collections.sort(intervals, new IntervalComparator());
+            Interval last = intervals.get(0);
+            List<Interval> res = new ArrayList<Interval>();
+            for (int i = 1; i &lt; intervals.size(); i++) {
+                Interval cur = intervals.get(i);
+                if (cur.start &lt; last.end) {
+                    last.end = Math.max(cur.end, last.end);
+                } else {
+                    res.add(last);
+                    last = cur;
+                }
+            }
+            res.add(last);
+            return res;
+        }
+        private class IntervalComparator implements Comparator<Interval> {
+           public int compare(Interval a, Interval b) {
+               return a.start - b.start;
+           }
+        }  <br />
+    }</p>
+<ol>
+<li>Merge k Sorted Lists（给定k个排序的list,合并成一个list）</li>
+</ol>
+<blockquote>
+<p>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.</p>
+</blockquote>
+<ol>
+<li>
+<p>tip :priorityqueue是一个按大小顺序排列的队列。</p>
+<blockquote>
+<p>这种解法利用了最小堆这种数据结构，我们首先把k个链表的首元素都加入最小堆中，它们会自动排好序。然后我们每次取出最小的那个元素加入我们最终结果的链表中，然后把取出元素的下一个元素再加入堆中，下次仍从堆中取出最小的元素做相同的操作，以此类推，直到堆中没有元素了，此时k个链表也合并为了一个链表，返回首节点即可</p>
+</blockquote>
+<p>public class Solution {
+    private Comparator<ListNode> ListNodeComparator = new Comparator<ListNode>() {
+        public int compare(ListNode left, ListNode right) {
+            if (left == null) {
+                return 1;
+            } else if (right == null) {
+                return -1;
+            } else {
+                return left.val - right.val;
+            }
+        }
+    };
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists == null || lists.length == 0) {
+            return null;
+        }
+        Queue<ListNode> queue = new PriorityQueue<ListNode>(lists.length, ListNodeComparator);
+        for (int i = 0; i &lt; lists.length; i++) {
+            if (lists[i] != null) {
+                queue.add(lists[i]);
+            }
+        }
+        ListNode dumpty = new ListNode(0);
+        ListNode point = dumpty;
+        while(!queue.isEmpty()){
+            ListNode head = queue.poll();
+            point.next = head;
+            point = head;
+            if (head.next != null) {
+                queue.add(head.next);
+            }
+        }
+        return dumpty.next;
+    }
+}</p>
+</li>
+</ol>
+<p>2.调用两个的排序，Divide &amp; Conquer（ol较优）</p>
+<blockquote>
+<p>分治法 Divide and Conquer Approach。简单来说就是不停的对半划分，比如k个链表先划分为合并两个k/2个链表的任务，再不停的往下划分，直到划分成只有一个或两个链表的任务，开始合并。</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+public static ListNode mergeKLists(ListNode[] lists){
+    return partion(lists,0,lists.length-1);
+}
+
+public static ListNode partion(ListNode[] lists,int s,int e){
+    if(s==e)  return lists[s];
+    if(s&lt;e){
+        int q=(s+e)/2;
+        ListNode l1=partion(lists,s,q);
+        ListNode l2=partion(lists,q+1,e);
+        return merge(l1,l2);
+    }else
+        return null;
+}
+
+//This function is from Merge Two Sorted Lists.
+public static ListNode merge(ListNode l1,ListNode l2){
+    if(l1==null) return l2;
+    if(l2==null) return l1;
+    if(l1.val&lt;l2.val){
+        l1.next=merge(l1.next,l2);
+        return l1;
+    }else{
+        l2.next=merge(l1,l2.next);
+        return l2;
+    }
+}
+}
+</pre></div>
+
+
+<ol>
+<li>Rotate Array(至少3种方法)</li>
+</ol>
+<blockquote>
+<p>Rotate an array of n elements to the right by k steps.</p>
+<p>For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7] is rotated to [5,6,7,1,2,3,4].
+1、3次反转，（0，n-k-1）(n-k,n-1)(0,n-1) O（1）空间
+    public class Solution {
+        public void rotate(int[] nums, int k) {
+            if (nums.length == 0) {
+                return;
+            }
+            k = k % nums.length;
+            reverse(nums, 0, nums.length - k -1);
+            reverse(nums, nums.length - k, nums.length - 1);
+            reverse(nums, 0, nums.length - 1);
+        }
+        public void reverse(int[] nums, int start, int end) {
+            while (start &lt; end) {
+                int temp = nums[start];
+                nums[start] = nums[end];
+                nums[end] = temp;
+                start++;
+                end&ndash;;
+            }
+        }
+    }</p>
+</blockquote>
+<p>2、交换：不停的交换某两个数字的位置来实现旋转 O（1）空间</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public void rotate(int[] nums, int k) {
+        if (nums.length == 0) {
+            return;
+        }
+        int n = nums.length;
+        int start = 0;
+        while (n != 0 &amp;&amp; (k %= n) != 0) {
+            for (int i =0; i &lt; k; ++i) {
+                int temp = nums[i + start];
+                nums[i + start] = nums[i + start + n - k];
+                nums[i + start + n - k] = temp;
+            }
+            n -= k;
+            start += k;
+        }
+    }
+}
+</pre></div>
+
+
+<p>3、O（n）
+新建一个数组，对应传值</p>
+<p>https://discuss.leetcode.com/topic/64936/java-several-solutions-which-do-you-think-the-best-it-s-appreciated-if-you-could-provided-its-pros-and-cons/3</p>
+<p>tags:array</p>
+<p>2016/12/19 17:20:08 </p>
+<p>Third Maximum Number 第三大的数,如果不存在，就返回最大的数。
+方法：</p>
+<blockquote>
+<p>用三个变量first, second, third来分别保存第一大，第二大，和第三大的数，然后我们遍历数组，如果遍历到的数字大于当前第一大的数first，那么三个变量各自错位赋值，如果当前数字大于second，小于first，那么就更新second和third，如果当前数字大于third，小于second，那就只更新third。</p>
+<p>注意这里有个坑，就是初始化要用长整型long的最小值，否则当数组中有INT_MIN存在时，程序就不知道该返回INT_MIN还是最大值first了</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int thirdMax(int[] nums) {
+        long max = Long.MIN_VALUE;
+        long mid = max;
+        long min = max;
+        for (int n : nums) {
+            if (n &gt; max) {
+                min = mid;
+                mid = max;
+                max = n;
+            } else if (max &gt; n &amp;&amp; n &gt; mid) {
+                min = mid;
+                mid = n;
+            } else if (mid &gt; n &amp;&amp; n &gt; min) {
+                min = n;
+            }
+        }
+        return (int)(min != Long.MIN_VALUE ? min : max);
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Two Sum</li>
+</ol>
+<blockquote>
+<p>Given nums = [2, 7, 11, 15], target = 9,</p>
+<p>Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].</p>
+</blockquote>
+<p>tip:Time Limit Exceeded
+O（n） 一次循环</p>
+<p>not ac :map.put 错写成 add;新建数组 int[] {0,1} 而不是int[0,1],map是否含有某个key,containsKey;还有注释这行</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map&lt;Integer,Integer&gt; map = new HashMap&lt;Integer,Integer&gt;();
+        for (int i = 0; i &lt; nums.length; i++) {
+            if (map.containsKey(nums[i])){
+                return new int[] {map.get(nums[i]), i};//6
+            } else {
+                map.put(target - nums[i], i);
+            }
+        }
+        return new int[2];
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Pascal&rsquo;s Triangle II（求第k行的杨辉三角）</li>
+</ol>
+<blockquote>
+<p>Given an index k, return the kth row of the Pascal&rsquo;s triangle.</p>
+<p>For example, given k = 3,
+Return [1,3,3,1].
+要求：O（k）的额外空间
+tip：利用杨辉三角的性质：
+除每行最左侧与最右侧的数字以外，每个数字等于它的左上方与右上方两个数字之和。
+notac:j&gt;=不是小于等于</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public List&lt;Integer&gt; getRow(int rowIndex) {
+        List&lt;Integer&gt; res = new ArrayList&lt;Integer&gt;();
+        res.add(1);
+        for (int i = 1; i &lt;= rowIndex; i++) {
+            for (int j = i - 1; j &gt;= 1; j--) {
+                int temp = res.get(j - 1) + res.get(j);
+                res.set(j, temp);
+            }
+            res.add(1);
+        }
+        return res;
+    }
+}
+</pre></div>
+
+
+<p>2016/12/20 9:30:28 </p>
+<ol>
+<li>Pascal&rsquo;s Triangle<blockquote>
+<p>Given numRows, generate the first numRows of Pascal&rsquo;s triangle.</p>
+<p>For example, given numRows = 5,
+Return</p>
+<p>[
+     [1],
+    [1,1],
+   [1,2,1],
+  [1,3,3,1],
+ [1,4,6,4,1]
+]</p>
+</blockquote>
+</li>
+</ol>
+<p>1、动态dp解决方法
+public class Solution {
+    public List<List<Integer>&gt; generate(int numRows) {
+        List<List<Integer>&gt; res = new ArrayList<List<Integer>&gt;();
+        List<Integer> row = null;
+        List<Integer> pre = row;
+        for (int i = 0; i &lt; numRows; i++) {
+            row = new ArrayList<Integer>();
+            for (int j = 0; j &lt; i + 1; j++) {
+                if (j == 0 || j == i) {
+                    row.add(1);
+                } else {
+                    row.add(pre.get(j - 1) + pre.get(j));
+                }
+            }
+            pre = row;
+            res.add(row);
+        }
+        return res;
+    }
+}
+2、注意：此方法中每次row的规模都随着i变化，所以每次要res.add(复制row的值)</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; generate(int numRows) {
+        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;List&lt;Integer&gt;&gt;();
+        List&lt;Integer&gt; row = new ArrayList&lt;Integer&gt;();
+        for (int i = 0; i &lt; numRows; i++) {
+            row.add(0, 1);
+            for (int j = 1; j &lt; row.size() - 1; j++) {
+                row.set(j, row.get(j) + row.get(j + 1));
+            }
+            res.add(new ArrayList&lt;Integer&gt;(row));
+        }
+        return res;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Contains Duplicate II(查看数组中是否有间隔最多为k的相等的元素)</li>
+</ol>
+<blockquote>
+<p>Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i and j is at most k.</p>
+</blockquote>
+<p>tip: 滑动窗口，窗口大小为k,如果没有添加成功说明有重复数字，set始终只有k个大小。
+not ac: set是抽象的要用HashSet实现</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        Set&lt;Integer&gt; set = new HashSet&lt;Integer&gt;();
+        for (int i = 0; i &lt; nums.length; i++) {
+            if (i &gt; k) {
+                set.remove(nums[i - k - 1]);
+            }
+            if (!set.add(nums[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Contains Duplicate(数组中是否有重复的值)</li>
+</ol>
+<blockquote>
+<p>Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.</p>
+</blockquote>
+<p>tip:方法很多
+1、O（n）O(n)</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        final Set&lt;Integer&gt; set = new HashSet&lt;Integer&gt;();
+        for (int n : nums) {
+            if(!set.add(n)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+</pre></div>
+
+
+<p>2.o(nlogn) o(1) oj很快 先排序，然后比较相邻两个值</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>   public boolean containsDuplicate(int[] nums) {
+        Arrays.sort(nums);
+        for(int ind = 1; ind &lt; nums.length; ind++) {
+            if(nums[ind] == nums[ind - 1]) {
+                return true;
+            }
+        }
+        return false;
+    }
+</pre></div>
+
+
+<ol>
+<li>Best Time to Buy and Sell Stock</li>
+</ol>
+<blockquote>
+<p>If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.</p>
+<p>tip：问题的另一个问法是max subarray problem&rdquo; using Kadane&rsquo;s Algorithm，如果有负数的情况。</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int maxProfit(int[] prices) {
+        int maxCur = 0;
+        int maxSoFar = 0;
+        for (int i = 1; i &lt; prices.length; i++) {
+            maxCur = Math.max(0, maxCur += prices[i] - prices[i - 1]);
+            maxSoFar = Math.max(maxSoFar, maxCur);
+        }
+        return maxSoFar;
+    }
+}
+</pre></div>
+
+
+<p>2016/12/20 14:16:54 </p>
+<ol>
+<li>Best Time to Buy and Sell Stock II(多次买入卖出，但必须先买后卖)</li>
+</ol>
+<blockquote>
+<p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
+<p>Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int maxProfit(int[] prices) {
+        int res = 0;
+        for (int i = 1; i &lt; prices.length; i++) {
+            if (prices[i] - prices[i - 1] &gt; 0) {
+                res += prices[i] - prices[i - 1];
+            }
+        }
+        return res;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Best Time to Buy and Sell Stock III（hard<strong>待理解</strong>）
+最多进行2次交易的最大利润。<blockquote>
+<p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
+</blockquote>
+</li>
+</ol>
+<p>Design an algorithm to find the maximum profit. You may complete at most two transactions.
+参见：http://blog.csdn.net/linhuanmars/article/details/23236995</p>
+<blockquote>
+<p>local[i][j]=max(global[i-1][j-1]+max(diff,0),local[i-1][j]+diff) </p>
+<p>global[i][j]=max(local[i][j],global[i-1][j])，
+定义local[i][j]为在到达第i天时最多可进行j次交易并且最后一次交易在最后一天卖出的最大利润，此为局部最优。
+解法：动态优化</p>
+</blockquote>
+<ol>
+<li>Find All Numbers Disappeared in an Array
+要求： O(n) 除了返回的外不占用额外空间</li>
+</ol>
+<blockquote>
+<p>Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.</p>
+</blockquote>
+<p>tip ： 1、变量：对存在的元素进行处理，变为负数，不存在的就为0，最后看没改变的就是没有的。</p>
+<blockquote>
+<p>The basic idea is that we iterate through the input array and mark elements as negative using nums[nums[i] -1] = -nums[nums[i]-1]. In this way all the numbers that we have seen will be marked as negative. In the second iteration, if a value is not marked as negative, it implies we have never seen that index before, so just add it to the return list.</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public List&lt;Integer&gt; findDisappearedNumbers(int[] nums) {
+        List&lt;Integer&gt; res = new ArrayList&lt;Integer&gt;();
+        for (int i = 0; i &lt; nums.length; i++) {
+            int val = Math.abs(nums[i]) - 1;
+            if (nums[val] &gt; 0) {
+                nums[val] = -nums[val];
+            }
+        }
+        for (int i = 0; i &lt; nums.length; i++) {
+            if (nums[i] &gt; 0) {
+                res.add(i + 1);
+            }
+        }
+        return res;
+    }
+}
+</pre></div>
+
+
+<p>2016/12/20 20:16:13</p>
+<ol>
+<li>Majority Element</li>
+</ol>
+<p>1.摩尔投票法 Moore Voting，需要O(n)的时间和O(1)的空间，比hashset更好。这种投票法先将第一个数字假设为众数，然后把计数器设为1，比较下一个数和此数是否相等，若相等则计数器加一，反之减一。然后看此时计数器的值，若为零，则将当前值设为候选众数。</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int majorityElement(int[] nums) {
+        int ma = nums[0];
+        int count = 1;
+        for (int i = 1; i &lt; nums.length; i++) {
+            if(count == 0) {
+                count++;
+                ma = nums[i];
+            } else if (ma == nums[i]) {
+                count++;
+            } else {
+                count--;
+            }
+        }
+        return ma;
+    }
+}
+</pre></div>
+
+
+<p>2.hashset存储每个数与出现次数，如果出现的次数 &gt; 长度的一半。</p>
+<ol>
+<li>Move Zeroes</li>
+</ol>
+<blockquote>
+<p>Given an array nums, write a function to move all 0&rsquo;s to the end of it while maintaining the relative order of the non-zero elements.</p>
+</blockquote>
+<p>For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].</p>
+<blockquote>
+<p>要求：
+You must do this in-place without making a copy of the array.
+Minimize the total number of operations.（最少的移动次数）</p>
+</blockquote>
+<p>1.后置：找到0后置
+    public class Solution {
+        public void moveZeroes(int[] nums) {
+            int j = 0;
+            int n = nums.length;
+            for (int i = 0; i &lt; n; i++) {
+                if (nums[i]) {
+                    continue;
+                }
+                if (j &lt;= i) {
+                    j = i + 1;
+                }
+                while (j &lt; n &amp;&amp; nums[j] == 0) {
+                    j++;
+                }
+                if (j == n) {
+                    break;
+                }
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+            }
+        }
+    }
+2.前置：找到非零，前置，优化：先找到为零的地方，最后末尾填0</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public void moveZeroes(int[] nums) {
+        int j = 0;
+        while(j &lt; nums.length &amp;&amp; nums[j] != 0) {
+            j++;
+        }
+         for (int i = j; i &lt; nums.length; i++) {
+             if(nums[i] != 0) {
+                 nums[j++] = nums[i];
+             }
+         }
+         Arrays.fill(nums, j, nums.length, 0);
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>Shortest Word Distance （求数组中最短单词距离）</li>
+</ol>
+<blockquote>
+<p>Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.</p>
+<p>For example,
+Assume that words = [&ldquo;practice&rdquo;, &ldquo;makes&rdquo;, &ldquo;perfect&rdquo;, &ldquo;coding&rdquo;, &ldquo;makes&rdquo;].</p>
+<p>Given word1 = “coding”, word2 = “practice”, return 3.
+Given word1 = &ldquo;makes&rdquo;, word2 = &ldquo;coding&rdquo;, return 1.</p>
+<p>Note:
+You may assume that word1 does not equal to word2, and word1 and word2 are both in the list.</p>
+<p>1.次优：一次循环，两个辅助
+遍历一次数组就可以了，我们用两个变量p1,p2初始化为-1，然后我们遍历数组，遇到单词1，就将其位置存在p1里，若遇到单词2，就将其位置存在p2里，如果此时p1, p2都不为-1了，那么我们更新结果，</p>
+<p>2.最优：一次循环，一个变量
+只用一个辅助变量idx，初始化为-1，然后遍历数组，如果遇到等于两个单词中的任意一个的单词，我们在看idx是否为-1，若不为-1，且指向的单词和当前遍历到的单词不同，我们更新结果.</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public int shortestDistance(String[] words, String word1, String word2) {
+   int index = -1, minDistance = Integer.MAX_VALUE;
+   for (int i = 0; i &lt; words.length; i++) {
+      if (words[i].equals(word1) || words[i].equals(word2)) {
+         if (index != -1 &amp;&amp; !words[index].equals(words[i])) {
+            minDistance = Math.min(minDistance, i - index);
+          }
+          index = i;
+      }
+   }
+   return minDistance;
+}
+</pre></div>
+
+
+<p>243.2 [LeetCode] Shortest Word Distance II 最短单词距离之二</p>
+<blockquote>
+<p>This is a follow up of Shortest Word Distance. The only difference is now you are given the list of words and your method will be called repeatedly many times with different parameters. How would you optimize it?</p>
+<p>Design a class which receives a list of words in the constructor, and implements a method that takes two words word1 and word2 and return the shortest distance between these two words in the list.</p>
+<p>For example,
+Assume that words = [&ldquo;practice&rdquo;, &ldquo;makes&rdquo;, &ldquo;perfect&rdquo;, &ldquo;coding&rdquo;, &ldquo;makes&rdquo;].</p>
+<p>Given word1 = “coding”, word2 = “practice”, return 3.
+Given word1 = &ldquo;makes&rdquo;, word2 = &ldquo;coding&rdquo;, return 1.</p>
+<p>思路： 我们用哈希表来建立每个单词和其所有出现的位置的映射，然后在找最短单词距离时，我们只需要取出该单词在哈希表中映射的位置数组进行两两比较即可</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class WordDistance {
+
+    private final Map&lt;String, List&lt;Integer&gt;&gt; indices = new HashMap&lt;&gt;();
+
+    public WordDistance(String[] words) {
+      for(int i = 0; i &lt; words.length; i++) {
+        String word = words[i];
+        List&lt;Integer&gt; indicesForWord = indices.get(word);
+        if(indicesForWord == null) {
+          indicesForWord = new ArrayList&lt;&gt;();
+          indices.put(word, indicesForWord);
+        }
+        indicesForWord.add(i);
+      }
+    }
+
+    public int shortest(String word1, String word2) {
+      int min = Integer.MAX_VALUE;
+      int i = 0, j = 0;
+      List&lt;Integer&gt; indices1 = indices.get(word1);
+      List&lt;Integer&gt; indices2 = indices.get(word2);
+      while(i &lt; indices1.size() &amp;&amp; j &lt; indices2.size()) {
+        min = Math.min(min, Math.abs(indices2.get(j) - indices1.get(i)));
+        if(i + 1 == indices1.size() || indices2.get(j) &lt; indices1.get(i)) j++;
+        else i++;
+      }
+      return min;
+    }
+
+  }
+</pre></div>
+
+
+<blockquote>
+<p>Time for initialization/indexing: O(n)
+Time for finding distance: O(n)
+Memory: O(n)</p>
+</blockquote>
+<p>345.Shortest Word Distance III 最短单词距离之三</p>
+<blockquote>
+<p>word1 and word2 may be the same and they represent two individual words in the list.</p>
+<p>For example,
+Assume that words = [&ldquo;practice&rdquo;, &ldquo;makes&rdquo;, &ldquo;perfect&rdquo;, &ldquo;coding&rdquo;, &ldquo;makes&rdquo;].</p>
+<p>Given word1 = “makes”, word2 = “coding”, return 1.
+Given word1 = &ldquo;makes&rdquo;, word2 = &ldquo;makes&rdquo;, return 3.
+已经优化，只用一个变量，这个idx的作用就相当于记录上一次的位置，当前idx不等-1时，说明当前i和idx不同，然后我们在word1和word2相同或者words[i]和words[idx]相同的情况下更新结果，最后别忘了将idx赋为i</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+        public int shortestWordDistance(String[] words, String word1, String word2) {
+            int index = -1;
+            int min = words.length;
+            for (int i = 0; i &lt; words.length; i++) {
+                if (words[i].equals(word1) || words[i].equals(word2)) {
+                    if (index != -1 &amp;&amp; (word1.equals(word2) || !words[index].equals(words[i]))) {
+                        min = Math.min(i - index, min);
+                    }
+                    index = i;
+                }
+            }
+            return min;
+        }
+    }
+</pre></div>
+
+
+<ol>
+<li>Plus One(就末尾加1)</li>
+</ol>
+<blockquote>
+<p>Given a non-negative number rep
+resented as an array of digits, plus one to the number.</p>
+<p>The digits are stored such that the most significant digit is at the head of the list.</p>
+<p>tip：
+首先判断最后一位是否为9，若不是，直接加一返回，若是，则该位赋0，再继续查前一位，同样的方法，知道查完第一位。如果第一位原本为9，加一后会产生新的一位，那么最后要做的是，查运算完的第一位是否为0，如果是，则在最前头加一个1。</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int[] plusOne(int[] digits) {
+        for (int i = digits.length - 1; i &gt;= 0; i--) {
+            if (digits[i] &lt; 9) {
+                digits[i]++;
+                return digits;
+            } else {
+                digits[i] = 0;
+            }
+        }
+        int[] res = new int [digits.length + 1];
+        res[0] = 1;
+        return res;
+    }
+}
+</pre></div>
+
+
+<hr />
+<p>相似题目：4Sum</p>
+<p>3Sum Smaller</p>
+<p>3Sum Closest</p>
+<p>3Sum</p>
+<p>Two Sum III - Data structure design </p>
+<h2 id="two-sum-ii-input-array-is-sorted">Two Sum II - Input array is sorted</h2>
+<ol>
+<li>Two Sum II - Input array is sorted</li>
+</ol>
+<blockquote>
+<p>Input: numbers={2, 7, 11, 15}, target=9
+Output: index1=1, index2=2</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        int n = numbers.length;
+        for(int i = 0, j = n - 1; i &lt; j ;){
+            int sum = numbers[i] + numbers[j];
+            if(sum == target) {
+                return new int[] {i + 1,j + 1};
+            } else if (sum &lt; target){
+                i++;
+            } else {
+                j--;
+            }
+        }
+         return new int[2];
+    }
+}
+</pre></div>
+
+
+<p>Two Sum III - Data structure design 两数之和之三 - 数据结构设计</p>
+<blockquote>
+<p>Design and implement a TwoSum class. It should support the following operations:add and find.</p>
+<p>add - Add the number to an internal data structure.
+find - Find if there exists any pair of numbers which sum is equal to the value.</p>
+<p>For example,
+add(1); add(3); add(5);
+find(4) -&gt; true
+find(7) -&gt; false</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class TwoSum {
+    private List&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();
+    private Map&lt;Integer, Integer&gt; map = new HashMap&lt;Integer, Integer&gt;();
+
+    // Add the number to an internal data structure.
+    public void add(int number) {
+        if (map.containsKey(number)) map.put(number, map.get(number) + 1);
+        else {
+            map.put(number, 1);
+            list.add(number);
+        }
+    }
+
+    // Find if there exists any pair of numbers which sum is equal to the value.
+    public boolean find(int value) {
+        for (int i = 0; i &lt; list.size(); i++){
+            int num1 = list.get(i), num2 = value - num1;
+            if ((num1 == num2 &amp;&amp; map.get(num1) &gt; 1) || (num1 != num2 &amp;&amp; map.containsKey(num2))) return true;
+        }
+        return false;
+    }
+    //find2
+    public boolean find(int value) {
+        for (int i : map.keySet) {
+            int count = i == value - i ? 1 : 0;
+            if (map.get(value - i) &gt; count) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>3Sum</li>
+</ol>
+<blockquote>
+<p>Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
+For example, given array S = [-1, 0, 1, 2, -1, -4],</p>
+<p>A solution set is:
+[
+  [-1, 0, 1],
+  [-1, -1, 2]
+]</p>
+<p>tip： 比之前那道Two Sum 两数之和要复杂一些，我们还是要首先对原数组进行排序，然后开始遍历排序后的数组，这里注意不是遍历到最后一个停止，而是到倒数第三个就可以了，然后我们还要加上重复就跳过的处理，对于遍历到的数，我们用0减去这个数得到一个sum，我们只需要再之后找到两个数之和等于sum即可，这样一来问题又转化为了求two sum，这时候我们一次扫描，找到了等于sum的两数后，加上当前遍历到的数字，按顺序存入结果中即可，然后还要注意跳过重复数字。
+注意：去重，</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; threeSum(int[] nums) {
+        Arrays.sort(nums);
+        List&lt;List&lt;Integer&gt;&gt; res = new LinkedList&lt;&gt;();
+        for(int i = 0; i &lt; nums.length - 2; i++) {
+            if (i == 0 || (i &gt; 0 &amp;&amp; nums[i] != nums[i - 1])) {
+                int l = i + 1;
+                int h = nums.length - 1;
+                int sum = 0 - nums[i];
+                while(l &lt; h) {
+                    if (nums[l] + nums[h] == sum) {
+                        res.add(Arrays.asList(nums[i], nums[l], nums[h]));
+                        while(l &lt; h &amp;&amp; nums[l] == nums[l + 1]) {
+                            l++;
+                        }
+                        while(l &lt; h &amp;&amp; nums[h] == nums[h - 1]) {
+                            h--;
+                        }
+                        h--;
+                        l++;
+                    } else if (nums[l] + nums[h] &lt; sum) {
+                        l++;
+                    } else {
+                        h--;
+                    }
+                }
+            }
+        }
+        return res;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>3Sum Closest(求最接近给定值的三数之和)</li>
+</ol>
+<blockquote>
+<p>For example, given array S = {-1 2 1 -4}, and target = 1.</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
+</pre></div>
+
+
+<blockquote>
+<p>tip:<strong>即我们要保证当前三数和跟给定值之间的差的绝对值最小</strong>，所以我们需要定义一个变量diff用来记录差的绝对值，然后我们还是要先将数组排个序，然后开始遍历数组，思路跟那道三数之和很相似，都是先确定一个数，然后用两个指针left和right来滑动寻找另外两个数，每确定两个数，我们求出此三数之和，然后算和给定值的差的绝对值存在newDiff中，然后和diff比较并更新diff和结果closest即可</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public int threeSumClosest(int[] nums, int target) {
+        Arrays.sort(nums);
+        int diff = Integer.MAX_VALUE;
+        int res= 0;
+        for (int i = 0; i &lt; nums.length -2; i++) {
+            for(int k = i + 1, j = nums.length - 1; k &lt; j;) {
+                int sum = nums[i] + nums[k] + nums[j];
+                if (sum == target) {
+                    return target;
+                } else if (sum &lt; target) {
+                    if (target - sum &lt; diff) {
+                        diff = target - sum;
+                        res = sum;
+                    }
+                    ++k;
+                } else {
+                    if (sum - target &lt; diff) {
+                        diff = sum - target;
+                        res = sum;
+                    }
+                    --j;
+                }
+            }
+        }
+        return res;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>3Sum Smaller 三数之和较小值(要求 O(n2))</li>
+</ol>
+<blockquote>
+<p>Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 &lt;= i &lt; j &lt; k &lt; n that satisfy the condition nums[i] + nums[j] + nums[k] &lt; target.</p>
+<p>For example, given nums = [-2, 0, 1, 3], and target = 2.</p>
+<p>Return 2. Because there are two triplets which sums are less than 2:</p>
+<p>[-2, 0, 1]
+[-2, 0, 3]</p>
+<p>tip:
+借鉴之前那两道题3Sum Closest和3Sum中的方法，采用双指针来做，这里面有个trick就是当判断三个数之和小于目标值时，此时结果应该加上right-left，以为数组排序了以后，如果加上num[right]小于目标值的话，那么加上一个更小的数必定也会小于目标值，然后我们将左指针右移一位，否则我们将右指针左移一位</p>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    int count;
+
+    public int threeSumSmaller(int[] nums, int target) {
+        count = 0;
+        Arrays.sort(nums);
+        int len = nums.length;
+
+        for(int i=0; i&lt;len-2; i++) {
+            int left = i+1, right = len-1;
+            while(left &lt; right) {
+                if(nums[i] + nums[left] + nums[right] &lt; target) {
+                    count += right-left;
+                    left++;
+                } else {
+                    right--;
+                }
+            }
+        }
+
+        return count;
+    }
+}
+</pre></div>
+
+
+<ol>
+<li>4Sum</li>
+</ol>
+<blockquote>
+<p>Given an array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.</p>
+<p>Note: The solution set must not contain duplicate quadruplets.</p>
+<p>For example, given array S = [1, 0, -1, 0, -2, 2], and target = 0.</p>
+<p>A solution set is:
+[
+  [-1,  0, 0, 1],
+  [-2, -1, 1, 2],
+  [-2,  0, 0, 2]
+]</p>
+<p>方法1：
+To avoid duplicate list items(避免重复), I skip unnecessary indices at two locations:</p>
+<ul>
+<li>one at the end of the outer loop (i-loop)</li>
+<li>the other at the end of the inner loop (j-loop).</li>
+</ul>
+<p>To avoid useless </p>
+<p>computations（无用的计算）, the following is kind of critical:</p>
+<ul>
+<li>the function return immediately when nums[i]*4 &gt; target</li>
+<li>the inner loop break immediately when nums[j]*4 &lt; target.
+These two lines save quite some time due to the set up of the test cases in OJ.</li>
+</ul>
+</blockquote>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; fourSum(int[] nums, int target) {
+        List&lt;List&lt;Integer&gt;&gt; list = new ArrayList&lt;List&lt;Integer&gt;&gt;();
+        Arrays.sort(nums);
+        for(int i=0, L=nums.length; i&lt;L-3; i++) {
+            if(nums[i]&lt;&lt;2 &gt; target) return list; // return immediately
+            for(int j=L-1; j&gt;i+2; j--) {
+                if(nums[j]&lt;&lt;2 &lt; target) break; // break immediately
+                int rem = target-nums[i]-nums[j];
+                int lo = i+1, hi=j-1;
+                while(lo&lt;hi) {
+                    int sum = nums[lo] + nums[hi];
+                    if(sum&gt;rem) --hi;
+                    else if(sum&lt;rem) ++lo;
+                    else {
+                        list.add(Arrays.asList(nums[i],nums[lo],nums[hi],nums[j]));
+                        while(++lo&lt;=hi &amp;&amp; nums[lo-1]==nums[lo]) continue; // avoid duplicate results
+                        while(--hi&gt;=lo &amp;&amp; nums[hi]==nums[hi+1]) continue; // avoid duplicate results
+                    }
+                }
+                while(j&gt;=1 &amp;&amp; nums[j]==nums[j-1]) --j; // skip inner loop
+            }
+            while(i&lt;L-1 &amp;&amp; nums[i]==nums[i+1]) ++i; // skip outer loop
+        }
+        return list;
+    }
+}
+</pre></div>
+
+
+<p>方法2：k-sum，适用于任何多次和。</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; fourSum(int[] nums, int target) {
+        List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;&gt;();
+        if (nums == null || nums.length &lt; 4) return result;
+        Arrays.sort(nums);
+        kSum_Trim(nums, target, 4, 0, result, new ArrayList&lt;&gt;());
+        return result;
+    }
+    void kSum_Trim(int[] a, int target, int k, int start, List&lt;List&lt;Integer&gt;&gt; result, List&lt;Integer&gt; path) {
+        int max = a[a.length - 1];
+        if (a[start] * k &gt; target || max * k &lt; target) return;
+
+        if (k == 2) {                        // 2 Sum
+            int left = start;
+            int right = a.length - 1;
+            while (left &lt; right) {
+                if      (a[left] + a[right] &lt; target) left++;
+                else if (a[left] + a[right] &gt; target) right--;
+                else {
+                    result.add(new ArrayList&lt;&gt;(path));
+                    result.get(result.size() - 1).addAll(Arrays.asList(a[left], a[right]));
+                    left++; right--;
+                    while (left &lt; right &amp;&amp; a[left] == a[left - 1]) left++;
+                    while (left &lt; right &amp;&amp; a[right] == a[right + 1]) right--;
+                }
+            }
+        }
+        else {                        // k Sum
+            for (int i = start; i &lt; a.length - k + 1; i++) {
+                if (i &gt; start &amp;&amp; a[i] == a[i - 1]) continue;
+                if (a[i] + max * (k - 1) &lt; target) continue;
+                if (a[i] * k &gt; target) break;
+                if (a[i] * k == target) {
+                    if (a[i + k - 1] == a[i]) {
+                        result.add(new ArrayList&lt;&gt;(path));
+                        List&lt;Integer&gt; temp = new ArrayList&lt;&gt;();
+                        for (int x = 0; x &lt; k; x++) temp.add(a[i]);
+                        result.get(result.size() - 1).addAll(temp);    // Add result immediately.
+                    }
+                    break;
+                }
+                path.add(a[i]);
+                kSum_Trim(a, target - a[i], k - 1, i + 1, result, path);
+                path.remove(path.size() - 1);        // Backtracking
+            }
+        }
+    }
+}
+</pre></div>
+                </div>
+                <hr>
+                <div class="alert alert-success">版权声明：<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">自由转载-保持署名</a></div><hr>
+                <!-- /.entry-content -->
+                <div class="comments">
+                <h2>Comments !</h2>
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                           var disqus_identifier = "articles/suan-fa/java-suanfa.html";
+                           (function() {
+                                var dsq = document.createElement('script');
+                                dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'https://#.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] ||
+                                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                        </script>
+                </div>
+        </article>
+</section>
+        </div><!--/span-->
+
+                <div class="span3 well sidebar-nav" id="sidebar">
+<ul class="nav nav-list">
+<li class="nav-header"><h4><i class="icon-external-link"></i>blogroll</h4></li>
+    <li><a href="https://github.com/Linglim/"><i class="icon-external-link"></i>LinglimGithub</a></li>
+<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
+<li><a href="/" rel="alternate"><i class="icon-bookmark icon-large"></i>atom feed</a></li>
+    <li><a href="https://github.com/Linglim"><i class="icon-LinglimGithub-sign icon-large"></i>LinglimGithub</a></li>
+
+<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+<li>
+<a href="/category/ce-shi.html">
+    <i class="icon-folder-open icon-large"></i>测试
+</a>
+</li>
+<li>
+<a href="/category/hou-duan.html">
+    <i class="icon-folder-open icon-large"></i>后端
+</a>
+</li>
+<li>
+<a href="/category/java.html">
+    <i class="icon-folder-open icon-large"></i>java
+</a>
+</li>
+<li>
+<a href="/category/javayu-yan.html">
+    <i class="icon-folder-open icon-large"></i>java语言
+</a>
+</li>
+<li>
+<a href="/category/ji-zhu-bi-ji.html">
+    <i class="icon-folder-open icon-large"></i>技术笔记
+</a>
+</li>
+<li>
+<a href="/category/qian-duan.html">
+    <i class="icon-folder-open icon-large"></i>前端
+</a>
+</li>
+<li>
+<a href="/category/shu-ju-jie-gou.html">
+    <i class="icon-folder-open icon-large"></i>数据结构
+</a>
+</li>
+<li>
+<a href="/category/suan-fa.html">
+    <i class="icon-folder-open icon-large"></i>算法
+</a>
+</li>
+<li>
+<a href="/category/sui-bi.html">
+    <i class="icon-folder-open icon-large"></i>随笔
+</a>
+</li>
+
+<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+<li class="tag-[<pelican.contents.Article object at 0x000000000446E4A8>]">
+    <a href="/tag/javasuan-fa.html">
+        <i class="icon-tag icon-large"></i>java算法
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x0000000004442C18>]">
+    <a href="/tag/shu-ju-jie-gou.html">
+        <i class="icon-tag icon-large"></i>数据结构
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x0000000004470FD0>]">
+    <a href="/tag/shi-ti.html">
+        <i class="icon-tag icon-large"></i>试题
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x000000000441F0F0>]">
+    <a href="/tag/bo-ke.html">
+        <i class="icon-tag icon-large"></i>博客
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x000000000447C780>]">
+    <a href="/tag/qian-duan.html">
+        <i class="icon-tag icon-large"></i>前端
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x0000000004470F98>, <pelican.contents.Article object at 0x00000000043CA4E0>]">
+    <a href="/tag/ji-zhu-bi-ji.html">
+        <i class="icon-tag icon-large"></i>技术笔记
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x000000000441F160>]">
+    <a href="/tag/about.html">
+        <i class="icon-tag icon-large"></i>ABOUT
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x000000000447D400>]">
+    <a href="/tag/test.html">
+        <i class="icon-tag icon-large"></i>test
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x000000000447C470>]">
+    <a href="/tag/shu-zhai.html">
+        <i class="icon-tag icon-large"></i>书摘
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x0000000004470550>, <pelican.contents.Article object at 0x000000000447C630>, <pelican.contents.Article object at 0x000000000446E160>]">
+    <a href="/tag/javaweb.html">
+        <i class="icon-tag icon-large"></i>javaweb
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x00000000044703C8>]">
+    <a href="/tag/jsying-yong.html">
+        <i class="icon-tag icon-large"></i>js应用
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x0000000004473710>, <pelican.contents.Article object at 0x000000000446E940>]">
+    <a href="/tag/java.html">
+        <i class="icon-tag icon-large"></i>java
+    </a>
+</li>
+
+<!---->
+
+
+
+
+
+</ul>        </div><!--/.well -->
+
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+
+
+
+
+        <address id="about">
+            <P>DON'T HESITATE ,JUST DO IT!</P>
+
+                Powered by <a href="http://pelican.notmyidea.org/">Pelican <i class="icon-external-link"></i></a>,
+        </address><!-- /#about -->
+
+       
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+<script type="text/javascript">
+    var disqus_shortname = '#';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/theme/js/jquery-1.7.2.min.js"></script>
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <!-- 设置被百度收录-->
+    <script>
+    (function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+  </body>
+</html>

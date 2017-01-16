@@ -81,6 +81,11 @@
 					</a>
                   </li>
                   <li >
+                    <a href="/category/javayu-yan.html">
+						<i class="icon-folder-open icon-large"></i>java语言
+					</a>
+                  </li>
+                  <li >
                     <a href="/category/ji-zhu-bi-ji.html">
 						<i class="icon-folder-open icon-large"></i>技术笔记
 					</a>
@@ -93,6 +98,11 @@
                   <li >
                     <a href="/category/shu-ju-jie-gou.html">
 						<i class="icon-folder-open icon-large"></i>数据结构
+					</a>
+                  </li>
+                  <li >
+                    <a href="/category/suan-fa.html">
+						<i class="icon-folder-open icon-large"></i>算法
 					</a>
                   </li>
                   <li >
@@ -117,6 +127,165 @@
     <div class="container-fluid">
       <div class="row">
         <div class="span9 offset1" id="content">
+        <div class="article">
+                <h1><a href="/articles/sui-bi/博客搭建.html">Blog搭建</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2016-09-11T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-09-11(星期日) 00:00
+</abbr>
+<span class="label">By</span>
+<a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
+<span class="label">Category</span>
+<a href="/category/sui-bi.html"><i class="icon-folder-open"></i>随笔</a>.
+
+
+<span class="label">Tags</span>
+	<a href="/tag/bo-ke.html"><i class="icon-tag"></i>博客</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><h2 id="_1">我的博客搭建：</h2>
+<p>keys :pelican+github
+enviroment:win10 + python</p>
+<p> 由于是windows环境搭建出现很多困难，需准备很多python 的环境</p>
+
+<h2 id="introduction">introduction:</h2>
+<ul>
+<li>pelican:python写的的静态blog生成器，支持markdown，有许多主题和插件，易配置</li>
+<li>setuptools：python 包管理工具，功能：利用EasyInstall自动查找、下载、安装、升级依赖包<blockquote>
+<p>Pelican is a static site generator, written in Python. Highlights include:markdown formats、simple CLI tool、Easy to interface、Completely static output</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="install-preparation">install preparation ：</h2>
+<ol>
+<li>
+<p>python :Python ...</p></li></ol>
+                        <a class="btn primary xsmall" href="/articles/sui-bi/博客搭建.html">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="/pages/about.html">ABOUT ME</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2016-08-10T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-08-10(星期三) 00:00
+</abbr>
+<span class="label">By</span>
+<a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
+<span class="label">Category</span>
+<a href="/category/sui-bi.html"><i class="icon-folder-open"></i>随笔</a>.
+
+
+<span class="label">Tags</span>
+	<a href="/tag/about.html"><i class="icon-tag"></i>ABOUT</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><h1 id="welcome-to-linglims-blog">Welcome to Linglim&rsquo;s Blog.</h1>
+<p>She is lazy,but trying to be diligent</p>
+<p>She is clumsy,but struggling to learning</p>
+<p>She is down-to-earth ,but stilling dreaming of &hellip;</p>
+<p>One day, she will be the one she always wanted.<strong>Fighting ,newbie girl!</strong></p>
+                        <a class="btn primary xsmall" href="/pages/about.html">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="/articles/ce-shi/di-yi-ci-shang-chuan-ce-shi.html">第一次上传测试</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2016-08-10T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-08-10(星期三) 00:00
+</abbr>
+<span class="label">By</span>
+<a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
+<span class="label">Category</span>
+<a href="/category/ce-shi.html"><i class="icon-folder-open"></i>测试</a>.
+
+
+<span class="label">Tags</span>
+	<a href="/tag/test.html"><i class="icon-tag"></i>test</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>Summary：本文仅仅用于测试+博文标签解读
+Slug: first-test
+Status:draft</p>
+<h2 id="7">7夕</h2>
+<ul>
+<li>
+<p>L:今天好像是7夕&hellip;</p>
+</li>
+<li>
+<p>M:然并没什么用。</p>
+</li>
+</ul>
+<h1 id="_1">标签解读</h1>
+<p>-Slug:</p>
+<ol>
+<li>文档唯一标识，html名，必须唯一.pelican.py中有关url设置
+ <code>ARTICLE_URL = 'articles/{category}/{slug}.html'</code></li>
+<li>官网介绍是：可两篇文章公用一个slug标签，尽管发布的内容不同（语言不通），仍有唯一的相同点——slug（在此处用作识别符）。如果你并未明确定义slug，必须要确保不同语言版本文章的标题是相同的，因为slug将会根据文章标题自动生成。</li>
+<li>
+<p>pelican.py中有关url设置，</p>
+<p><code>ARTICLE_SAVE_AS = 'articles/{category}/{slug}.html</code>
+说明了生成的html存储位置</p>
+</li>
+</ol>
+<p>-Status:草稿，这篇文章也会生成html，但不会放在博客的主页及分类索引里，这样普通的读者一般看不到这个文章。</p>
+                        <a class="btn primary xsmall" href="/articles/ce-shi/di-yi-ci-shang-chuan-ce-shi.html">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="/articles/ji-zhu-bi-ji/git-1.html">learn git（1）</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2016-07-27T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-07-27(星期三) 00:00
+</abbr>
+<span class="label">By</span>
+<a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
+<span class="label">Category</span>
+<a href="/category/ji-zhu-bi-ji.html"><i class="icon-folder-open"></i>技术笔记</a>.
+
+
+<span class="label">Tags</span>
+	<a href="/tag/ji-zhu-bi-ji.html"><i class="icon-tag"></i>技术笔记</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><h2 id="learn-git">learn git</h2>
+<h2 id="_1">安装与配置</h2>
+<p><code>git config --global user.name "name"</code></p>
+<p><code>git config --global user.email "emailadd"</code></p>
+<h2 id="_2">创建版本库(不要存在中文)</h2>
+<h3 id="_3">先创建空目录（工作区）</h3>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>mkdir learngit
+cd learngit
+pwd
+</pre></div>
+
+
+<h3 id="_4">将目录变为仓库</h3>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>git init
+</pre></div>
+
+
+<p>当前目录下多了一个.git的目录出现 .git的目录（暂存区），ls -ah查看隐藏文件</p>
+<h2 id="_5"><strong>*</strong>工作原理</h2>
+<p><img alt="工作原理图" src="http://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0" /></p>
+<blockquote>
+<p>把文件往Git版本库里添加的时候，是分两步执行的：</p>
+<ul>
+<li>
+<p>第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；</p>
+</li>
+<li>
+<p>第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。</p>
+</li>
+</ul>
+<p>因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改。</p>
+<p>每次修改，如果不add到暂存区 ...</p></blockquote>
+                        <a class="btn primary xsmall" href="/articles/ji-zhu-bi-ji/git-1.html">more ...</a>
+                </div>
+        </div>
+        <hr />
         <div class="article">
                 <h1><a href="/articles/qian-duan/qian-duan-1.html">前端基础学习笔记1</a></h1>
                 <div class="well small"><footer class="post-info">
@@ -269,6 +438,11 @@
 </a>
 </li>
 <li>
+<a href="/category/javayu-yan.html">
+    <i class="icon-folder-open icon-large"></i>java语言
+</a>
+</li>
+<li>
 <a href="/category/ji-zhu-bi-ji.html">
     <i class="icon-folder-open icon-large"></i>技术笔记
 </a>
@@ -284,55 +458,75 @@
 </a>
 </li>
 <li>
+<a href="/category/suan-fa.html">
+    <i class="icon-folder-open icon-large"></i>算法
+</a>
+</li>
+<li>
 <a href="/category/sui-bi.html">
     <i class="icon-folder-open icon-large"></i>随笔
 </a>
 </li>
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-<li class="tag-[<pelican.contents.Article object at 0x0000000004878B00>]">
-    <a href="/tag/shi-ti.html">
-        <i class="icon-tag icon-large"></i>试题
+<li class="tag-[<pelican.contents.Article object at 0x000000000446E4A8>]">
+    <a href="/tag/javasuan-fa.html">
+        <i class="icon-tag icon-large"></i>java算法
     </a>
 </li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000048CA908>]">
-    <a href="/tag/about.html">
-        <i class="icon-tag icon-large"></i>ABOUT
-    </a>
-</li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000048FEBA8>]">
-    <a href="/tag/java.html">
-        <i class="icon-tag icon-large"></i>java
-    </a>
-</li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000048F24E0>]">
+<li class="tag-[<pelican.contents.Article object at 0x0000000004442C18>]">
     <a href="/tag/shu-ju-jie-gou.html">
         <i class="icon-tag icon-large"></i>数据结构
     </a>
 </li>
-<li class="tag-[<pelican.contents.Article object at 0x0000000004939E80>]">
-    <a href="/tag/test.html">
-        <i class="icon-tag icon-large"></i>test
+<li class="tag-[<pelican.contents.Article object at 0x0000000004470FD0>]">
+    <a href="/tag/shi-ti.html">
+        <i class="icon-tag icon-large"></i>试题
     </a>
 </li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000048CABA8>]">
+<li class="tag-[<pelican.contents.Article object at 0x000000000441F0F0>]">
     <a href="/tag/bo-ke.html">
         <i class="icon-tag icon-large"></i>博客
     </a>
 </li>
-<li class="tag-[<pelican.contents.Article object at 0x0000000004935F98>]">
-    <a href="/tag/jsying-yong.html">
-        <i class="icon-tag icon-large"></i>js应用
+<li class="tag-[<pelican.contents.Article object at 0x000000000447C780>]">
+    <a href="/tag/qian-duan.html">
+        <i class="icon-tag icon-large"></i>前端
     </a>
 </li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000048DE400>, <pelican.contents.Article object at 0x0000000004878A90>]">
+<li class="tag-[<pelican.contents.Article object at 0x0000000004470F98>, <pelican.contents.Article object at 0x00000000043CA4E0>]">
     <a href="/tag/ji-zhu-bi-ji.html">
         <i class="icon-tag icon-large"></i>技术笔记
     </a>
 </li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000049396D8>, <pelican.contents.Article object at 0x00000000048FE048>, <pelican.contents.Article object at 0x000000000492CCF8>]">
+<li class="tag-[<pelican.contents.Article object at 0x000000000441F160>]">
+    <a href="/tag/about.html">
+        <i class="icon-tag icon-large"></i>ABOUT
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x000000000447D400>]">
+    <a href="/tag/test.html">
+        <i class="icon-tag icon-large"></i>test
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x000000000447C470>]">
+    <a href="/tag/shu-zhai.html">
+        <i class="icon-tag icon-large"></i>书摘
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x0000000004470550>, <pelican.contents.Article object at 0x000000000447C630>, <pelican.contents.Article object at 0x000000000446E160>]">
     <a href="/tag/javaweb.html">
         <i class="icon-tag icon-large"></i>javaweb
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x00000000044703C8>]">
+    <a href="/tag/jsying-yong.html">
+        <i class="icon-tag icon-large"></i>js应用
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x0000000004473710>, <pelican.contents.Article object at 0x000000000446E940>]">
+    <a href="/tag/java.html">
+        <i class="icon-tag icon-large"></i>java
     </a>
 </li>
 

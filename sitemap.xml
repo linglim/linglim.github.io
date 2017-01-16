@@ -5,9 +5,37 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2016-10-20T16:44:01-00:00</lastmod>
+<lastmod>2017-01-16T18:34:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>/articles/suan-fa/java-suanfa.html</loc>
+<lastmod>2016-11-28T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>/articles/javayu-yan/java-jichu.html</loc>
+<lastmod>2016-11-14T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>/articles/qian-duan/qianduanshili-1.html</loc>
+<lastmod>2016-11-03T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>/articles/sui-bi/zhaji-1.html</loc>
+<lastmod>2016-11-03T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
 </url>
 
 <url>
@@ -116,6 +144,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/category/javayu-yan.html</loc>
+<lastmod>2016-11-14T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/category/ji-zhu-bi-ji.html</loc>
 <lastmod>2016-07-27T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -124,7 +159,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/qian-duan.html</loc>
-<lastmod>2016-10-19T00:00:00+08:06</lastmod>
+<lastmod>2016-11-03T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -137,29 +172,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/category/suan-fa.html</loc>
+<lastmod>2016-11-28T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/category/sui-bi.html</loc>
-<lastmod>2016-09-11T00:00:00+08:06</lastmod>
+<lastmod>2016-11-03T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/shi-ti.html</loc>
-<lastmod>2016-09-21T00:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/tag/about.html</loc>
-<lastmod>2016-08-10T00:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/tag/java.html</loc>
-<lastmod>2016-09-22T00:00:00+08:06</lastmod>
+<loc>/tag/javasuan-fa.html</loc>
+<lastmod>2016-11-28T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -172,8 +200,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/tag/test.html</loc>
-<lastmod>2016-08-10T00:00:00+08:06</lastmod>
+<loc>/tag/shi-ti.html</loc>
+<lastmod>2016-09-21T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -186,8 +214,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/tag/jsying-yong.html</loc>
-<lastmod>2016-10-19T00:00:00+08:06</lastmod>
+<loc>/tag/qian-duan.html</loc>
+<lastmod>2016-11-03T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -200,6 +228,27 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>/tag/about.html</loc>
+<lastmod>2016-08-10T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/test.html</loc>
+<lastmod>2016-08-10T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/shu-zhai.html</loc>
+<lastmod>2016-11-03T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>/tag/javaweb.html</loc>
 <lastmod>2016-09-20T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -207,8 +256,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>/author/linglim.html</loc>
+<loc>/tag/jsying-yong.html</loc>
 <lastmod>2016-10-19T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tag/java.html</loc>
+<lastmod>2016-11-14T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/author/linglim.html</loc>
+<lastmod>2016-11-28T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

@@ -81,6 +81,11 @@
 					</a>
                   </li>
                   <li >
+                    <a href="/category/javayu-yan.html">
+						<i class="icon-folder-open icon-large"></i>java语言
+					</a>
+                  </li>
+                  <li >
                     <a href="/category/ji-zhu-bi-ji.html">
 						<i class="icon-folder-open icon-large"></i>技术笔记
 					</a>
@@ -93,6 +98,11 @@
                   <li class="active">
                     <a href="/category/shu-ju-jie-gou.html">
 						<i class="icon-folder-open icon-large"></i>数据结构
+					</a>
+                  </li>
+                  <li >
+                    <a href="/category/suan-fa.html">
+						<i class="icon-folder-open icon-large"></i>算法
 					</a>
                   </li>
                   <li >
@@ -145,7 +155,10 @@
 	<a href="/tag/shu-ju-jie-gou.html"><i class="icon-tag"></i>数据结构</a>
 </footer><!-- /.post-info -->                </div>
                 <p>Summary：概念笔记</p>
-<h2 id="_1">数据结构</h2>
+<h2 id="_1">代码规范：</h2>
+<p>1、水平空白：空格，二元三元运算符两侧，括号两侧，类型和变量间。
+2、大括号{}换行，有if,else{}要连着。缩进2空格，自动换行4个空格。</p>
+<h2 id="_2">数据结构</h2>
 <p>1、线性表：元素关系1：1，出去第一个和最后一个元素外，首位相连</p>
 <ul>
 <li>
@@ -213,15 +226,394 @@ Map中我们通过对象来对对象进行索引，用来索引的对象叫做ke
 HashMap 非线程安全 TreeMap 非线程安全 </p>
 <p>9、ArrayList：动态数组，容量可变 <code>ArrayList animalArrayList = new ArrayList();</code></p>
 <p>Array:长度固定 <code>Array[] animalArray = new Array[2];</code></p>
-<h2 id="_2">算法</h2>
+<h2 id="_3">算法</h2>
 <p>1、<a href="https://segmentfault.com/a/1190000002595152#articleHeader15">排序算法比较</a></p>
 <p><a href="http://www.cnblogs.com/cj723/archive/2011/04/22/2024269.html">堆排序：详解</a>
 时间复杂度：无论是最好、最坏和平均时间复杂度均为O(nlogn)
-空间复杂度：一个交换单元
-不合适数列少情况</p>
-<p>.sixxs.org</p>
+空间复杂度：一个交换单元</p>
+<p><a href="http://univasity.iteye.com/blog/1164707">复杂度与时间效率的关系：</a>
+c &lt; log<sub>2</sub>n &lt; n &lt; n*log<sub>2</sub>n (较好)&lt; n<sup>2</sup> &lt; n<sup>3</sup> &lt; 2<sup>n</sup>（一般） &lt; 3<sup>n</sup> &lt; n! （c是一个常量）（较差）</p>
+<p>其中c是一个常量，如果一个算法的复杂度为c 、n<em>log<sub>2</sub>n 、n 、 n</em>log2n,那么这个算法时间效率比较高 ，如果是 2n , 3n ,n!,那么稍微大一些的n就会令这个算法不能动了，居于中间的几个则差强人意。</p>
+<p>不合适数列少情况</p>
+<p>2016/10/25 9:07:57 </p>
+<p>2、math</p>
+<ol>
+<li>素数：恰好有两个约数的整数，一个是1，另一个则是它自己</li>
+<li>
+<p>素数算法：</p>
+<ul>
+<li>
+<p>素数测试：判断n是否为素数，只需对前<img src="http://www.forkosh.com/mathtex.cgi? \Large \sqrt{n}">个数进行处理.针对单个整数。</p>
+</li>
+<li>
+<p>埃氏筛法：核心思想是枚举从小到大的素数并将素数的整数倍依次从原整数数组中删除，余下的即为全部素数，枚举整数n以内的素数求得[1, b)内的素数。</p>
+</li>
+<li>
+<p>区间筛法:求区间[a, b)内有多少素数？先用埃氏筛法求得[1, b)内的素数，然后截取为[a, b)即可。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><a href="https://algorithm.yuanbin.me/zh-hans/basics_algorithm/math/prime.html">java code:</a></p>
+<h2 id="code">code</h2>
+<h3 id="_4">一、字符串</h3>
+<h4 id="1strstrkmp">1、STRSTR查找：kMP</h4>
+<p>1.python 中
+<code>collectins.defaultdict(default_factory[,..])#构建类似dictionary对象，keys值可自行赋值，values的类型是default_factory[,..]，有默认值，就算不存在key,d[key]，也存在相应类型的默认值</code></p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>class Solution:
+def strStr(self, source, target):
+    if source is None or target is None:
+        return -1
+
+    for i in range(len(source) - len(target) + 1):
+        for j in range(len(target)):
+            if source[i + j] != target[j]:
+                break
+        else:  # no break
+            return i
+    return -1
+</pre></div>
+
+
+<p>***python 中else 接 for 含义为no break </p>
+<p>2、java</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution {
+public int strStr(String haystack, String needle) {
+    if (haystack == null &amp;&amp; needle == null) return 0;
+    if (haystack == null) return -1;
+    if (needle == null) return 0;
+
+    for (int i = 0; i &lt; haystack.length() - needle.length() + 1; i++) {
+        int j = 0;
+        for (; j &lt; needle.length(); j++) {
+            if (haystack.charAt(i+j) != needle.charAt(j)) break;
+        }
+        if (j == needle.length()) return i;
+    }
+
+    return -1;
+}
+}
+</pre></div>
+
+
+<p>双重 for 循环，时间复杂度最坏情况下为 O((n-m)*m)O((n−m)∗m).</p>
+<h4 id="2two-strings-are-anagrams">2、Two Strings Are Anagrams</h4>
+<p>方法1：hashmap统计字频，适应于少的
+1、python
+    public class Solution {
+    public int strStr(String haystack, String needle) {
+        if (haystack == null &amp;&amp; needle == null) return 0;
+        if (haystack == null) return -1;
+        if (needle == null) return 0;</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    for (int i = 0; i &lt; haystack.length() - needle.length() + 1; i++) {
+        int j = 0;
+        for (; j &lt; needle.length(); j++) {
+            if (haystack.charAt(i+j) != needle.charAt(j)) break;
+        }
+        if (j == needle.length()) return i;
+    }
+
+    return -1;
+}
+}
+</pre></div>
+
+
+<p>2、java
+    public class Solution {
+    /*<em>
+     * @param s: The first string
+     * @param b: The second string
+     * @return true or false
+     </em>/
+    public boolean anagram(String s, String t) {
+        if (s.length() != t.length()) {
+           return false;
+        }</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    int[] count = new int[256];
+    for (int i = 0; i &lt; s.length(); i++) {
+        count[(int) s.charAt(i)]++;
+    }
+    for (int i = 0; i &lt; t.length(); i++) {
+        count[(int) t.charAt(i)]--;
+        if (count[(int) t.charAt(i)] &lt; 0) {
+            return false;
+        }
+    }
+    return true;
+}
+};
+</pre></div>
+
+
+<p>两次遍历字符串，时间复杂度最坏情况下为 O(n)O(n), 使用了额外的数组，空间复杂度 O(1)O(1).
+方法2：排序字符串后比较
+1、python
+    public class Solution {
+    /*<em>
+     * @param s: The first string
+     * @param b: The second string
+     * @return true or false
+     </em>/
+    public boolean anagram(String s, String t) {
+        if (s.length() != t.length()) {
+           return false;
+        }</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    int[] count = new int[256];
+    for (int i = 0; i &lt; s.length(); i++) {
+        count[(int) s.charAt(i)]++;
+    }
+    for (int i = 0; i &lt; t.length(); i++) {
+        count[(int) t.charAt(i)]--;
+        if (count[(int) t.charAt(i)] &lt; 0) {
+            return false;
+        }
+    }
+    return true;
+}
+};
+</pre></div>
+
+
+<p>2、java
+    public boolean isAnagram(String firstWord, String secondWord) {
+     char[] word1 = firstWord.replaceAll(&ldquo;[\s]&rdquo;, &ldquo;&rdquo;).toCharArray();
+     char[] word2 = secondWord.replaceAll(&ldquo;[\s]&rdquo;, &ldquo;&rdquo;).toCharArray();
+     Arrays.sort(word1);
+     Arrays.sort(word2);
+     return Arrays.equals(word1, word2);
+    }
+O(NlogN) (N is the lenght of both the strings together) there is a O(N) algorithm using O(N/2)~O(N) memory</p>
+<h4 id="3compare-strings">3、Compare Strings</h4>
+<blockquote>
+<p>Compare two strings A and B, determine whether A contains all of the characters in B.</p>
+<p>The characters in string A and B are all Upper Case letters.</p>
+<p>Example
+For A = &ldquo;ABCD&rdquo;, B = &ldquo;ABC&rdquo;, return true.</p>
+<p>For A = &ldquo;ABCD&rdquo; B = &ldquo;AABC&rdquo;, return false.</p>
+</blockquote>
+<p>1、PYTHON</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>import collections
+class Solution:
+def compare_strings(self, A, B):
+    # return a dict with default value set to 0
+    letters = collections.defaultdict(int)#[k-y,k可不存在](http://www.jb51.net/article/48771.htm)
+    for a in A:
+        letters[a] += 1
+
+    for b in B:
+        if b not in letters:
+            return False
+        elif letters[b] &lt;= 0:
+            return False
+        else:
+            letters[b] -= 1
+    return True
+</pre></div>
+
+
+<p>2、java
+    public static boolean compareStrings(String A, String B) {
+       if (A == null || B == null) return false;
+       if (A.length() &lt; B.length()) return false;</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>   final int UPPER_NUM = 26;
+   int[] letter_cnt = new int[UPPER_NUM];
+
+   for (int i = 0; i &lt; A.length(); i++) {
+       System.out.print(A.charAt(i) - &#39;A&#39;);//第i个字符的asicll值减去A的asscill,
+       letter_cnt[A.charAt(i) - &#39;A&#39;]++;
+   }
+   for (int i = 0; i &lt; B.length(); i++) {
+       letter_cnt[B.charAt(i) - &#39;A&#39;]--;
+       if (letter_cnt[B.charAt(i) - &#39;A&#39;] &lt; 0) return false;
+   }
+
+   return true;
+ }
+</pre></div>
+
+
+<p>遍历一次 A 字符串，遍历一次 B 字符串，时间复杂度最坏 O(2n)O(2n), 空间复杂度为 O(26)O(26).
+<code>?str=""//这是空吗？非空</code></p>
+<h4 id="4anagramsgroup-anagrams">4、Anagrams/Group Anagrams</h4>
+<p>题型一：</p>
+<blockquote>
+<p>Example
+Given [&ldquo;lint&rdquo;, &ldquo;intl&rdquo;, &ldquo;inlt&rdquo;, &ldquo;code&rdquo;], return [&ldquo;lint&rdquo;, &ldquo;inlt&rdquo;, &ldquo;intl&rdquo;].</p>
+</blockquote>
+<p>参照：https://algorithm.yuanbin.me/zh-hans/string/group_anagrams.html</p>
+<blockquote>
+<p>or example, given: [&ldquo;eat&rdquo;, &ldquo;tea&rdquo;, &ldquo;tan&rdquo;, &ldquo;ate&rdquo;, &ldquo;nat&rdquo;, &ldquo;bat&rdquo;], 
+Return:</p>
+<p>[
+  [&ldquo;ate&rdquo;, &ldquo;eat&rdquo;,&rdquo;tea&rdquo;],
+  [&ldquo;nat&rdquo;,&rdquo;tan&rdquo;],
+  [&ldquo;bat&rdquo;]
+]</p>
+</blockquote>
+<p>1、java 注意map(tree:生成的自动排序,hash：无序,table)</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>/*所以我们可以将一个词里所有字符构成的串排序，然后将这个结果作为key，所有相同结果的词都放到同一个key下面。这样我们就可以很自然的想到用一个Map来解决问题。在详细的实现时，我们可以声明一个HashMap&lt;String, List&lt;String&gt;&gt;，key是根据一个字符串排序后得到的一个串，value是相同的anagram构成的列表。因为要求后面的结果是排序的，我们在后面将所有的value值都从Map里取出来的时候，先对value排一下序再加入到最终的列表中即得到最终的结果。详细实现如下：
+                            */
+
+public class Solution {
+public List&lt;List&lt;String&gt;&gt; groupAnagrams(String[] strs) {
+    List&lt;List&lt;String&gt;&gt; result=new ArrayList&lt;&gt;();
+    Map&lt;String,List&lt;String&gt;&gt; map=new TreeMap&lt;&gt;();
+    for(String s:strs){
+        char[] chars=s.toCharArray();
+        Arrays.sort(chars);
+        String key =String.valueOf(chars);
+        if(!map.containsKey(key))map.put(key,new ArrayList&lt;&gt;());
+        map.get(key).add(s);
+    }
+    for(String key:map.keySet()){
+        List&lt;String&gt; list=map.get(key);
+        Collections.sort(list);
+        result.add(list);
+    }
+
+    return result;
+}
+}
+</pre></div>
+
+
+<p>遍历一次字符串数组，复杂度为 O(n)O(n), 对单个字符串排序复杂度近似为 O(L \log L)O(LlogL). 两次遍历字符串数组，故总的时间复杂度近似为 O(nL \log L)O(nLlogL). 使用了哈希表，空间复杂度为 O(K)O(K), 其中 K 为排序后不同的字符串个数。</p>
+<p>题型二、</p>
+<blockquote>
+<p>Example
+Given [&ldquo;lint&rdquo;, &ldquo;intl&rdquo;, &ldquo;inlt&rdquo;, &ldquo;code&rdquo;], return [&ldquo;lint&rdquo;, &gt;&rdquo;inlt&rdquo;, &ldquo;intl&rdquo;].</p>
+<p>Given [&ldquo;ab&rdquo;, &ldquo;ba&rdquo;, &ldquo;cd&rdquo;, &ldquo;dc&rdquo;, &ldquo;e&rdquo;], return [&ldquo;ab&rdquo;, &ldquo;ba&rdquo;, &gt;&rdquo;cd&rdquo;, &ldquo;dc&rdquo;]. </p>
+</blockquote>
+<p><a href="https://algorithm.yuanbin.me/zh-hans/string/group_anagrams.html">题解两种方法：</a></p>
+<h4 id="5rotate-string">5、Rotate String</h4>
+<p>Problem Statement</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>Given a string and an offset, rotate string by offset. (rotate from left to right)
+Example
+
+Given &quot;abcdefg&quot;.
+offset=0 =&quot;abcdefg&quot;
+offset=1 =&quot;gabcdef&quot;
+offset=2 =&quot;fgabcde&quot;
+offset=3 =&quot;efgabcd&quot;
+</pre></div>
+
+
+<p>注意：<code>offset %= len(A)#以防offset&gt;len</code>
+解法1：immutable string（要求O(1)）</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span> A = before[::-1] + after[::-1]
+ A = A[::-1]
+</pre></div>
+
+
+<p>解法2： mutable list(要求O(1))</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span> self.reverse(A, 0, len(A)-offset-1)
+ self.reverse(A, len(A)-offset, len(A)-1)
+ self.reverse(A, 0, len(A)-1)
+</pre></div>
+
+
+<p>解法3：不限空间java：http://www.jianshu.com/p/2b4659a7f950</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>public class Solution { 
+public void rotateString(char[] str, int offset) { 
+    int len = str.length; 
+    char[] newstr = new char[len+1]; 
+    if (str == null || str.length == 0) return; 
+    //modify offset if offset &gt; length; 
+    offset = offset % len; 
+    for (int i = 0; i &lt; offset; i++) { 
+        newstr[i] = str[len-offset+i]; 
+     } 
+     for (int i = offset; i &lt; len; i++) { 
+        newstr[i] = str[i-offset]; 
+    } 
+    for (int i = 0; i &lt; len; i++) { 
+        str[i] = newstr[i]; 
+    } 
+    return; 
+}
+}
+</pre></div>
+
+
+<p>参考：<a href="http://www.jiuzhang.com/solutions/rotate-string/">九章</a></p>
+<p>python 模块和类使用小结：</p>
+<ul>
+<li>
+<p><a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431845183474e20ee7e7828b47f7b7607f2dc1e90dbb000">模块使用：</a>
+使用自己定义的模块：
+先导入path <code>import sys ``sys.path.append('C:\\Python34\\mycode')``sys.path#查看是否有路径</code>
+,然后<code>import name/from name (.py)import name（函数名）</code>
+或者，F5，自动将脚本导入。
+使用时，PY NAME.函数名（）。
+类，一定要先实例化<code>s=Solution()#类名（）``s.test()#使用类里的方法</code></p>
+</li>
+<li>
+<p><a href="http://www.cnblogs.com/jessonluo/p/4717140.html">self:</a>
+self,代表类的实例，非类。在定义类里的方法时一定有。</p>
+</li>
+</ul>
+<h4 id="6reverse-words-in-a-string">6、Reverse Words in a String</h4>
+<blockquote>
+<p>For example,
+Given s = &ldquo;the sky is blue&rdquo;,
+return &ldquo;blue is sky the&rdquo;.</p>
+</blockquote>
+<p>1、python</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>def reverseWords(self, s):
+    return &#39; &#39;.join(reversed(s.strip().split()))
+
+&#39;连接符&#39;.join,reversed(str)#反转str,str.strip(&#39;要去的首尾字符，空表示空格&#39;)#，str.split(&#39;分隔符，空位空格&#39;)
+</pre></div>
+
+
+<p>2、java(九章)
+    public class Solution {
+    public String reverseWords(String s) {
+        if (s == null || s.length() == 0) {
+            return &ldquo;&rdquo;;
+        }</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    String[] array = s.split(&quot; &quot;);
+    StringBuilder sb = new StringBuilder();
+
+    for (int i = array.length - 1; i &gt;= 0; --i) {
+        if (!array[i].equals(&quot;&quot;)) {
+            sb.append(array[i]).append(&quot; &quot;);
+        }
+    }
+
+    //remove the last &quot; &quot;
+    return sb.length() == 0 ? &quot;&quot; : sb.substring(0, sb.length() - 1);
+}
+}
+</pre></div>
+
+
+<p>public class Solution {
+public String reverseString(String s) {
+return new StringBuilder(s).reverse().toString();
+}
+}</p>
+<h4 id="7valid-palindrome">7.Valid Palindrome</h4>
+<p><a href="http://www.runoob.com/java/java-character.html">java的Character:</a>
+代码参见：https://algorithm.yuanbin.me/zh-hans/string/valid_palindrome.html</p>
+<h4 id="8longest-palindromic-substring">8.Longest Palindromic Substring</h4>
+<p><a href="http://blog.csdn.net/GarfieldEr007/article/details/52143776">字符串反转：8中方法</a></p>
+<blockquote>
+<p>Given s = &ldquo;hello&rdquo;, return &ldquo;olleh&rdquo;.
+1、二分递归{O()=O(logn)}，其他都是O（n）
+2、append*2
+3、StringBuilder和StringBuffer自实现
+4、二分交换
+5、异或交换（烂，省了一个temp,计算步骤较多，用更多的指令）
+6、堆栈先进后出</p>
+</blockquote>
+<p><a href="http://www.jb51.net/article/48771.htm">collections</a>
+.sixxs.org</p>
 <p>https://algorithm.yuanbin.me/zh-hans/basics_sorting/</p>
 <p>https://www.shiyanlou.com/courses/484</p>
+<p>验证http://www.cnblogs.com/best/p/5709680.html</p>
                 </div>
                 <hr>
                 <div class="alert alert-success">版权声明：<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">自由转载-保持署名</a></div><hr>
@@ -269,6 +661,11 @@ HashMap 非线程安全 TreeMap 非线程安全 </p>
 </a>
 </li>
 <li>
+<a href="/category/javayu-yan.html">
+    <i class="icon-folder-open icon-large"></i>java语言
+</a>
+</li>
+<li>
 <a href="/category/ji-zhu-bi-ji.html">
     <i class="icon-folder-open icon-large"></i>技术笔记
 </a>
@@ -284,55 +681,75 @@ HashMap 非线程安全 TreeMap 非线程安全 </p>
 </a>
 </li>
 <li>
+<a href="/category/suan-fa.html">
+    <i class="icon-folder-open icon-large"></i>算法
+</a>
+</li>
+<li>
 <a href="/category/sui-bi.html">
     <i class="icon-folder-open icon-large"></i>随笔
 </a>
 </li>
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-<li class="tag-[<pelican.contents.Article object at 0x0000000004878B00>]">
-    <a href="/tag/shi-ti.html">
-        <i class="icon-tag icon-large"></i>试题
+<li class="tag-[<pelican.contents.Article object at 0x000000000446E4A8>]">
+    <a href="/tag/javasuan-fa.html">
+        <i class="icon-tag icon-large"></i>java算法
     </a>
 </li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000048CA908>]">
-    <a href="/tag/about.html">
-        <i class="icon-tag icon-large"></i>ABOUT
-    </a>
-</li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000048FEBA8>]">
-    <a href="/tag/java.html">
-        <i class="icon-tag icon-large"></i>java
-    </a>
-</li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000048F24E0>]">
+<li class="tag-[<pelican.contents.Article object at 0x0000000004442C18>]">
     <a href="/tag/shu-ju-jie-gou.html">
         <i class="icon-tag icon-large"></i>数据结构
     </a>
 </li>
-<li class="tag-[<pelican.contents.Article object at 0x0000000004939E80>]">
-    <a href="/tag/test.html">
-        <i class="icon-tag icon-large"></i>test
+<li class="tag-[<pelican.contents.Article object at 0x0000000004470FD0>]">
+    <a href="/tag/shi-ti.html">
+        <i class="icon-tag icon-large"></i>试题
     </a>
 </li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000048CABA8>]">
+<li class="tag-[<pelican.contents.Article object at 0x000000000441F0F0>]">
     <a href="/tag/bo-ke.html">
         <i class="icon-tag icon-large"></i>博客
     </a>
 </li>
-<li class="tag-[<pelican.contents.Article object at 0x0000000004935F98>]">
-    <a href="/tag/jsying-yong.html">
-        <i class="icon-tag icon-large"></i>js应用
+<li class="tag-[<pelican.contents.Article object at 0x000000000447C780>]">
+    <a href="/tag/qian-duan.html">
+        <i class="icon-tag icon-large"></i>前端
     </a>
 </li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000048DE400>, <pelican.contents.Article object at 0x0000000004878A90>]">
+<li class="tag-[<pelican.contents.Article object at 0x0000000004470F98>, <pelican.contents.Article object at 0x00000000043CA4E0>]">
     <a href="/tag/ji-zhu-bi-ji.html">
         <i class="icon-tag icon-large"></i>技术笔记
     </a>
 </li>
-<li class="tag-[<pelican.contents.Article object at 0x00000000049396D8>, <pelican.contents.Article object at 0x00000000048FE048>, <pelican.contents.Article object at 0x000000000492CCF8>]">
+<li class="tag-[<pelican.contents.Article object at 0x000000000441F160>]">
+    <a href="/tag/about.html">
+        <i class="icon-tag icon-large"></i>ABOUT
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x000000000447D400>]">
+    <a href="/tag/test.html">
+        <i class="icon-tag icon-large"></i>test
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x000000000447C470>]">
+    <a href="/tag/shu-zhai.html">
+        <i class="icon-tag icon-large"></i>书摘
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x0000000004470550>, <pelican.contents.Article object at 0x000000000447C630>, <pelican.contents.Article object at 0x000000000446E160>]">
     <a href="/tag/javaweb.html">
         <i class="icon-tag icon-large"></i>javaweb
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x00000000044703C8>]">
+    <a href="/tag/jsying-yong.html">
+        <i class="icon-tag icon-large"></i>js应用
+    </a>
+</li>
+<li class="tag-[<pelican.contents.Article object at 0x0000000004473710>, <pelican.contents.Article object at 0x000000000446E940>]">
+    <a href="/tag/java.html">
+        <i class="icon-tag icon-large"></i>java
     </a>
 </li>
 

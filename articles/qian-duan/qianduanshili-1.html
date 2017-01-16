@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Linglim 's Blog - ABOUT</title>
+    <title>一个前端实例学习</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Linglim">
@@ -90,7 +90,7 @@
 						<i class="icon-folder-open icon-large"></i>技术笔记
 					</a>
                   </li>
-                  <li >
+                  <li class="active">
                     <a href="/category/qian-duan.html">
 						<i class="icon-folder-open icon-large"></i>前端
 					</a>
@@ -127,32 +127,218 @@
     <div class="container-fluid">
       <div class="row">
         <div class="span9 offset1" id="content">
-        <div class="article">
-                <h1><a href="/pages/about.html">ABOUT ME</a></h1>
-                <div class="well small"><footer class="post-info">
+<section id="content">
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to 一个前端实例学习">
+                                        一个前端实例学习
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2016-08-10T00:00:00+08:00">
-        <i class="icon-calendar"></i>2016-08-10(星期三) 00:00
+<abbr class="published" title="2016-11-03T00:00:00+08:00">
+        <i class="icon-calendar"></i>2016-11-03(星期四) 00:00
 </abbr>
 <span class="label">By</span>
 <a href="/author/linglim.html"><i class="icon-user"></i>Linglim</a>
 <span class="label">Category</span>
-<a href="/category/sui-bi.html"><i class="icon-folder-open"></i>随笔</a>.
+<a href="/category/qian-duan.html"><i class="icon-folder-open"></i>前端</a>.
 
 
 <span class="label">Tags</span>
-	<a href="/tag/about.html"><i class="icon-tag"></i>ABOUT</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><h1 id="welcome-to-linglims-blog">Welcome to Linglim&rsquo;s Blog.</h1>
-<p>She is lazy,but trying to be diligent</p>
-<p>She is clumsy,but struggling to learning</p>
-<p>She is down-to-earth ,but stilling dreaming of &hellip;</p>
-<p>One day, she will be the one she always wanted.<strong>Fighting ,newbie girl!</strong></p>
-                        <a class="btn primary xsmall" href="/pages/about.html">more ...</a>
-                </div>
-        </div>
-        <hr />
+	<a href="/tag/qian-duan.html"><i class="icon-tag"></i>前端</a>
+</footer><!-- /.post-info -->                </div>
+                <p>Summary：实例中的技巧、快捷</p>
+<p>1、快捷键：</p>
+<blockquote>
+<p>复制：Ctrl + ⇧ + D，具有或不具有突出显示文本<br>
+选择词：Ctrl + D<br>
+选择行：Ctrl + L<br>
+全选：Ctrl + A<br>
+选择每个实例：Alt + F3(选中所有有关的)<br>
+移动光标至上一个词：Ctrl + ←<br>
+移动光标至下一个词：Ctrl + →<br>
+移动光标至行首：Home<br>
+移动光标至行尾：End<br>
+移动光标至文档开头：Ctrl + Home<br>
+移动光标至文档结尾：Ctrl + End<br>
+跳转到左/右圆括号、方括号、大括号：Ctrl + M(适合对齐)<br>
+跳转到定义：Ctrl + R<br>
+缩进：Tab 或 ⌘ + ]<br>
+取消缩进：⇧ + Tab 或 ⌘ + [<br>
+切换注释：Ctrl + /（<strong>*</strong>，把选中注释和取消注释）<br>
+标签管理：<br>
+- 新建标签：Ctrl + N<br>
+- 向左切换标签：Ctrl + PgUp<br>
+- 向右切换标签：Ctrl + PgDn<br>
+- 关闭标签：Ctrl + W<br>
+- 重新打开标签：Ctrl + ⇧ + T<br>
+在众多文件里快速打开：Ctrl + P<br></p>
+</blockquote>
+<p>sublime <a href="http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html">更多参考：</a></p>
+<p>1、博文原型：</p>
+<p>下角标<sub>1</sub></p>
+<p>上角标<sup>2</sup></p>
+<p>居中的设计：   <code>{margin-left:auto;margin-right:auto;}</code></p>
+<p>2、设计猫咪图片样式：</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>.kitten-image {
+  border: 5px dashed salmon;//边框
+  border-radius: 5px;//圆角边框
+  cursor: pointer;//光标手型
+  box-shadow: 5px 5px 20px #ccc;//使用阴影为图片增加深度感
+}
+</pre></div>
 
+
+<p>ps:<a href="http://www.cssmatic.com/box-shadow">前端参考css</a>，按需设计样式，自动生成css代码</p>
+<p>3、字体
+    .udacity-text {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 60px;
+      text-transform: uppercase;//全大写
+      text-decoration: underline;//下划线
+      color: #8001ff;
+    }</p>
+<p>[Google 字体]（https://www.google.com/fonts）
+4、class=&rdquo;title underline&rdquo;//可以把两个属性写在一个class里</p>
+<p>5、<a href="http://www.alloyteam.com/2015/05/xi-shuo-flexbox-dan-xing-he-zi-bu-ju/">flex-box:</a>弹性盒子</p>
+<blockquote>
+<p>flexbox是一个新的盒子模型，当你给一个元素使用了flexbox模块，那么它的子元素就会指定的方向在水平或者纵向方向排列。这些子元素会按照一定的比例进行扩展或收缩来填补容器的可用空间。</p>
+<p>属性： </p>
+</blockquote>
+<ul>
+<li><a href="http://www.runoob.com/try/playit.php?f=playcss_justify-content&amp;preval=flex-start">align-content</a>：属性对齐交叉轴上的各项（垂直）。</li>
+<li><a href="http://www.runoob.com/try/playit.php?f=playcss_align-content&amp;preval=stretch">justify-content</a>：用于设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。</li>
+<li><a href="http://www.runoob.com/cssref/css3-pr-align-items.html">align-items</a>:居中对齐弹性盒的各项 <div> 元素</li>
+<li><a href="http://www.runoob.com/cssref/css3-pr-align-self.html">align-self</a>:居中对齐弹性对象元素内的某个项：</li>
+<li><a href="http://www.runoob.com/cssref/css3-pr-flex-direction.html">flex-direction </a>:属性规定灵活项目的方向。</li>
+</ul>
+<p>一个header的设计：</p>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Udacity Site Header&lt;/title&gt;
+  &lt;link href=&#39;https://fonts.googleapis.com/css?family=Open+Sans:400,300&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&gt;
+  &lt;meta name=&quot;udacity-grader&quot; content=&quot;http://udacity.github.io/fend/lessons/L3/problem-set/08-udacity-site-header/tests.json&quot;&gt;
+  &lt;style&gt;
+* {
+  box-sizing: border-box;
+  /*box-sizing:
+  content-box：weight height 只是为内容的宽高，不包括margin和padding
+  border-box:盒模型，使得weight height就是实际的宽高，包括了padding和border和内容*/
+}
+body {
+  font-family: &#39;Open Sans&#39;, sans-serif;
+
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+}
+header {
+  font-weight: 400;/*文本的粗细*/
+  -webkit-font-smoothing: antialiased;/*字体平滑*/
+
+  background: white;
+  height: 85px;
+  padding: 15px;
+  text-align: right;/*文字向右*/
+  color:#697681;
+}
+section {
+  padding: 16px;
+}
+.flex-container {
+  display: flex;  /*flexbox是一个新的盒子模型，当你给一个元素使用了flexbox模块，那么它的子元素就会指定的方向在水平或者纵向方向排列。这些子元素会按照一定的比例进行扩展或收缩来填补容器的可用空间。*http://www.alloyteam.com/2015/05/xi-shuo-flexbox-dan-xing-he-zi-bu-ju/*/
+}
+.space-between {
+  justify-content: space-between;/*项目位于各行之间留有空白的容器内。*/
+}
+.vertical-centerer {
+  height: 100%;
+  flex-direction: column;/*灵活的项目将垂直显示，正如一个列一样。*/
+  justify-content: center;/*子元素水平对齐方式：居中*/
+}
+.header-content {
+  width: 960px;
+  margin-left: auto;/*水平居中*/
+  margin-right: auto;
+}
+.logo {
+  width: 500px;
+  display: inline-block;
+  margin: 10px 0px;
+}
+.menu {
+  list-style: none;
+  list-style-type: none;
+}
+.menu &gt; li {
+  display: inline;
+  margin-left: 37.5px;
+}
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+&lt;div class=&quot;vertical-centerer flex-container&quot;&gt;
+  &lt;div class=&quot;flex-container space-between header-content&quot;&gt;
+&lt;div&gt;
+  &lt;span&gt;
+&lt;img class=&quot;logo&quot; src=&quot;Udacity_Logo_SVG_200x35.svg&quot; alt=&quot;Udacity Logo&quot;&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;ul class=&quot;menu&quot;&gt;
+&lt;li&gt;Nanodegree&lt;/li&gt;
+&lt;li&gt;Catalog&lt;/li&gt;
+&lt;li&gt;Classroom&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/header&gt;
+  &lt;section&gt;
+&lt;p&gt;Ewww. The header looks weird.&lt;/p&gt;
+
+&lt;p&gt;
+  You need to use Developer Tools to edit this website and pass this quiz. Make sure you read the criteria carefully because they contain the exact CSS properties that you need to change!
+&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+
+
+<p>6.然列表顶格：
+ul,li{margin-left:0;padding-left:5px;}
+7.<a href="http://www.cnblogs.com/gaojun/p/3510931.html">json对象数组按对象属性排序:</a></p>
+                </div>
+                <hr>
+                <div class="alert alert-success">版权声明：<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">自由转载-保持署名</a></div><hr>
+                <!-- /.entry-content -->
+                <div class="comments">
+                <h2>Comments !</h2>
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                           var disqus_identifier = "articles/qian-duan/qianduanshili-1.html";
+                           (function() {
+                                var dsq = document.createElement('script');
+                                dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'https://#.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] ||
+                                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                        </script>
+                </div>
+        </article>
+</section>
         </div><!--/span-->
 
                 <div class="span3 well sidebar-nav" id="sidebar">
